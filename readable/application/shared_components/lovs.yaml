@@ -1,0 +1,141 @@
+---
+- # ====== List of Values: STATUS_LIMPEZA.DESCRICAO ============
+  id: 2237482771986264181
+  identification: 
+    name: STATUS_LIMPEZA.DESCRICAO
+
+  subscription: 
+    version-number: 15538080036211
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: STATUS_LIMPEZA
+
+  column-mapping: 
+    return: ID
+    display: DESCRICAO
+    default-sort: DESCRICAO
+    sort-direction: Ascending (Nulls Last)
+
+- # ====== List of Values: STATUS_MANUTENCAO.DESCRICAO =========
+  id: 2237483443884264182
+  identification: 
+    name: STATUS_MANUTENCAO.DESCRICAO
+
+  subscription: 
+    version-number: 15538080036220
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: STATUS_MANUTENCAO
+
+  column-mapping: 
+    return: ID
+    display: DESCRICAO
+    default-sort: DESCRICAO
+    sort-direction: Ascending (Nulls Last)
+
+- # ====== List of Values: STATUS_DISPONIBILIDADE.DESCRICAO ====
+  id: 2237484165621264183
+  identification: 
+    name: STATUS_DISPONIBILIDADE.DESCRICAO
+
+  subscription: 
+    version-number: 15538080036226
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: STATUS_DISPONIBILIDADE
+
+  column-mapping: 
+    return: ID
+    display: DESCRICAO
+    default-sort: DESCRICAO
+    sort-direction: Ascending (Nulls Last)
+
+- # ====== List of Values: CLIENTE.CPF =========================
+  id: 2237519965530265352
+  identification: 
+    name: CLIENTE.CPF
+
+  subscription: 
+    version-number: 15538080050267
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: CLIENTE
+
+  column-mapping: 
+    return: ID
+    display: CPF
+    default-sort: CPF
+    sort-direction: Ascending (Nulls Last)
+
+- # ====== List of Values: ACOMODACAO.NOME =====================
+  id: 2237520689223265353
+  identification: 
+    name: ACOMODACAO.NOME
+
+  subscription: 
+    version-number: 15538080050272
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: ACOMODACAO
+
+  column-mapping: 
+    return: ID
+    display: NOME
+    default-sort: NOME
+    sort-direction: Ascending (Nulls Last)
+
+- # ====== List of Values: METODO_PAGAMENTO.DESCRICAO ==========
+  id: 2237521325300265354
+  identification: 
+    name: METODO_PAGAMENTO.DESCRICAO
+
+  subscription: 
+    version-number: 15538080050275
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: METODO_PAGAMENTO
+
+  column-mapping: 
+    return: ID
+    display: DESCRICAO
+    default-sort: DESCRICAO
+    sort-direction: Ascending (Nulls Last)
+
+- # ====== List of Values: STATUS_RESERVA.DESCRICAO ============
+  id: 2237522088490265354
+  identification: 
+    name: STATUS_RESERVA.DESCRICAO
+
+  subscription: 
+    version-number: 15538080050292
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: STATUS_RESERVA
+
+  column-mapping: 
+    return: ID
+    display: DESCRICAO
+    default-sort: DESCRICAO
+    sort-direction: Ascending (Nulls Last)
+

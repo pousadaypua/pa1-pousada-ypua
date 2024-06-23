@@ -1,0 +1,133 @@
+---
+- # ====== Breadcrumb: Breadcrumb ==============================
+  id: 2236516456817260877
+  identification: 
+    name: Breadcrumb
+
+  entries: 
+  - # ====== Entry: Home =========================================
+    id: 2236516621630260877
+    identification: 
+      name: Home
+      page-number: 1
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
+        page: 1 # Home
+
+  - # ====== Entry: Metodo Pagamento =============================
+    id: 2237432783182261332
+    identification: 
+      name: Metodo Pagamento
+      page-number: 2
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.:::'
+        page: 2 # Metodo Pagamento
+
+  - # ====== Entry: Status Reserva ===============================
+    id: 2237444251560261880
+    identification: 
+      name: Status Reserva
+      page-number: 4
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
+        page: 4 # Status Reserva
+
+  - # ====== Entry: Status Disponibilidade =======================
+    id: 2237455658715262467
+    identification: 
+      name: Status Disponibilidade
+      page-number: 6
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:6:&APP_SESSION.::&DEBUG.:::'
+        page: 6 # Status Disponibilidade
+
+  - # ====== Entry: Status Manutencao ============================
+    id: 2237467817193263058
+    identification: 
+      name: Status Manutencao
+      page-number: 8
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&APP_SESSION.::&DEBUG.:::'
+        page: 8 # Status Manutencao
+
+  - # ====== Entry: Status Limpeza ===============================
+    id: 2237480116448263617
+    identification: 
+      name: Status Limpeza
+      page-number: 10
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:10:&APP_SESSION.::&DEBUG.:::'
+        page: 10 # Status Limpeza
+
+  - # ====== Entry: Acomodacao ===================================
+    id: 2237498946248264195
+    identification: 
+      name: Acomodacao
+      page-number: 12
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:12:&SESSION.::&DEBUG.:::'
+        page: 12 # Acomodacao
+
+  - # ====== Entry: Cliente ======================================
+    id: 2237517548513264801
+    identification: 
+      name: Cliente
+      page-number: 14
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.:::'
+        page: 14 # Cliente
+
+  - # ====== Entry: Reserva ======================================
+    id: 2237536443350265366
+    identification: 
+      name: Reserva
+      page-number: 16
+
+    execution: 
+      sequence: 10
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:16:&SESSION.::&DEBUG.:::'
+        page: 16 # Reserva
+
