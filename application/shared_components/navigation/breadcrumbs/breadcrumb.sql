@@ -1,0 +1,114 @@
+prompt --application/shared_components/navigation/breadcrumbs/breadcrumb
+begin
+--   Manifest
+--     MENU: Breadcrumb
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.05.31'
+,p_release=>'24.1.0'
+,p_default_workspace_id=>123520941329165394883
+,p_default_application_id=>208491
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_MARCIOSENAI'
+);
+wwv_flow_imp_shared.create_menu(
+ p_id=>wwv_flow_imp.id(2236516456817260877)
+,p_name=>'Breadcrumb'
+,p_created_on=>wwv_flow_imp.dz('20240621004346Z')
+,p_updated_on=>wwv_flow_imp.dz('20240622235905Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(2236516621630260877)
+,p_short_name=>'Home'
+,p_link=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>1
+,p_created_on=>wwv_flow_imp.dz('20240621004346Z')
+,p_updated_on=>wwv_flow_imp.dz('20240621004346Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(2237432783182261332)
+,p_short_name=>'Metodo Pagamento'
+,p_link=>'f?p=&APP_ID.:2:&SESSION.::&DEBUG.:::'
+,p_page_id=>2
+,p_created_on=>wwv_flow_imp.dz('20240621004350Z')
+,p_updated_on=>wwv_flow_imp.dz('20240622235850Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(2237444251560261880)
+,p_short_name=>'Status Reserva'
+,p_link=>'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>4
+,p_created_on=>wwv_flow_imp.dz('20240621004356Z')
+,p_updated_on=>wwv_flow_imp.dz('20240621004356Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(2237455658715262467)
+,p_short_name=>'Status Disponibilidade'
+,p_link=>'f?p=&APP_ID.:6:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>6
+,p_created_on=>wwv_flow_imp.dz('20240621004401Z')
+,p_updated_on=>wwv_flow_imp.dz('20240621004401Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(2237467817193263058)
+,p_short_name=>'Status Manutencao'
+,p_link=>'f?p=&APP_ID.:8:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>8
+,p_created_on=>wwv_flow_imp.dz('20240621004407Z')
+,p_updated_on=>wwv_flow_imp.dz('20240621004407Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(2237480116448263617)
+,p_short_name=>'Status Limpeza'
+,p_link=>'f?p=&APP_ID.:10:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>10
+,p_created_on=>wwv_flow_imp.dz('20240621004413Z')
+,p_updated_on=>wwv_flow_imp.dz('20240621004413Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(2237498946248264195)
+,p_short_name=>'Acomodacao'
+,p_link=>'f?p=&APP_ID.:12:&SESSION.::&DEBUG.:::'
+,p_page_id=>12
+,p_created_on=>wwv_flow_imp.dz('20240621004419Z')
+,p_updated_on=>wwv_flow_imp.dz('20240622235823Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(2237517548513264801)
+,p_short_name=>'Cliente'
+,p_link=>'f?p=&APP_ID.:14:&SESSION.::&DEBUG.:::'
+,p_page_id=>14
+,p_created_on=>wwv_flow_imp.dz('20240621004425Z')
+,p_updated_on=>wwv_flow_imp.dz('20240622235834Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(2237536443350265366)
+,p_short_name=>'Reserva'
+,p_link=>'f?p=&APP_ID.:16:&SESSION.::&DEBUG.:::'
+,p_page_id=>16
+,p_created_on=>wwv_flow_imp.dz('20240621004430Z')
+,p_updated_on=>wwv_flow_imp.dz('20240622235905Z')
+,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
+,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
+);
+wwv_flow_imp.component_end;
+end;
+/
