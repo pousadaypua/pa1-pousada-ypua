@@ -1,13 +1,13 @@
 prompt --application/shared_components/files/icons_app_icon_32_png
 begin
 --   Manifest
---     APP STATIC FILES: 208491
+--     APP STATIC FILES: 236183
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.05.31'
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
-,p_default_application_id=>208491
+,p_default_application_id=>236183
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
@@ -36,15 +36,11 @@ wwv_flow_imp.g_varchar2_table(21) := '55C564A890AA34A79980396E327A64DD160B81D1E9
 wwv_flow_imp.g_varchar2_table(22) := '1D098BD9D46F8F3EF7676340B1D6B863EF7E9605A25654FB570EAEB6171863CADE02B2609C710746B0DD65B398336AEF03D209CF33BDB9D0A94F053F5FD77C49A9E682EC50CAA8487334EA9FF1566C4D1EBAB795FECD483721DF78A913A56D4C8A796C7C';
 wwv_flow_imp.g_varchar2_table(23) := 'FA94E68932EECF9596526A465937FE4F5FFE0766F7BBA58FE2239B0000000049454E44AE426082';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(2237407540583261156)
+ p_id=>wwv_flow_imp.id(3340332330548411650)
 ,p_file_name=>'icons/app-icon-32.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'
 ,p_file_content => wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
-,p_created_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621005253Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp.component_end;
 end;

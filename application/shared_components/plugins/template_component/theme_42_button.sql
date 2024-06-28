@@ -7,12 +7,12 @@ wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.05.31'
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
-,p_default_application_id=>208491
+,p_default_application_id=>236183
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
 wwv_flow_imp_shared.create_plugin(
- p_id=>wwv_flow_imp.id(2237310877164261036)
+ p_id=>wwv_flow_imp.id(3340217056887411555)
 ,p_plugin_type=>'TEMPLATE COMPONENT'
 ,p_theme_id=>nvl(wwv_flow_application_install.get_theme_id, '42')
 ,p_name=>'THEME_42$BUTTON'
@@ -31,14 +31,10 @@ wwv_flow_imp_shared.create_plugin(
 ,p_reference_id=>1568467215199837453
 ,p_version_scn=>76331028
 ,p_subscribe_plugin_settings=>true
-,p_created_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(2237311101498261037)
-,p_plugin_id=>wwv_flow_imp.id(2237310877164261036)
+ p_id=>wwv_flow_imp.id(3340217391932411556)
+,p_plugin_id=>wwv_flow_imp.id(3340217056887411555)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>1
 ,p_display_sequence=>10
@@ -48,14 +44,10 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'RAW'
 ,p_is_translatable=>true
-,p_created_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(2237311487843261038)
-,p_plugin_id=>wwv_flow_imp.id(2237310877164261036)
+ p_id=>wwv_flow_imp.id(3340217664371411556)
+,p_plugin_id=>wwv_flow_imp.id(3340217056887411555)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>2
 ,p_display_sequence=>20
@@ -65,14 +57,10 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'ATTR'
 ,p_is_translatable=>false
-,p_created_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(2237311744350261038)
-,p_plugin_id=>wwv_flow_imp.id(2237310877164261036)
+ p_id=>wwv_flow_imp.id(3340217965795411557)
+,p_plugin_id=>wwv_flow_imp.id(3340217056887411555)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>3
 ,p_display_sequence=>30
@@ -82,14 +70,10 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'RAW'
 ,p_is_translatable=>false
-,p_created_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(2237312043773261039)
-,p_plugin_id=>wwv_flow_imp.id(2237310877164261036)
+ p_id=>wwv_flow_imp.id(3340218271217411557)
+,p_plugin_id=>wwv_flow_imp.id(3340217056887411555)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>4
 ,p_display_sequence=>40
@@ -99,14 +83,10 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'ATTR'
 ,p_is_translatable=>false
-,p_created_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(2237312379090261039)
-,p_plugin_id=>wwv_flow_imp.id(2237310877164261036)
+ p_id=>wwv_flow_imp.id(3340218550868411557)
+,p_plugin_id=>wwv_flow_imp.id(3340217056887411555)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>5
 ,p_display_sequence=>50
@@ -116,14 +96,10 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_is_required=>false
 ,p_escape_mode=>'ATTR'
 ,p_is_translatable=>false
-,p_created_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(2237312648057261039)
-,p_plugin_id=>wwv_flow_imp.id(2237310877164261036)
+ p_id=>wwv_flow_imp.id(3340218895216411557)
+,p_plugin_id=>wwv_flow_imp.id(3340217056887411555)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>6
 ,p_display_sequence=>60
@@ -134,14 +110,10 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'N'
 ,p_escape_mode=>'HTML'
 ,p_is_translatable=>false
-,p_created_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(2237312982283261040)
-,p_plugin_id=>wwv_flow_imp.id(2237310877164261036)
+ p_id=>wwv_flow_imp.id(3340219144941411558)
+,p_plugin_id=>wwv_flow_imp.id(3340217056887411555)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>7
 ,p_display_sequence=>70
@@ -152,14 +124,10 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'N'
 ,p_escape_mode=>'HTML'
 ,p_is_translatable=>false
-,p_created_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_plugin_attribute(
- p_id=>wwv_flow_imp.id(2237313208049261040)
-,p_plugin_id=>wwv_flow_imp.id(2237310877164261036)
+ p_id=>wwv_flow_imp.id(3340219450147411558)
+,p_plugin_id=>wwv_flow_imp.id(3340217056887411555)
 ,p_attribute_scope=>'COMPONENT'
 ,p_attribute_sequence=>8
 ,p_display_sequence=>80
@@ -170,10 +138,6 @@ wwv_flow_imp_shared.create_plugin_attribute(
 ,p_default_value=>'N'
 ,p_escape_mode=>'HTML'
 ,p_is_translatable=>false
-,p_created_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004347Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 end;
 /

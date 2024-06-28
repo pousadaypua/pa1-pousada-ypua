@@ -7,12 +7,12 @@ wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.05.31'
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
-,p_default_application_id=>208491
+,p_default_application_id=>236183
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
 wwv_flow_imp_shared.create_list_template(
- p_id=>wwv_flow_imp.id(2237265276650260956)
+ p_id=>wwv_flow_imp.id(3340171606212411524)
 ,p_list_template_current=>wwv_flow_string.join(wwv_flow_t_varchar2(
 '<li class="t-BadgeList-item #A02# is-current" aria-current="page">',
 '  <a class="t-BadgeList-wrap u-color #A04#" href="#LINK#" #A03#>',
@@ -45,10 +45,6 @@ wwv_flow_imp_shared.create_list_template(
 'A01: Large Number',
 'A02: List Item Classes',
 'A03: Link Attributes'))
-,p_created_on=>wwv_flow_imp.dz('20240621004346Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004346Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp.component_end;
 end;

@@ -1,9 +1,9 @@
 ---
-# ====== Application: Pousada do Ypuã v2.2 ===================
+# ====== Application: Pousada Quinta do Ypuã  - FINAL ========
 identification: 
-  name: Pousada do Ypuã v2.2
-  alias: POUSADADOYPUA-2-2
-  version: Release 2.2
+  name: Pousada Quinta do Ypuã  - FINAL
+  alias: POUSADADOYPUA-3-FINAL
+  version: Release 1.0
 
 row-search: 
   tokenize: true
@@ -30,7 +30,7 @@ advanced:
 
 authentication: 
   public-user: APEX_PUBLIC_USER
-  authentication-scheme: Oracle APEX Accounts # 2236516100255260877
+  authentication-scheme: Oracle APEX Accounts # 3340022412554411463
 
 authorization: 
   source-for-role-or-group-schemes: Access Control User Role Assignments
@@ -47,6 +47,8 @@ security:
   embed-in-frames: Deny
   referrer-policy: strict-origin
   html-escaping-mode: Extended
+  runtime-api-usage: 
+  - Modify This Application
 
 database-session: 
   parsing-schema: WKSP_MARCIOSENAI
@@ -59,8 +61,8 @@ globalization:
   automatic-csv-encoding: true
 
 application-format-masks: 
-  date: DD-MON-YYYY
-  timestamp: DD-MON-YYYY
+  date: DS
+  timestamp: DS
   timestamp-time-zone: DS
 
 character-value-comparison: 
@@ -68,17 +70,15 @@ character-value-comparison:
 
 logo: 
   type: Image and Text
-  image-url: '#APP_FILES#app-208491-logo.png'
-  text: Pousadadoypua
+  image-url: '#APP_FILES#app-236183-logo.png'
+  text: PousadaQuintaDoYpua
 
 progressive-web-app: 
   enable: true
   installable: true
-  display: Fullscreen
+  display: Standalone
   screen-orientation: Any
-  theme-color: '#f42b2b'
   ios-status-bar-style: Default
-  app-description: Sistema de Gestão de Hospedagem
   enable-push-notifications: false
 
 navigation: 
@@ -97,11 +97,11 @@ navigation-menu:
   - t-TreeNav--styleA
   - js-navCollapsed--hidden
   list-position: Side
-  list: Navigation Menu # 2236516949042260878
+  list: Navigation Menu # 3340023258454411464
 
 navigation-bar: 
   implementation: List
-  list: Navigation Bar # 2237406570207261153
+  list: Navigation Bar # 3340331284247411647
   list-template: Navigation Bar
   template-options: 
   - '#DEFAULT#'
@@ -123,20 +123,20 @@ substitutions:
     name: APP_NAME
 
   value: 
-    static-value: Pousadadoypua 2.2
+    static-value: Pousada Quinta do Ypuã
 
 component-settings: 
 - # ====== Component Setting: NATIVE_OPEN_AI_ASSISTANT =========
-  id: 2236511943742260874
+  id: 3340018246279411461
   identification: 
     name: NATIVE_OPEN_AI_ASSISTANT
     type: Dynamic Action
 
   subscription: 
-    version-number: 15538079930269
+    version-number: 15538721392041
 
 - # ====== Component Setting: NATIVE_COLOR_PICKER ==============
-  id: 2236512208797260874
+  id: 3340018540807411461
   identification: 
     name: NATIVE_COLOR_PICKER
     type: Item
@@ -146,10 +146,10 @@ component-settings:
     attribute-2: POPUP
 
   subscription: 
-    version-number: 15538079930270
+    version-number: 15538721392042
 
 - # ====== Component Setting: NATIVE_DATE_PICKER_APEX ==========
-  id: 2236512541129260875
+  id: 3340018874673411461
   identification: 
     name: NATIVE_DATE_PICKER_APEX
     type: Item
@@ -161,10 +161,10 @@ component-settings:
     attribute-4: FOCUS
 
   subscription: 
-    version-number: 15538079930271
+    version-number: 15538721392043
 
 - # ====== Component Setting: NATIVE_GEOCODED_ADDRESS ==========
-  id: 2236512808091260875
+  id: 3340019176472411461
   identification: 
     name: NATIVE_GEOCODED_ADDRESS
     type: Item
@@ -177,10 +177,10 @@ component-settings:
     attribute-6: LIST
 
   subscription: 
-    version-number: 15538079930272
+    version-number: 15538721392043
 
 - # ====== Component Setting: NATIVE_SELECT_MANY ===============
-  id: 2236513171347260875
+  id: 3340019476438411461
   identification: 
     name: NATIVE_SELECT_MANY
     type: Item
@@ -189,10 +189,10 @@ component-settings:
     attribute-1: separated
 
   subscription: 
-    version-number: 15538079930273
+    version-number: 15538721392043
 
 - # ====== Component Setting: NATIVE_SINGLE_CHECKBOX ===========
-  id: 2236513416191260875
+  id: 3340019735563411462
   identification: 
     name: NATIVE_SINGLE_CHECKBOX
     type: Item
@@ -202,10 +202,10 @@ component-settings:
     attribute-2: N
 
   subscription: 
-    version-number: 15538079930276
+    version-number: 15538721392043
 
 - # ====== Component Setting: NATIVE_STAR_RATING ===============
-  id: 2236513766357260875
+  id: 3340020055929411462
   identification: 
     name: NATIVE_STAR_RATING
     type: Item
@@ -215,10 +215,10 @@ component-settings:
     attribute-4: '#VALUE#'
 
   subscription: 
-    version-number: 15538079930277
+    version-number: 15538721392046
 
 - # ====== Component Setting: NATIVE_YES_NO ====================
-  id: 2236514098038260876
+  id: 3340020318725411462
   identification: 
     name: NATIVE_YES_NO
     type: Item
@@ -229,10 +229,10 @@ component-settings:
     attribute-5: SWITCH_CB
 
   subscription: 
-    version-number: 15538079930281
+    version-number: 15538721392047
 
 - # ====== Component Setting: NATIVE_GEOCODING =================
-  id: 2236514338740260876
+  id: 3340020602571411462
   identification: 
     name: NATIVE_GEOCODING
     type: Process
@@ -241,41 +241,41 @@ component-settings:
     attribute-1: RELAX_HOUSE_NUMBER
 
   subscription: 
-    version-number: 15538079930283
+    version-number: 15538721392050
 
 - # ====== Component Setting: NATIVE_DISPLAY_SELECTOR ==========
-  id: 2236514631387260876
+  id: 3340020977842411462
   identification: 
     name: NATIVE_DISPLAY_SELECTOR
     type: Region
 
   subscription: 
-    version-number: 15538079930285
+    version-number: 15538721392050
 
 - # ====== Component Setting: NATIVE_IR ========================
-  id: 2236514952826260876
+  id: 3340021246873411462
   identification: 
     name: NATIVE_IR
     type: Region
 
   subscription: 
-    version-number: 15538079930291
+    version-number: 15538721392050
 
 - # ====== Component Setting: NATIVE_MAP_REGION ================
-  id: 2236515228212260876
+  id: 3340021532483411463
   identification: 
     name: NATIVE_MAP_REGION
     type: Region
 
   subscription: 
-    version-number: 15538079930295
+    version-number: 15538721392054
 
 - # ====== Component Setting: NATIVE_ADFBC =====================
-  id: 2236515539836260877
+  id: 3340021867014411463
   identification: 
     name: NATIVE_ADFBC
     type: REST Data Source
 
   subscription: 
-    version-number: 15538079930295
+    version-number: 15538721392054
 

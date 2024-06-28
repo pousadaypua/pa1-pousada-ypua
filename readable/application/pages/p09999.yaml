@@ -39,7 +39,7 @@ server-cache:
 
 regions: 
 - # ====== Region: Pousadadoypua 2.2 ===========================
-  id: 2237415047389261165
+  id: 3340340205809411661
   identification: 
     name: Pousadadoypua 2.2
     type: Static Content
@@ -81,7 +81,7 @@ regions:
 
 page-items: 
 - # ====== Page Item: P9999_USERNAME ===========================
-  id: 2237415593605261166
+  id: 3340340762636411662
   identification: 
     name: P9999_USERNAME
     type: Text Field
@@ -99,7 +99,7 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Pousadadoypua 2.2 # 2237415047389261165
+    region: Pousadadoypua 2.2 # 3340340205809411661
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -142,7 +142,7 @@ page-items:
     restricted-characters: All characters can be saved.
 
 - # ====== Page Item: P9999_PASSWORD ===========================
-  id: 2237415910499261167
+  id: 3340341127856411663
   identification: 
     name: P9999_PASSWORD
     type: Password
@@ -156,7 +156,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Pousadadoypua 2.2 # 2237415047389261165
+    region: Pousadadoypua 2.2 # 3340340205809411661
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -196,7 +196,7 @@ page-items:
     restricted-characters: All characters can be saved.
 
 - # ====== Page Item: P9999_REMEMBER ===========================
-  id: 2237416335856261167
+  id: 3340341513814411663
   identification: 
     name: P9999_REMEMBER
     type: Checkbox
@@ -210,7 +210,7 @@ page-items:
 
   layout: 
     sequence: 30
-    region: Pousadadoypua 2.2 # 2237415047389261165
+    region: Pousadadoypua 2.2 # 3340340205809411661
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -241,7 +241,60 @@ page-items:
   server-side-condition: 
     type: Expression
     language: PL/SQL
-    pl/sql-expression: apex_authentication.persistent_cookies_enabled
+    pl/sql-expression: apex_authentication.persistent_cookies_enabled and not apex_authentication.persistent_auth_enabled
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P9999_PERSISTENT_AUTH ====================
+  id: 3340341966328411663
+  identification: 
+    name: P9999_PERSISTENT_AUTH
+    type: Checkbox
+
+  label: 
+    label: Remember me
+    alignment: Right
+
+  settings: 
+    use-defaults: true
+
+  layout: 
+    sequence: 30
+    region: Pousadadoypua 2.2 # 3340340205809411661
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Hidden
+    template-options: 
+    - '#DEFAULT#'
+
+  validation: 
+    value-required: false
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    type: Null
+    used: Only when current value in session state is null
+
+  session-state: 
+    storage: Per Session (Persistent)
+
+  server-side-condition: 
+    type: Expression
+    language: PL/SQL
+    pl/sql-expression: apex_authentication.persistent_auth_enabled
 
   security: 
     session-state-protection: Unrestricted
@@ -250,14 +303,14 @@ page-items:
 
 buttons: 
 - # ====== Button: LOGIN =======================================
-  id: 2237416736612261167
+  id: 3340342330395411664
   identification: 
     button-name: LOGIN
     label: Sign In
 
   layout: 
     sequence: 40
-    region: Pousadadoypua 2.2 # 2237415047389261165
+    region: Pousadadoypua 2.2 # 3340340205809411661
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -279,7 +332,7 @@ buttons:
 
 processes: 
 - # ====== Process: Login ======================================
-  id: 2237417065329261168
+  id: 3340342695558411664
   identification: 
     name: Login
     type: Invoke API
@@ -301,7 +354,7 @@ processes:
 
   parameters: 
   - # ====== Parameter: p_username ===============================
-    id: 2237417564188261168
+    id: 3340343173332411664
     identification: 
       name: p_username
 
@@ -318,7 +371,7 @@ processes:
       display-sequence: 1
 
   - # ====== Parameter: p_password ===============================
-    id: 2237418029743261168
+    id: 3340343655119411665
     identification: 
       name: p_password
 
@@ -335,7 +388,7 @@ processes:
       display-sequence: 2
 
   - # ====== Parameter: p_set_persistent_auth ====================
-    id: 2237418516157261169
+    id: 3340344106720411665
     identification: 
       name: p_set_persistent_auth
 
@@ -345,13 +398,14 @@ processes:
       has-default: true
 
     value: 
-      type: API Default
+      type: Item
+      item: P9999_PERSISTENT_AUTH
 
     advanced: 
       display-sequence: 3
 
 - # ====== Process: Set Username Cookie ========================
-  id: 2237418951272261169
+  id: 3340344560532411665
   identification: 
     name: Set Username Cookie
     type: Invoke API
@@ -373,7 +427,7 @@ processes:
 
   parameters: 
   - # ====== Parameter: p_username ===============================
-    id: 2237419431837261169
+    id: 3340345087017411665
     identification: 
       name: p_username
 
@@ -391,7 +445,7 @@ processes:
       display-sequence: 1
 
   - # ====== Parameter: p_consent ================================
-    id: 2237419975176261170
+    id: 3340345518316411666
     identification: 
       name: p_consent
 
@@ -408,7 +462,7 @@ processes:
       display-sequence: 2
 
 - # ====== Process: Get Username Cookie ========================
-  id: 2237420428319261170
+  id: 3340346015903411666
   identification: 
     name: Get Username Cookie
     type: Execute Code
@@ -427,7 +481,7 @@ processes:
     run-process: Once Per Page Visit (default)
 
 - # ====== Process: Clear Page(s) Cache ========================
-  id: 2237420817122261170
+  id: 3340346439751411666
   identification: 
     name: Clear Page(s) Cache
     type: Clear Session State

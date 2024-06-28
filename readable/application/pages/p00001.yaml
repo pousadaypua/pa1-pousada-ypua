@@ -37,10 +37,10 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Pousadadoypua ===============================
-  id: 2237422014194261172
+- # ====== Region: PousadaQuintaDoYpua =========================
+  id: 3340347637776411667
   identification: 
-    name: Pousadadoypua
+    name: PousadaQuintaDoYpua
     type: Static Content
 
   layout: 
@@ -79,13 +79,13 @@ regions:
       expand-shortcuts: false
 
 - # ====== Region: Page Navigation =============================
-  id: 2237598692104265423
+  id: 3340527788893415640
   identification: 
     name: Page Navigation
     type: List
 
   source: 
-    list: Page Navigation # 2237595198256265421
+    list: Page Navigation # 3340524218678415637
 
   layout: 
     sequence: 30

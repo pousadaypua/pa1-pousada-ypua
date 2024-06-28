@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Reserva ================================
+# ====== Page: Cliente =======================================
 id: 5
 identification: 
-  name: Status Reserva
-  alias: STATUS-RESERVA
-  title: Status Reserva
+  name: Cliente
+  alias: CLIENTE
+  title: Cliente
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,17 +41,17 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Status Reserva ==============================
-  id: 2237434705480261871
+- # ====== Region: Cliente =====================================
+  id: 3340369785267412349
   identification: 
-    name: Status Reserva
+    name: Cliente
     type: Form
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: STATUS_RESERVA
+    table-name: CLIENTE
     include-rowid-column: false
 
   layout: 
@@ -91,7 +91,7 @@ regions:
       lost-update-type: Row Values
 
 - # ====== Region: Buttons =====================================
-  id: 2237436472731261874
+  id: 3340374958853412354
   identification: 
     name: Buttons
     type: Static Content
@@ -130,7 +130,7 @@ regions:
 
 page-items: 
 - # ====== Page Item: P5_ID ====================================
-  id: 2237435058725261872
+  id: 3340370097965412350
   identification: 
     name: P5_ID
     type: Hidden
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Status Reserva # 2237434705480261871
+    region: Cliente # 3340369785267412349
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Reserva # 2237434705480261871
+    form-region: Cliente # 3340369785267412349
     column: ID
     data-type: NUMBER
     query-only: true
@@ -162,14 +162,14 @@ page-items:
     store-value-encrypted-in-session-state: true
     restricted-characters: All characters can be saved.
 
-- # ====== Page Item: P5_DESCRICAO =============================
-  id: 2237435466882261873
+- # ====== Page Item: P5_CPF ===================================
+  id: 3340370479737412351
   identification: 
-    name: P5_DESCRICAO
+    name: P5_CPF
     type: Text Field
 
   label: 
-    label: Descricao
+    label: Cpf
     alignment: Right
 
   settings: 
@@ -181,7 +181,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Status Reserva # 2237434705480261871
+    region: Cliente # 3340369785267412349
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -205,8 +205,309 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Reserva # 2237434705480261871
-    column: DESCRICAO
+    form-region: Cliente # 3340369785267412349
+    column: CPF
+    data-type: VARCHAR2
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P5_NOME ==================================
+  id: 3340370852366412351
+  identification: 
+    name: P5_NOME
+    type: Text Field
+
+  label: 
+    label: Nome
+    alignment: Right
+
+  settings: 
+    subtype: Text
+    trim-spaces: None
+    text-case: NO CHANGE
+    submit-when-enter-pressed: false
+    disabled: false
+
+  layout: 
+    sequence: 30
+    region: Cliente # 3340369785267412349
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 32
+
+  validation: 
+    value-required: true
+    maximum-length: 255
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Cliente # 3340369785267412349
+    column: NOME
+    data-type: VARCHAR2
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P5_DATA_NASC =============================
+  id: 3340371216649412351
+  identification: 
+    name: P5_DATA_NASC
+    type: Date Picker
+
+  label: 
+    label: Data Nasc
+    alignment: Right
+
+  settings: 
+    show-time: false
+    display-as: Popup
+    minimum-date: None
+    maximum-date: None
+    multiple-months: No
+    use-defaults: true
+
+  layout: 
+    sequence: 40
+    region: Cliente # 3340369785267412349
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Optional - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 32
+
+  validation: 
+    value-required: false
+    maximum-length: 255
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Cliente # 3340369785267412349
+    column: DATA_NASC
+    data-type: DATE
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P5_TELEFONE ==============================
+  id: 3340371607734412352
+  identification: 
+    name: P5_TELEFONE
+    type: Text Field
+
+  label: 
+    label: Telefone
+    alignment: Right
+
+  settings: 
+    subtype: Text
+    trim-spaces: None
+    text-case: NO CHANGE
+    submit-when-enter-pressed: false
+    disabled: false
+
+  layout: 
+    sequence: 50
+    region: Cliente # 3340369785267412349
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 32
+
+  validation: 
+    value-required: true
+    maximum-length: 15
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Cliente # 3340369785267412349
+    column: TELEFONE
+    data-type: VARCHAR2
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P5_EMAIL =================================
+  id: 3340372060369412352
+  identification: 
+    name: P5_EMAIL
+    type: Text Field
+
+  label: 
+    label: Email
+    alignment: Right
+
+  settings: 
+    subtype: Text
+    trim-spaces: None
+    text-case: NO CHANGE
+    submit-when-enter-pressed: false
+    disabled: false
+
+  layout: 
+    sequence: 60
+    region: Cliente # 3340369785267412349
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 32
+
+  validation: 
+    value-required: true
+    maximum-length: 255
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Cliente # 3340369785267412349
+    column: EMAIL
+    data-type: VARCHAR2
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P5_ENDERECO ==============================
+  id: 3340372459120412352
+  identification: 
+    name: P5_ENDERECO
+    type: Text Field
+
+  label: 
+    label: Endereco
+    alignment: Right
+
+  settings: 
+    subtype: Text
+    trim-spaces: None
+    text-case: NO CHANGE
+    submit-when-enter-pressed: false
+    disabled: false
+
+  layout: 
+    sequence: 70
+    region: Cliente # 3340369785267412349
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 32
+
+  validation: 
+    value-required: true
+    maximum-length: 255
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Cliente # 3340369785267412349
+    column: ENDERECO
     data-type: VARCHAR2
     query-only: false
     primary-key: false
@@ -224,14 +525,14 @@ page-items:
 
 buttons: 
 - # ====== Button: CANCEL ======================================
-  id: 2237436823022261874
+  id: 3340375386559412354
   identification: 
     button-name: CANCEL
     label: Cancel
 
   layout: 
     sequence: 10
-    region: Buttons # 2237436472731261874
+    region: Buttons # 3340374958853412354
     slot: CLOSE
     start-new-layout: false
     start-new-row: true
@@ -250,14 +551,14 @@ buttons:
     execute-validations: true
 
 - # ====== Button: DELETE ======================================
-  id: 2237438210842261875
+  id: 3340376773789412355
   identification: 
     button-name: DELETE
     label: Delete
 
   layout: 
     sequence: 20
-    region: Buttons # 2237436472731261874
+    region: Buttons # 3340374958853412354
     slot: DELETE
     start-new-layout: false
     start-new-row: true
@@ -289,14 +590,14 @@ buttons:
     item: P5_ID
 
 - # ====== Button: SAVE ========================================
-  id: 2237438647321261875
+  id: 3340377141182412355
   identification: 
     button-name: SAVE
     label: Apply Changes
 
   layout: 
     sequence: 30
-    region: Buttons # 2237436472731261874
+    region: Buttons # 3340374958853412354
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -322,14 +623,14 @@ buttons:
     item: P5_ID
 
 - # ====== Button: CREATE ======================================
-  id: 2237439021230261876
+  id: 3340377587473412356
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 40
-    region: Buttons # 2237436472731261874
+    region: Buttons # 3340374958853412354
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -356,7 +657,7 @@ buttons:
 
 dynamic-actions: 
 - # ====== Dynamic Action: Cancel Dialog =======================
-  id: 2237436948450261874
+  id: 3340375433679412354
   identification: 
     name: Cancel Dialog
 
@@ -368,41 +669,41 @@ dynamic-actions:
   when: 
     event: Click
     selection-type: Button
-    button: CANCEL # 2237436823022261874
+    button: CANCEL # 3340375386559412354
 
   actions: 
   - # ====== Action: Cancel Dialog ===============================
-    id: 2237437785591261875
+    id: 3340376282920412355
     identification: 
       action: Cancel Dialog
 
     execution: 
       sequence: 10
-      event: Cancel Dialog # 2237436948450261874
+      event: Cancel Dialog # 3340375433679412354
       fire-when-event-result-is: True
       fire-on-initialization: false
 
 processes: 
-- # ====== Process: Initialize form Status Reserva =============
-  id: 2237439480374261876
+- # ====== Process: Initialize form Cliente ====================
+  id: 3340377973320412356
   identification: 
-    name: Initialize form Status Reserva
+    name: Initialize form Cliente
     type: Form - Initialization
     execution-chain: None
-    form-region: Status Reserva # 2237434705480261871
+    form-region: Cliente # 3340369785267412349
 
   execution: 
     sequence: 10
     point: Before Header
     run-process: Once Per Page Visit (default)
 
-- # ====== Process: Process form Status Reserva ================
-  id: 2237439849364261876
+- # ====== Process: Process form Cliente =======================
+  id: 3340378337044412356
   identification: 
-    name: Process form Status Reserva
+    name: Process form Cliente
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Status Reserva # 2237434705480261871
+    form-region: Cliente # 3340369785267412349
 
   settings: 
     target-type: Region Source
@@ -416,10 +717,11 @@ processes:
     run-process: Once Per Page Visit (default)
 
   error: 
+    error-message: Este CPF já está cadastrado no Sistema!!!
     display-location: Inline in Notification
 
 - # ====== Process: Close Dialog ===============================
-  id: 2237440284126261876
+  id: 3340378788431412356
   identification: 
     name: Close Dialog
     type: Close Dialog

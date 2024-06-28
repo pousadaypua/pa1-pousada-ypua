@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Limpeza ================================
+# ====== Page: Status Reserva ================================
 id: 11
 identification: 
-  name: Status Limpeza
-  alias: STATUS-LIMPEZA
-  title: Status Limpeza
+  name: Status Reserva
+  alias: STATUS-RESERVA
+  title: Status Reserva
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,17 +41,17 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Status Limpeza ==============================
-  id: 2237470687485263608
+- # ====== Region: Status Reserva ==============================
+  id: 3340421962266413986
   identification: 
-    name: Status Limpeza
+    name: Status Reserva
     type: Form
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: STATUS_LIMPEZA
+    table-name: STATUS_RESERVA
     include-rowid-column: false
 
   layout: 
@@ -91,7 +91,7 @@ regions:
       lost-update-type: Row Values
 
 - # ====== Region: Buttons =====================================
-  id: 2237472338826263610
+  id: 3340423643704413988
   identification: 
     name: Buttons
     type: Static Content
@@ -130,7 +130,7 @@ regions:
 
 page-items: 
 - # ====== Page Item: P11_ID ===================================
-  id: 2237470974043263609
+  id: 3340422224663413987
   identification: 
     name: P11_ID
     type: Hidden
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Status Limpeza # 2237470687485263608
+    region: Status Reserva # 3340421962266413986
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Limpeza # 2237470687485263608
+    form-region: Status Reserva # 3340421962266413986
     column: ID
     data-type: NUMBER
     query-only: true
@@ -163,7 +163,7 @@ page-items:
     restricted-characters: All characters can be saved.
 
 - # ====== Page Item: P11_DESCRICAO ============================
-  id: 2237471352849263609
+  id: 3340422699996413987
   identification: 
     name: P11_DESCRICAO
     type: Text Field
@@ -181,7 +181,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Status Limpeza # 2237470687485263608
+    region: Status Reserva # 3340421962266413986
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -205,7 +205,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Limpeza # 2237470687485263608
+    form-region: Status Reserva # 3340421962266413986
     column: DESCRICAO
     data-type: VARCHAR2
     query-only: false
@@ -224,14 +224,14 @@ page-items:
 
 buttons: 
 - # ====== Button: CANCEL ======================================
-  id: 2237472722007263611
+  id: 3340424022448413988
   identification: 
     button-name: CANCEL
     label: Cancel
 
   layout: 
     sequence: 10
-    region: Buttons # 2237472338826263610
+    region: Buttons # 3340423643704413988
     slot: CLOSE
     start-new-layout: false
     start-new-row: true
@@ -250,14 +250,14 @@ buttons:
     execute-validations: true
 
 - # ====== Button: DELETE ======================================
-  id: 2237474118477263612
+  id: 3340425404421413989
   identification: 
     button-name: DELETE
     label: Delete
 
   layout: 
     sequence: 20
-    region: Buttons # 2237472338826263610
+    region: Buttons # 3340423643704413988
     slot: DELETE
     start-new-layout: false
     start-new-row: true
@@ -289,14 +289,14 @@ buttons:
     item: P11_ID
 
 - # ====== Button: SAVE ========================================
-  id: 2237474580109263612
+  id: 3340425846505413989
   identification: 
     button-name: SAVE
     label: Apply Changes
 
   layout: 
     sequence: 30
-    region: Buttons # 2237472338826263610
+    region: Buttons # 3340423643704413988
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -322,14 +322,14 @@ buttons:
     item: P11_ID
 
 - # ====== Button: CREATE ======================================
-  id: 2237474920343263612
+  id: 3340426206686413989
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 40
-    region: Buttons # 2237472338826263610
+    region: Buttons # 3340423643704413988
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -356,7 +356,7 @@ buttons:
 
 dynamic-actions: 
 - # ====== Dynamic Action: Cancel Dialog =======================
-  id: 2237472862523263611
+  id: 3340424158263413988
   identification: 
     name: Cancel Dialog
 
@@ -368,41 +368,41 @@ dynamic-actions:
   when: 
     event: Click
     selection-type: Button
-    button: CANCEL # 2237472722007263611
+    button: CANCEL # 3340424022448413988
 
   actions: 
   - # ====== Action: Cancel Dialog ===============================
-    id: 2237473675909263611
+    id: 3340424957214413989
     identification: 
       action: Cancel Dialog
 
     execution: 
       sequence: 10
-      event: Cancel Dialog # 2237472862523263611
+      event: Cancel Dialog # 3340424158263413988
       fire-when-event-result-is: True
       fire-on-initialization: false
 
 processes: 
-- # ====== Process: Initialize form Status Limpeza =============
-  id: 2237475313751263613
+- # ====== Process: Initialize form Status Reserva =============
+  id: 3340426694736413990
   identification: 
-    name: Initialize form Status Limpeza
+    name: Initialize form Status Reserva
     type: Form - Initialization
     execution-chain: None
-    form-region: Status Limpeza # 2237470687485263608
+    form-region: Status Reserva # 3340421962266413986
 
   execution: 
     sequence: 10
     point: Before Header
     run-process: Once Per Page Visit (default)
 
-- # ====== Process: Process form Status Limpeza ================
-  id: 2237475710556263613
+- # ====== Process: Process form Status Reserva ================
+  id: 3340427044193413990
   identification: 
-    name: Process form Status Limpeza
+    name: Process form Status Reserva
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Status Limpeza # 2237470687485263608
+    form-region: Status Reserva # 3340421962266413986
 
   settings: 
     target-type: Region Source
@@ -419,7 +419,7 @@ processes:
     display-location: Inline in Notification
 
 - # ====== Process: Close Dialog ===============================
-  id: 2237476187152263613
+  id: 3340427472254413990
   identification: 
     name: Close Dialog
     type: Close Dialog

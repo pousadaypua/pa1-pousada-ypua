@@ -7,12 +7,12 @@ wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.05.31'
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
-,p_default_application_id=>208491
+,p_default_application_id=>236183
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
 wwv_flow_imp_shared.create_row_template(
- p_id=>wwv_flow_imp.id(2237249423008260948)
+ p_id=>wwv_flow_imp.id(3340155899436411518)
 ,p_row_template_name=>'Comments'
 ,p_internal_name=>'COMMENTS'
 ,p_row_template1=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -61,10 +61,6 @@ wwv_flow_imp_shared.create_row_template(
 ,p_preset_template_options=>'t-Comments--chat'
 ,p_reference_id=>2611722012730764232
 ,p_translate_this_template=>'N'
-,p_created_on=>wwv_flow_imp.dz('20240621004346Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004346Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp.component_end;
 end;

@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Reserva ================================
+# ====== Page: Cliente =======================================
 id: 4
 identification: 
-  name: Status Reserva
-  alias: STATUS-RESERVA1
-  title: Status Reserva
+  name: Cliente
+  alias: CLIENTE1
+  title: Cliente
 
 appearance: 
   page-mode: Normal
@@ -49,17 +49,17 @@ help:
     <p>Click the <strong>Reset</strong> button to reset the interactive report back to the default settings.</p>
 
 regions: 
-- # ====== Region: Status Reserva ==============================
-  id: 2237440815693261877
+- # ====== Region: Cliente =====================================
+  id: 3340379350365412357
   identification: 
-    name: Status Reserva
+    name: Cliente
     type: Interactive Report
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: STATUS_RESERVA
+    table-name: CLIENTE
     include-rowid-column: false
 
   layout: 
@@ -86,12 +86,12 @@ regions:
     customizable: Not Customizable By End Users
 
   attributes: 
-    id: 2237440956010261877
+    id: 3340379471471412357
     link: 
       link-column: Link to Custom Target
       target: 
         url: 'f?p=&APP_ID.:5:&APP_SESSION.::&DEBUG.:RP:P5_ID:\#ID#\'
-        page: 5 # Status Reserva
+        page: 5 # Cliente
         clear-cache: RP
         values: 
           p5_id: '#ID#'
@@ -156,14 +156,14 @@ regions:
 
     saved-reports: 
     - # ====== Saved Report: Primary Report ========================
-      id: 2237542378511265372
+      id: 3340478607920415603
       identification: 
         name: Primary Report
-        alias: 22375424
+        alias: 33404787
 
     columns: 
     - # ====== Column: ID ==========================================
-      id: 2237441643934261878
+      id: 3340380147035412358
       identification: 
         column-name: ID
         type: Hidden
@@ -180,14 +180,14 @@ regions:
       security: 
         escape-special-characters: true
 
-    - # ====== Column: DESCRICAO ===================================
-      id: 2237442042808261879
+    - # ====== Column: CPF =========================================
+      id: 3340380552462412358
       identification: 
-        column-name: DESCRICAO
+        column-name: CPF
         type: Plain Text
 
       heading: 
-        heading: Descricao
+        heading: Cpf
         alignment: start
 
       single-row-view: 
@@ -195,6 +195,222 @@ regions:
 
       layout: 
         sequence: 2
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: NOME ========================================
+      id: 3340380995425412359
+      identification: 
+        column-name: NOME
+        type: Plain Text
+
+      heading: 
+        heading: Nome
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 3
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: DATA_NASC ===================================
+      id: 3340381340262412359
+      identification: 
+        column-name: DATA_NASC
+        type: Plain Text
+
+      heading: 
+        heading: Data Nasc
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 4
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+        date-ranges: All
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: TELEFONE ====================================
+      id: 3340381743401412359
+      identification: 
+        column-name: TELEFONE
+        type: Link
+
+      heading: 
+        heading: Telefone
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 5
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      link: 
+        target: 
+          url: 'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:2,RR:IR_ID_CLIENTE:\#CPF#\'
+          page: 2 # Reserva
+          clear-cache: 2,RR
+          values: 
+            ir_id_cliente: '#CPF#'
+
+        link-text: '#TELEFONE#'
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: EMAIL =======================================
+      id: 3340382155677412359
+      identification: 
+        column-name: EMAIL
+        type: Plain Text
+
+      heading: 
+        heading: Email
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 6
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: ENDERECO ====================================
+      id: 3340382552152412360
+      identification: 
+        column-name: ENDERECO
+        type: Plain Text
+
+      heading: 
+        heading: Endereco
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 7
         column-alignment: start
 
       accessibility: 
@@ -241,7 +457,7 @@ regions:
         font-size: 12
         font-color: '#000000'
         alignment: center
-        page-header-text: Status Reserva
+        page-header-text: Cliente
 
       column-headings: 
         font: Helvetica
@@ -265,13 +481,13 @@ regions:
         alignment: center
 
 - # ====== Region: Breadcrumb ==================================
-  id: 2237443700121261880
+  id: 3340384247512412361
   identification: 
     name: Breadcrumb
     type: Breadcrumb
 
   source: 
-    breadcrumb: Breadcrumb # 2236516456817260877
+    breadcrumb: Breadcrumb # 3340022758891411463
 
   layout: 
     sequence: 20
@@ -309,14 +525,14 @@ regions:
 
 buttons: 
 - # ====== Button: CREATE ======================================
-  id: 2237442581925261879
+  id: 3340383054443412360
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 10
-    region: Status Reserva # 2237440815693261877
+    region: Cliente # 3340379350365412357
     slot: RIGHT_OF_IR_SEARCH_BAR
     start-new-layout: false
     start-new-row: true
@@ -334,14 +550,14 @@ buttons:
     action: Redirect to Page in this Application
     target: 
       url: 'f?p=&APP_ID.:5:&APP_SESSION.::&DEBUG.:5::'
-      page: 5 # Status Reserva
+      page: 5 # Cliente
       clear-cache: 5
 
     warn-on-unsaved-changes: Do Not Check
 
 dynamic-actions: 
 - # ====== Dynamic Action: Edit Report - Dialog Closed =========
-  id: 2237442859481261879
+  id: 3340383325155412360
   identification: 
     name: Edit Report - Dialog Closed
 
@@ -353,21 +569,21 @@ dynamic-actions:
   when: 
     event: Dialog Closed
     selection-type: Region
-    region: Status Reserva # 2237440815693261877
+    region: Cliente # 3340379350365412357
 
   actions: 
   - # ====== Action: Refresh =====================================
-    id: 2237443380762261880
+    id: 3340383809858412360
     identification: 
       action: Refresh
 
     affected-elements: 
       selection-type: Region
-      region: Status Reserva # 2237440815693261877
+      region: Cliente # 3340379350365412357
 
     execution: 
       sequence: 10
-      event: Edit Report - Dialog Closed # 2237442859481261879
+      event: Edit Report - Dialog Closed # 3340383325155412360
       fire-when-event-result-is: True
       fire-on-initialization: false
 

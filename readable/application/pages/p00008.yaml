@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Manutencao =============================
+# ====== Page: Metodo Pagamento ==============================
 id: 8
 identification: 
-  name: Status Manutencao
-  alias: STATUS-MANUTENCAO1
-  title: Status Manutencao
+  name: Metodo Pagamento
+  alias: METODO-PAGAMENTO1
+  title: Metodo Pagamento
 
 appearance: 
   page-mode: Normal
@@ -49,17 +49,17 @@ help:
     <p>Click the <strong>Reset</strong> button to reset the interactive report back to the default settings.</p>
 
 regions: 
-- # ====== Region: Status Manutencaoes =========================
-  id: 2237464488758263054
+- # ====== Region: Metodo Pagamentoes ==========================
+  id: 3340417263878413451
   identification: 
-    name: Status Manutencaoes
+    name: Metodo Pagamentoes
     type: Interactive Report
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: STATUS_MANUTENCAO
+    table-name: METODO_PAGAMENTO
     include-rowid-column: false
 
   layout: 
@@ -86,12 +86,12 @@ regions:
     customizable: Not Customizable By End Users
 
   attributes: 
-    id: 2237464540515263054
+    id: 3340417342614413451
     link: 
       link-column: Link to Custom Target
       target: 
         url: 'f?p=&APP_ID.:9:&APP_SESSION.::&DEBUG.:RP:P9_ID:\#ID#\'
-        page: 9 # Status Manutencao
+        page: 9 # Metodo Pagamento
         clear-cache: RP
         values: 
           p9_id: '#ID#'
@@ -156,14 +156,14 @@ regions:
 
     saved-reports: 
     - # ====== Saved Report: Primary Report ========================
-      id: 2237551495419265380
+      id: 3340501689143415620
       identification: 
         name: Primary Report
-        alias: 22375515
+        alias: 33405017
 
     columns: 
     - # ====== Column: ID ==========================================
-      id: 2237465255515263056
+      id: 3340418098586413452
       identification: 
         column-name: ID
         type: Hidden
@@ -181,7 +181,7 @@ regions:
         escape-special-characters: true
 
     - # ====== Column: DESCRICAO ===================================
-      id: 2237465611931263056
+      id: 3340418403902413452
       identification: 
         column-name: DESCRICAO
         type: Plain Text
@@ -241,7 +241,7 @@ regions:
         font-size: 12
         font-color: '#000000'
         alignment: center
-        page-header-text: Status Manutencao
+        page-header-text: Metodo Pagamento
 
       column-headings: 
         font: Helvetica
@@ -265,13 +265,13 @@ regions:
         alignment: center
 
 - # ====== Region: Breadcrumb ==================================
-  id: 2237467307795263057
+  id: 3340420121418413453
   identification: 
     name: Breadcrumb
     type: Breadcrumb
 
   source: 
-    breadcrumb: Breadcrumb # 2236516456817260877
+    breadcrumb: Breadcrumb # 3340022758891411463
 
   layout: 
     sequence: 20
@@ -309,14 +309,14 @@ regions:
 
 buttons: 
 - # ====== Button: CREATE ======================================
-  id: 2237466150495263056
+  id: 3340418966403413452
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 10
-    region: Status Manutencaoes # 2237464488758263054
+    region: Metodo Pagamentoes # 3340417263878413451
     slot: RIGHT_OF_IR_SEARCH_BAR
     start-new-layout: false
     start-new-row: true
@@ -334,14 +334,14 @@ buttons:
     action: Redirect to Page in this Application
     target: 
       url: 'f?p=&APP_ID.:9:&APP_SESSION.::&DEBUG.:9::'
-      page: 9 # Status Manutencao
+      page: 9 # Metodo Pagamento
       clear-cache: 9
 
     warn-on-unsaved-changes: Do Not Check
 
 dynamic-actions: 
 - # ====== Dynamic Action: Edit Report - Dialog Closed =========
-  id: 2237466453159263057
+  id: 3340419267829413452
   identification: 
     name: Edit Report - Dialog Closed
 
@@ -353,21 +353,21 @@ dynamic-actions:
   when: 
     event: Dialog Closed
     selection-type: Region
-    region: Status Manutencaoes # 2237464488758263054
+    region: Metodo Pagamentoes # 3340417263878413451
 
   actions: 
   - # ====== Action: Refresh =====================================
-    id: 2237466987223263057
+    id: 3340419790744413453
     identification: 
       action: Refresh
 
     affected-elements: 
       selection-type: Region
-      region: Status Manutencaoes # 2237464488758263054
+      region: Metodo Pagamentoes # 3340417263878413451
 
     execution: 
       sequence: 10
-      event: Edit Report - Dialog Closed # 2237466453159263057
+      event: Edit Report - Dialog Closed # 3340419267829413452
       fire-when-event-result-is: True
       fire-on-initialization: false
 

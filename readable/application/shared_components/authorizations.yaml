@@ -1,11 +1,11 @@
 ---
 - # ====== Authorization: Administration Rights ================
-  id: 2237410093241261158
+  id: 3340335239157411655
   identification: 
     name: Administration Rights
 
   subscription: 
-    version-number: 15538079945795
+    version-number: 15538721394067
 
   authorization-scheme: 
     type: PL/SQL Function Returning Boolean

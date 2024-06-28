@@ -1,10 +1,10 @@
 ---
-# ====== Page: Cliente =======================================
+# ====== Page: Status Manutencao =============================
 id: 15
 identification: 
-  name: Cliente
-  alias: CLIENTE
-  title: Cliente
+  name: Status Manutencao
+  alias: STATUS-MANUTENCAO
+  title: Status Manutencao
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,17 +41,17 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Cliente =====================================
-  id: 2237502549882264788
+- # ====== Region: Status Manutencao ===========================
+  id: 3340443836743415054
   identification: 
-    name: Cliente
+    name: Status Manutencao
     type: Form
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: CLIENTE
+    table-name: STATUS_MANUTENCAO
     include-rowid-column: false
 
   layout: 
@@ -91,7 +91,7 @@ regions:
       lost-update-type: Row Values
 
 - # ====== Region: Buttons =====================================
-  id: 2237507748272264793
+  id: 3340445519805415056
   identification: 
     name: Buttons
     type: Static Content
@@ -130,7 +130,7 @@ regions:
 
 page-items: 
 - # ====== Page Item: P15_ID ===================================
-  id: 2237502872039264788
+  id: 3340444147919415055
   identification: 
     name: P15_ID
     type: Hidden
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Cliente # 2237502549882264788
+    region: Status Manutencao # 3340443836743415054
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Cliente # 2237502549882264788
+    form-region: Status Manutencao # 3340443836743415054
     column: ID
     data-type: NUMBER
     query-only: true
@@ -162,14 +162,14 @@ page-items:
     store-value-encrypted-in-session-state: true
     restricted-characters: All characters can be saved.
 
-- # ====== Page Item: P15_CPF ==================================
-  id: 2237503292436264789
+- # ====== Page Item: P15_DESCRICAO ============================
+  id: 3340444540432415056
   identification: 
-    name: P15_CPF
+    name: P15_DESCRICAO
     type: Text Field
 
   label: 
-    label: Cpf
+    label: Descricao
     alignment: Right
 
   settings: 
@@ -181,7 +181,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Cliente # 2237502549882264788
+    region: Status Manutencao # 3340443836743415054
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -205,309 +205,8 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Cliente # 2237502549882264788
-    column: CPF
-    data-type: VARCHAR2
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P15_NOME =================================
-  id: 2237503620879264789
-  identification: 
-    name: P15_NOME
-    type: Text Field
-
-  label: 
-    label: Nome
-    alignment: Right
-
-  settings: 
-    subtype: Text
-    trim-spaces: None
-    text-case: NO CHANGE
-    submit-when-enter-pressed: false
-    disabled: false
-
-  layout: 
-    sequence: 30
-    region: Cliente # 2237502549882264788
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    width: 32
-
-  validation: 
-    value-required: true
-    maximum-length: 255
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Cliente # 2237502549882264788
-    column: NOME
-    data-type: VARCHAR2
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P15_DATA_NASC ============================
-  id: 2237504008688264790
-  identification: 
-    name: P15_DATA_NASC
-    type: Date Picker
-
-  label: 
-    label: Data Nasc
-    alignment: Right
-
-  settings: 
-    show-time: false
-    display-as: Popup
-    minimum-date: None
-    maximum-date: None
-    multiple-months: No
-    use-defaults: true
-
-  layout: 
-    sequence: 40
-    region: Cliente # 2237502549882264788
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Optional - Floating
-    template-options: 
-    - '#DEFAULT#'
-    width: 32
-
-  validation: 
-    value-required: false
-    maximum-length: 255
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Cliente # 2237502549882264788
-    column: DATA_NASC
-    data-type: DATE
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P15_TELEFONE =============================
-  id: 2237504478500264790
-  identification: 
-    name: P15_TELEFONE
-    type: Text Field
-
-  label: 
-    label: Telefone
-    alignment: Right
-
-  settings: 
-    subtype: Text
-    trim-spaces: None
-    text-case: NO CHANGE
-    submit-when-enter-pressed: false
-    disabled: false
-
-  layout: 
-    sequence: 50
-    region: Cliente # 2237502549882264788
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    width: 32
-
-  validation: 
-    value-required: true
-    maximum-length: 15
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Cliente # 2237502549882264788
-    column: TELEFONE
-    data-type: VARCHAR2
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P15_EMAIL ================================
-  id: 2237504867669264790
-  identification: 
-    name: P15_EMAIL
-    type: Text Field
-
-  label: 
-    label: Email
-    alignment: Right
-
-  settings: 
-    subtype: Text
-    trim-spaces: None
-    text-case: NO CHANGE
-    submit-when-enter-pressed: false
-    disabled: false
-
-  layout: 
-    sequence: 60
-    region: Cliente # 2237502549882264788
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    width: 32
-
-  validation: 
-    value-required: true
-    maximum-length: 255
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Cliente # 2237502549882264788
-    column: EMAIL
-    data-type: VARCHAR2
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P15_ENDERECO =============================
-  id: 2237505227025264791
-  identification: 
-    name: P15_ENDERECO
-    type: Text Field
-
-  label: 
-    label: Endereco
-    alignment: Right
-
-  settings: 
-    subtype: Text
-    trim-spaces: None
-    text-case: NO CHANGE
-    submit-when-enter-pressed: false
-    disabled: false
-
-  layout: 
-    sequence: 70
-    region: Cliente # 2237502549882264788
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    width: 32
-
-  validation: 
-    value-required: true
-    maximum-length: 255
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Cliente # 2237502549882264788
-    column: ENDERECO
+    form-region: Status Manutencao # 3340443836743415054
+    column: DESCRICAO
     data-type: VARCHAR2
     query-only: false
     primary-key: false
@@ -525,14 +224,14 @@ page-items:
 
 buttons: 
 - # ====== Button: CANCEL ======================================
-  id: 2237508132167264793
+  id: 3340445938496415056
   identification: 
     button-name: CANCEL
     label: Cancel
 
   layout: 
     sequence: 10
-    region: Buttons # 2237507748272264793
+    region: Buttons # 3340445519805415056
     slot: CLOSE
     start-new-layout: false
     start-new-row: true
@@ -551,14 +250,14 @@ buttons:
     execute-validations: true
 
 - # ====== Button: DELETE ======================================
-  id: 2237509547727264794
+  id: 3340447310724415057
   identification: 
     button-name: DELETE
     label: Delete
 
   layout: 
     sequence: 20
-    region: Buttons # 2237507748272264793
+    region: Buttons # 3340445519805415056
     slot: DELETE
     start-new-layout: false
     start-new-row: true
@@ -590,14 +289,14 @@ buttons:
     item: P15_ID
 
 - # ====== Button: SAVE ========================================
-  id: 2237509956992264794
+  id: 3340447713194415057
   identification: 
     button-name: SAVE
     label: Apply Changes
 
   layout: 
     sequence: 30
-    region: Buttons # 2237507748272264793
+    region: Buttons # 3340445519805415056
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -623,14 +322,14 @@ buttons:
     item: P15_ID
 
 - # ====== Button: CREATE ======================================
-  id: 2237510358939264794
+  id: 3340448115803415058
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 40
-    region: Buttons # 2237507748272264793
+    region: Buttons # 3340445519805415056
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -657,7 +356,7 @@ buttons:
 
 dynamic-actions: 
 - # ====== Dynamic Action: Cancel Dialog =======================
-  id: 2237508210241264793
+  id: 3340446059608415056
   identification: 
     name: Cancel Dialog
 
@@ -669,41 +368,41 @@ dynamic-actions:
   when: 
     event: Click
     selection-type: Button
-    button: CANCEL # 2237508132167264793
+    button: CANCEL # 3340445938496415056
 
   actions: 
   - # ====== Action: Cancel Dialog ===============================
-    id: 2237509064459264794
+    id: 3340446800135415057
     identification: 
       action: Cancel Dialog
 
     execution: 
       sequence: 10
-      event: Cancel Dialog # 2237508210241264793
+      event: Cancel Dialog # 3340446059608415056
       fire-when-event-result-is: True
       fire-on-initialization: false
 
 processes: 
-- # ====== Process: Initialize form Cliente ====================
-  id: 2237510776339264795
+- # ====== Process: Initialize form Status Manutencao ==========
+  id: 3340448586579415058
   identification: 
-    name: Initialize form Cliente
+    name: Initialize form Status Manutencao
     type: Form - Initialization
     execution-chain: None
-    form-region: Cliente # 2237502549882264788
+    form-region: Status Manutencao # 3340443836743415054
 
   execution: 
     sequence: 10
     point: Before Header
     run-process: Once Per Page Visit (default)
 
-- # ====== Process: Process form Cliente =======================
-  id: 2237511168395264795
+- # ====== Process: Process form Status Manutencao =============
+  id: 3340448915803415058
   identification: 
-    name: Process form Cliente
+    name: Process form Status Manutencao
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Cliente # 2237502549882264788
+    form-region: Status Manutencao # 3340443836743415054
 
   settings: 
     target-type: Region Source
@@ -716,15 +415,11 @@ processes:
     point: Processing
     run-process: Once Per Page Visit (default)
 
-  success-message: 
-    success-message: Cliente Cadastrado com Sucesso!!!
-
   error: 
-    error-message: CPF já cadastrado!!!
     display-location: Inline in Notification
 
 - # ====== Process: Close Dialog ===============================
-  id: 2237511576772264795
+  id: 3340449327249415058
   identification: 
     name: Close Dialog
     type: Close Dialog

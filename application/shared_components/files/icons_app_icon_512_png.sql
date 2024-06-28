@@ -1,13 +1,13 @@
 prompt --application/shared_components/files/icons_app_icon_512_png
 begin
 --   Manifest
---     APP STATIC FILES: 208491
+--     APP STATIC FILES: 236183
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.05.31'
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
-,p_default_application_id=>208491
+,p_default_application_id=>236183
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
@@ -1521,7 +1521,7 @@ wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.05.31'
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
-,p_default_application_id=>208491
+,p_default_application_id=>236183
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
@@ -2254,15 +2254,11 @@ wwv_flow_imp.g_varchar2_table(2226) := '324F97D26C1DA07D3A303E9C4D6600D6DAA2395F
 wwv_flow_imp.g_varchar2_table(2227) := 'A95E643FC4DF8BCE7EE1F2A3D596D72778BFAAC064BCC9D40CFC3D9A527C0AC0DAD66E77B9F5812102EAC02B92637EA2E6CC96000066FF30531E2D5FC91280E581E890E8B20DFCC3A7BD7ED76E82DC658ABAF2D09B37D977DF8DE4853BC61D24278388BF';
 wwv_flow_imp.g_varchar2_table(2228) := 'ED764BB41B1F9AD9663902BB345DDB2737CE7BEA5ABF2446F6B5730CC2A6FBA8CFD764CF0FFA589F34BA7CD700407B1BE083C6F8BC9BCF39F039073EE7C0E71CF89C039F73E053C481FF1F158847C09860AD920000000049454E44AE426082';
 wwv_flow_imp_shared.create_app_static_file(
- p_id=>wwv_flow_imp.id(2237408729239261158)
+ p_id=>wwv_flow_imp.id(3340333525406411652)
 ,p_file_name=>'icons/app-icon-512.png'
 ,p_mime_type=>'image/png'
 ,p_file_charset=>'utf-8'
 ,p_file_content => wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
-,p_created_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621005257Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp.component_end;
 end;

@@ -1,10 +1,10 @@
 ---
-# ====== Page: Reserva =======================================
+# ====== Page: Status Limpeza ================================
 id: 17
 identification: 
-  name: Reserva
-  alias: RESERVA
-  title: Reserva
+  name: Status Limpeza
+  alias: STATUS-LIMPEZA
+  title: Status Limpeza
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,17 +41,17 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Reserva =====================================
-  id: 2237519180359265351
+- # ====== Region: Status Limpeza ==============================
+  id: 3340455735653415585
   identification: 
-    name: Reserva
+    name: Status Limpeza
     type: Form
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: RESERVA
+    table-name: STATUS_LIMPEZA
     include-rowid-column: false
 
   layout: 
@@ -91,7 +91,7 @@ regions:
       lost-update-type: Row Values
 
 - # ====== Region: Buttons =====================================
-  id: 2237526217023265358
+  id: 3340457477225415587
   identification: 
     name: Buttons
     type: Static Content
@@ -130,7 +130,7 @@ regions:
 
 page-items: 
 - # ====== Page Item: P17_ID ===================================
-  id: 2237519407369265352
+  id: 3340456020749415585
   identification: 
     name: P17_ID
     type: Hidden
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Reserva # 2237519180359265351
+    region: Status Limpeza # 3340455735653415585
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Reserva # 2237519180359265351
+    form-region: Status Limpeza # 3340455735653415585
     column: ID
     data-type: NUMBER
     query-only: true
@@ -162,283 +162,26 @@ page-items:
     store-value-encrypted-in-session-state: true
     restricted-characters: All characters can be saved.
 
-- # ====== Page Item: P17_ID_CLIENTE ===========================
-  id: 2237519825618265352
+- # ====== Page Item: P17_DESCRICAO ============================
+  id: 3340456446270415586
   identification: 
-    name: P17_ID_CLIENTE
-    type: Select List
+    name: P17_DESCRICAO
+    type: Text Field
 
   label: 
-    label: Id Cliente
+    label: Descricao
     alignment: Right
 
   settings: 
-    page-action-on-selection: None
-
-  multiple-values: 
-    type: No
+    subtype: Text
+    trim-spaces: None
+    text-case: NO CHANGE
+    submit-when-enter-pressed: false
+    disabled: false
 
   layout: 
     sequence: 20
-    region: Reserva # 2237519180359265351
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    height: 1
-
-  validation: 
-    value-required: true
-
-  list-of-values: 
-    type: Shared Component
-    list-of-values: CLIENTE.CPF # 2237519965530265352
-    display-extra-values: true
-    display-null-value: true
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Reserva # 2237519180359265351
-    column: ID_CLIENTE
-    data-type: NUMBER
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P17_ACOMODACAO_ID ========================
-  id: 2237520516233265353
-  identification: 
-    name: P17_ACOMODACAO_ID
-    type: Select List
-
-  label: 
-    label: Acomodacao
-    alignment: Right
-
-  settings: 
-    page-action-on-selection: None
-
-  multiple-values: 
-    type: No
-
-  layout: 
-    sequence: 30
-    region: Reserva # 2237519180359265351
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    height: 1
-
-  validation: 
-    value-required: true
-
-  list-of-values: 
-    type: Shared Component
-    list-of-values: ACOMODACAO.NOME # 2237520689223265353
-    display-extra-values: true
-    display-null-value: true
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Reserva # 2237519180359265351
-    column: ACOMODACAO_ID
-    data-type: NUMBER
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P17_METODO_PGTO_ID =======================
-  id: 2237521214380265353
-  identification: 
-    name: P17_METODO_PGTO_ID
-    type: Select List
-
-  label: 
-    label: Metodo Pgto
-    alignment: Right
-
-  settings: 
-    page-action-on-selection: None
-
-  multiple-values: 
-    type: No
-
-  layout: 
-    sequence: 40
-    region: Reserva # 2237519180359265351
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    height: 1
-
-  validation: 
-    value-required: true
-
-  list-of-values: 
-    type: Shared Component
-    list-of-values: METODO_PAGAMENTO.DESCRICAO # 2237521325300265354
-    display-extra-values: true
-    display-null-value: true
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Reserva # 2237519180359265351
-    column: METODO_PGTO_ID
-    data-type: NUMBER
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P17_STATUS_RESERVA_ID ====================
-  id: 2237521908505265354
-  identification: 
-    name: P17_STATUS_RESERVA_ID
-    type: Select List
-
-  label: 
-    label: Status Reserva
-    alignment: Right
-
-  settings: 
-    page-action-on-selection: None
-
-  multiple-values: 
-    type: No
-
-  layout: 
-    sequence: 50
-    region: Reserva # 2237519180359265351
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    height: 1
-
-  validation: 
-    value-required: true
-
-  list-of-values: 
-    type: Shared Component
-    list-of-values: STATUS_RESERVA.DESCRICAO # 2237522088490265354
-    display-extra-values: true
-    display-null-value: true
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Reserva # 2237519180359265351
-    column: STATUS_RESERVA_ID
-    data-type: NUMBER
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P17_DATA_INICIO ==========================
-  id: 2237522659763265355
-  identification: 
-    name: P17_DATA_INICIO
-    type: Date Picker
-
-  label: 
-    label: Data Inicio
-    alignment: Right
-
-  settings: 
-    show-time: false
-    display-as: Popup
-    minimum-date: None
-    maximum-date: None
-    multiple-months: No
-    use-defaults: true
-
-  layout: 
-    sequence: 60
-    region: Reserva # 2237519180359265351
+    region: Status Limpeza # 3340455735653415585
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -462,127 +205,9 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Reserva # 2237519180359265351
-    column: DATA_INICIO
-    data-type: DATE
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P17_DATA_FIM =============================
-  id: 2237523036025265355
-  identification: 
-    name: P17_DATA_FIM
-    type: Date Picker
-
-  label: 
-    label: Data Fim
-    alignment: Right
-
-  settings: 
-    show-time: false
-    display-as: Popup
-    minimum-date: None
-    maximum-date: None
-    multiple-months: No
-    use-defaults: true
-
-  layout: 
-    sequence: 70
-    region: Reserva # 2237519180359265351
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    width: 32
-
-  validation: 
-    value-required: true
-    maximum-length: 255
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Reserva # 2237519180359265351
-    column: DATA_FIM
-    data-type: DATE
-    query-only: false
-    primary-key: false
-
-  session-state: 
-    storage: Per Request (Memory Only)
-
-  quick-picks: 
-    show-quick-picks: false
-
-  security: 
-    session-state-protection: Unrestricted
-    store-value-encrypted-in-session-state: true
-    restricted-characters: All characters can be saved.
-
-- # ====== Page Item: P17_VALOR ================================
-  id: 2237523484178265355
-  identification: 
-    name: P17_VALOR
-    type: Number Field
-
-  label: 
-    label: Valor
-    alignment: Right
-
-  settings: 
-    number-alignment: Start
-    virtual-keyboard: Decimal
-
-  layout: 
-    sequence: 80
-    region: Reserva # 2237519180359265351
-    slot: BODY
-    alignment: Left
-    start-new-layout: false
-    start-new-row: true
-    column: Automatic
-    new-column: true
-    column-span: Automatic
-    label-column-span: Page Template Default
-
-  appearance: 
-    template: Required - Floating
-    template-options: 
-    - '#DEFAULT#'
-    width: 32
-
-  validation: 
-    value-required: true
-    maximum-length: 255
-
-  advanced: 
-    warn-on-unsaved-changes: Page Default
-
-  source: 
-    form-region: Reserva # 2237519180359265351
-    column: VALOR
-    data-type: NUMBER
+    form-region: Status Limpeza # 3340455735653415585
+    column: DESCRICAO
+    data-type: VARCHAR2
     query-only: false
     primary-key: false
 
@@ -599,14 +224,14 @@ page-items:
 
 buttons: 
 - # ====== Button: CANCEL ======================================
-  id: 2237526670844265358
+  id: 3340457800273415587
   identification: 
     button-name: CANCEL
     label: Cancel
 
   layout: 
     sequence: 10
-    region: Buttons # 2237526217023265358
+    region: Buttons # 3340457477225415587
     slot: CLOSE
     start-new-layout: false
     start-new-row: true
@@ -625,14 +250,14 @@ buttons:
     execute-validations: true
 
 - # ====== Button: DELETE ======================================
-  id: 2237528023711265359
+  id: 3340459255363415588
   identification: 
     button-name: DELETE
     label: Delete
 
   layout: 
     sequence: 20
-    region: Buttons # 2237526217023265358
+    region: Buttons # 3340457477225415587
     slot: DELETE
     start-new-layout: false
     start-new-row: true
@@ -664,14 +289,14 @@ buttons:
     item: P17_ID
 
 - # ====== Button: SAVE ========================================
-  id: 2237528409978265359
+  id: 3340459670326415588
   identification: 
     button-name: SAVE
     label: Apply Changes
 
   layout: 
     sequence: 30
-    region: Buttons # 2237526217023265358
+    region: Buttons # 3340457477225415587
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -697,14 +322,14 @@ buttons:
     item: P17_ID
 
 - # ====== Button: CREATE ======================================
-  id: 2237528865958265359
+  id: 3340460036481415588
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 40
-    region: Buttons # 2237526217023265358
+    region: Buttons # 3340457477225415587
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -731,7 +356,7 @@ buttons:
 
 dynamic-actions: 
 - # ====== Dynamic Action: Cancel Dialog =======================
-  id: 2237526759317265358
+  id: 3340457922627415587
   identification: 
     name: Cancel Dialog
 
@@ -743,41 +368,41 @@ dynamic-actions:
   when: 
     event: Click
     selection-type: Button
-    button: CANCEL # 2237526670844265358
+    button: CANCEL # 3340457800273415587
 
   actions: 
   - # ====== Action: Cancel Dialog ===============================
-    id: 2237527507022265358
+    id: 3340458784422415587
     identification: 
       action: Cancel Dialog
 
     execution: 
       sequence: 10
-      event: Cancel Dialog # 2237526759317265358
+      event: Cancel Dialog # 3340457922627415587
       fire-when-event-result-is: True
       fire-on-initialization: false
 
 processes: 
-- # ====== Process: Initialize form Reserva ====================
-  id: 2237529246228265359
+- # ====== Process: Initialize form Status Limpeza =============
+  id: 3340460492460415588
   identification: 
-    name: Initialize form Reserva
+    name: Initialize form Status Limpeza
     type: Form - Initialization
     execution-chain: None
-    form-region: Reserva # 2237519180359265351
+    form-region: Status Limpeza # 3340455735653415585
 
   execution: 
     sequence: 10
     point: Before Header
     run-process: Once Per Page Visit (default)
 
-- # ====== Process: Process form Reserva =======================
-  id: 2237529689611265360
+- # ====== Process: Process form Status Limpeza ================
+  id: 3340460845739415588
   identification: 
-    name: Process form Reserva
+    name: Process form Status Limpeza
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Reserva # 2237519180359265351
+    form-region: Status Limpeza # 3340455735653415585
 
   settings: 
     target-type: Region Source
@@ -794,7 +419,7 @@ processes:
     display-location: Inline in Notification
 
 - # ====== Process: Close Dialog ===============================
-  id: 2237530074882265360
+  id: 3340461262374415589
   identification: 
     name: Close Dialog
     type: Close Dialog

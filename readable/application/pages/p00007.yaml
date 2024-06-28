@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Disponibilidade ========================
+# ====== Page: Acomodacao ====================================
 id: 7
 identification: 
-  name: Status Disponibilidade
-  alias: STATUS-DISPONIBILIDADE
-  title: Status Disponibilidade
+  name: Acomodacao
+  alias: ACOMODACAO
+  title: Acomodacao
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,17 +41,17 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Status Disponibilidade ======================
-  id: 2237446112488262457
+- # ====== Region: Acomodacao ==================================
+  id: 3340390380550412900
   identification: 
-    name: Status Disponibilidade
+    name: Acomodacao
     type: Form
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: STATUS_DISPONIBILIDADE
+    table-name: ACOMODACAO
     include-rowid-column: false
 
   layout: 
@@ -91,7 +91,7 @@ regions:
       lost-update-type: Row Values
 
 - # ====== Region: Buttons =====================================
-  id: 2237447850994262460
+  id: 3340397124876412906
   identification: 
     name: Buttons
     type: Static Content
@@ -130,7 +130,7 @@ regions:
 
 page-items: 
 - # ====== Page Item: P7_ID ====================================
-  id: 2237446456097262458
+  id: 3340390625367412901
   identification: 
     name: P7_ID
     type: Hidden
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Status Disponibilidade # 2237446112488262457
+    region: Acomodacao # 3340390380550412900
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Disponibilidade # 2237446112488262457
+    form-region: Acomodacao # 3340390380550412900
     column: ID
     data-type: NUMBER
     query-only: true
@@ -162,15 +162,207 @@ page-items:
     store-value-encrypted-in-session-state: true
     restricted-characters: All characters can be saved.
 
-- # ====== Page Item: P7_DESCRICAO =============================
-  id: 2237446868611262459
+- # ====== Page Item: P7_ID_STATUS_LIMPEZA =====================
+  id: 3340391000777412901
   identification: 
-    name: P7_DESCRICAO
+    name: P7_ID_STATUS_LIMPEZA
+    type: Select List
+
+  label: 
+    label: Id Status Limpeza
+    alignment: Left
+
+  settings: 
+    page-action-on-selection: None
+
+  multiple-values: 
+    type: No
+
+  layout: 
+    sequence: 80
+    region: Acomodacao # 3340390380550412900
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: false
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Optional - Floating
+    template-options: 
+    - '#DEFAULT#'
+    height: 1
+
+  validation: 
+    value-required: false
+
+  list-of-values: 
+    type: Shared Component
+    list-of-values: STATUS_LIMPEZA.DESCRICAO # 3340391197272412901
+    display-extra-values: true
+    display-null-value: true
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Acomodacao # 3340390380550412900
+    column: ID_STATUS_LIMPEZA
+    data-type: NUMBER
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P7_ID_STATUS_MANUTENCAO ==================
+  id: 3340391773724412902
+  identification: 
+    name: P7_ID_STATUS_MANUTENCAO
+    type: Select List
+
+  label: 
+    label: Id Status Manutencao
+    alignment: Left
+
+  settings: 
+    page-action-on-selection: None
+
+  multiple-values: 
+    type: No
+
+  layout: 
+    sequence: 90
+    region: Acomodacao # 3340390380550412900
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Optional - Floating
+    template-options: 
+    - '#DEFAULT#'
+    height: 1
+
+  validation: 
+    value-required: false
+
+  list-of-values: 
+    type: Shared Component
+    list-of-values: STATUS_MANUTENCAO.DESCRICAO # 3340391873351412902
+    display-extra-values: true
+    display-null-value: true
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Acomodacao # 3340390380550412900
+    column: ID_STATUS_MANUTENCAO
+    data-type: NUMBER
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P7_ID_STATUS_DISPONIBILIDADE =============
+  id: 3340392416502412902
+  identification: 
+    name: P7_ID_STATUS_DISPONIBILIDADE
+    type: Select List
+
+  label: 
+    label: Id Status Disponibilidade
+    alignment: Left
+
+  settings: 
+    page-action-on-selection: None
+
+  multiple-values: 
+    type: No
+
+  layout: 
+    sequence: 60
+    region: Acomodacao # 3340390380550412900
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: false
+    column: Automatic
+    new-column: false
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Optional - Floating
+    template-options: 
+    - '#DEFAULT#'
+    height: 1
+
+  validation: 
+    value-required: false
+
+  list-of-values: 
+    type: Shared Component
+    list-of-values: STATUS_DISPONIBILIDADE.DESCRICAO # 3340392555634412903
+    display-extra-values: true
+    display-null-value: true
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Acomodacao # 3340390380550412900
+    column: ID_STATUS_DISPONIBILIDADE
+    data-type: NUMBER
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P7_NOME ==================================
+  id: 3340393155199412903
+  identification: 
+    name: P7_NOME
     type: Text Field
 
   label: 
-    label: Descricao
-    alignment: Right
+    label: Nome
+    alignment: Left
 
   settings: 
     subtype: Text
@@ -181,7 +373,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Status Disponibilidade # 2237446112488262457
+    region: Acomodacao # 3340390380550412900
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -205,9 +397,184 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Disponibilidade # 2237446112488262457
+    form-region: Acomodacao # 3340390380550412900
+    column: NOME
+    data-type: VARCHAR2
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P7_DESCRICAO =============================
+  id: 3340393531769412903
+  identification: 
+    name: P7_DESCRICAO
+    type: Textarea
+
+  label: 
+    label: Descricao
+    alignment: Left
+
+  settings: 
+    resizable: true
+    auto-height: false
+    character-counter: false
+    trim-spaces: Leading and Trailing
+
+  layout: 
+    sequence: 30
+    region: Acomodacao # 3340390380550412900
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 60
+    height: 4
+
+  validation: 
+    value-required: true
+    maximum-length: 4000
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Acomodacao # 3340390380550412900
     column: DESCRICAO
     data-type: VARCHAR2
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    data-type: VARCHAR2
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P7_CAPACIDADE ============================
+  id: 3340393990042412904
+  identification: 
+    name: P7_CAPACIDADE
+    type: Number Field
+
+  label: 
+    label: Capacidade
+    alignment: Left
+
+  settings: 
+    number-alignment: Start
+    virtual-keyboard: Decimal
+
+  layout: 
+    sequence: 40
+    region: Acomodacao # 3340390380550412900
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: false
+    column: Automatic
+    new-column: false
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Optional - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 32
+
+  validation: 
+    value-required: false
+    maximum-length: 255
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Acomodacao # 3340390380550412900
+    column: CAPACIDADE
+    data-type: NUMBER
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P7_VALOR_DIARIA ==========================
+  id: 3340394364202412904
+  identification: 
+    name: P7_VALOR_DIARIA
+    type: Number Field
+
+  label: 
+    label: Valor Diaria
+    alignment: Left
+
+  settings: 
+    number-alignment: Start
+    virtual-keyboard: Decimal
+
+  layout: 
+    sequence: 50
+    region: Acomodacao # 3340390380550412900
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: false
+    column: Automatic
+    new-column: false
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 32
+
+  validation: 
+    value-required: true
+    maximum-length: 255
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Acomodacao # 3340390380550412900
+    column: VALOR_DIARIA
+    data-type: NUMBER
     query-only: false
     primary-key: false
 
@@ -224,14 +591,14 @@ page-items:
 
 buttons: 
 - # ====== Button: CANCEL ======================================
-  id: 2237448282783262460
+  id: 3340397531438412906
   identification: 
     button-name: CANCEL
     label: Cancel
 
   layout: 
     sequence: 10
-    region: Buttons # 2237447850994262460
+    region: Buttons # 3340397124876412906
     slot: CLOSE
     start-new-layout: false
     start-new-row: true
@@ -250,14 +617,14 @@ buttons:
     execute-validations: true
 
 - # ====== Button: DELETE ======================================
-  id: 2237449630565262461
+  id: 3340399073373412907
   identification: 
     button-name: DELETE
     label: Delete
 
   layout: 
     sequence: 20
-    region: Buttons # 2237447850994262460
+    region: Buttons # 3340397124876412906
     slot: DELETE
     start-new-layout: false
     start-new-row: true
@@ -289,14 +656,14 @@ buttons:
     item: P7_ID
 
 - # ====== Button: SAVE ========================================
-  id: 2237450081604262461
+  id: 3340399495381412908
   identification: 
     button-name: SAVE
     label: Apply Changes
 
   layout: 
     sequence: 30
-    region: Buttons # 2237447850994262460
+    region: Buttons # 3340397124876412906
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -322,14 +689,14 @@ buttons:
     item: P7_ID
 
 - # ====== Button: CREATE ======================================
-  id: 2237450448203262462
+  id: 3340399833224412908
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 40
-    region: Buttons # 2237447850994262460
+    region: Buttons # 3340397124876412906
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -356,7 +723,7 @@ buttons:
 
 dynamic-actions: 
 - # ====== Dynamic Action: Cancel Dialog =======================
-  id: 2237448330978262460
+  id: 3340397692354412906
   identification: 
     name: Cancel Dialog
 
@@ -368,41 +735,41 @@ dynamic-actions:
   when: 
     event: Click
     selection-type: Button
-    button: CANCEL # 2237448282783262460
+    button: CANCEL # 3340397531438412906
 
   actions: 
   - # ====== Action: Cancel Dialog ===============================
-    id: 2237449122976262461
+    id: 3340398497256412907
     identification: 
       action: Cancel Dialog
 
     execution: 
       sequence: 10
-      event: Cancel Dialog # 2237448330978262460
+      event: Cancel Dialog # 3340397692354412906
       fire-when-event-result-is: True
       fire-on-initialization: false
 
 processes: 
-- # ====== Process: Initialize form Status Disponibilidade =====
-  id: 2237450833808262462
+- # ====== Process: Initialize form Acomodacao =================
+  id: 3340400299567412908
   identification: 
-    name: Initialize form Status Disponibilidade
+    name: Initialize form Acomodacao
     type: Form - Initialization
     execution-chain: None
-    form-region: Status Disponibilidade # 2237446112488262457
+    form-region: Acomodacao # 3340390380550412900
 
   execution: 
     sequence: 10
     point: Before Header
     run-process: Once Per Page Visit (default)
 
-- # ====== Process: Process form Status Disponibilidade ========
-  id: 2237451228669262462
+- # ====== Process: Process form Acomodacao ====================
+  id: 3340400606032412909
   identification: 
-    name: Process form Status Disponibilidade
+    name: Process form Acomodacao
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Status Disponibilidade # 2237446112488262457
+    form-region: Acomodacao # 3340390380550412900
 
   settings: 
     target-type: Region Source
@@ -419,7 +786,7 @@ processes:
     display-location: Inline in Notification
 
 - # ====== Process: Close Dialog ===============================
-  id: 2237451686828262463
+  id: 3340401043806412909
   identification: 
     name: Close Dialog
     type: Close Dialog

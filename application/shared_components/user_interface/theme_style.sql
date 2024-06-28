@@ -1,18 +1,18 @@
 prompt --application/shared_components/user_interface/theme_style
 begin
 --   Manifest
---     THEME STYLE: 208491
+--     THEME STYLE: 236183
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2024.05.31'
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
-,p_default_application_id=>208491
+,p_default_application_id=>236183
 ,p_default_id_offset=>0
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
 wwv_flow_imp_shared.create_theme_style(
- p_id=>wwv_flow_imp.id(2237382704315261140)
+ p_id=>wwv_flow_imp.id(3340307496972411637)
 ,p_theme_id=>42
 ,p_name=>'Redwood Light'
 ,p_css_file_urls=>wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -25,13 +25,9 @@ wwv_flow_imp_shared.create_theme_style(
 ,p_theme_roller_output_file_url=>'#THEME_FILES#css/Redwood-Theme#MIN#.css?v=#APEX_VERSION#'
 ,p_theme_roller_read_only=>true
 ,p_reference_id=>2596426436825065489
-,p_created_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_theme_style(
- p_id=>wwv_flow_imp.id(2237382988626261140)
+ p_id=>wwv_flow_imp.id(3340307628640411637)
 ,p_theme_id=>42
 ,p_name=>'Vita'
 ,p_is_current=>true
@@ -41,13 +37,9 @@ wwv_flow_imp_shared.create_theme_style(
 ,p_theme_roller_output_file_url=>'#THEME_FILES#css/Vita#MIN#.css?v=#APEX_VERSION#'
 ,p_theme_roller_read_only=>true
 ,p_reference_id=>2719875314571594493
-,p_created_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_theme_style(
- p_id=>wwv_flow_imp.id(2237383120422261140)
+ p_id=>wwv_flow_imp.id(3340307877235411637)
 ,p_theme_id=>42
 ,p_name=>'Vita - Dark'
 ,p_is_current=>false
@@ -57,13 +49,9 @@ wwv_flow_imp_shared.create_theme_style(
 ,p_theme_roller_output_file_url=>'#THEME_FILES#css/Vita-Dark#MIN#.css?v=#APEX_VERSION#'
 ,p_theme_roller_read_only=>true
 ,p_reference_id=>3543348412015319650
-,p_created_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_theme_style(
- p_id=>wwv_flow_imp.id(2237383332101261140)
+ p_id=>wwv_flow_imp.id(3340308029549411637)
 ,p_theme_id=>42
 ,p_name=>'Vita - Red'
 ,p_is_current=>false
@@ -73,13 +61,9 @@ wwv_flow_imp_shared.create_theme_style(
 ,p_theme_roller_output_file_url=>'#THEME_FILES#css/Vita-Red#MIN#.css?v=#APEX_VERSION#'
 ,p_theme_roller_read_only=>true
 ,p_reference_id=>1938457712423918173
-,p_created_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp_shared.create_theme_style(
- p_id=>wwv_flow_imp.id(2237383557565261140)
+ p_id=>wwv_flow_imp.id(3340308280988411637)
 ,p_theme_id=>42
 ,p_name=>'Vita - Slate'
 ,p_is_current=>false
@@ -89,10 +73,6 @@ wwv_flow_imp_shared.create_theme_style(
 ,p_theme_roller_output_file_url=>'#THEME_FILES#css/Vita-Slate#MIN#.css?v=#APEX_VERSION#'
 ,p_theme_roller_read_only=>true
 ,p_reference_id=>3291983347983194966
-,p_created_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_updated_on=>wwv_flow_imp.dz('20240621004348Z')
-,p_created_by=>'MKSDEVELOPER@HOTMAIL.COM'
-,p_updated_by=>'MKSDEVELOPER@HOTMAIL.COM'
 );
 wwv_flow_imp.component_end;
 end;

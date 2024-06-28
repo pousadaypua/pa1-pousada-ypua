@@ -1,10 +1,10 @@
 ---
-# ====== Page: Reserva =======================================
+# ====== Page: Status Limpeza ================================
 id: 16
 identification: 
-  name: Reserva
-  alias: RESERVA1
-  title: Reserva
+  name: Status Limpeza
+  alias: STATUS-LIMPEZA1
+  title: Status Limpeza
 
 appearance: 
   page-mode: Normal
@@ -49,17 +49,17 @@ help:
     <p>Click the <strong>Reset</strong> button to reset the interactive report back to the default settings.</p>
 
 regions: 
-- # ====== Region: Reserva =====================================
-  id: 2237530671592265361
+- # ====== Region: Status Limpeza ==============================
+  id: 3340461849541415589
   identification: 
-    name: Reserva
+    name: Status Limpeza
     type: Interactive Report
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: RESERVA
+    table-name: STATUS_LIMPEZA
     include-rowid-column: false
 
   layout: 
@@ -86,12 +86,12 @@ regions:
     customizable: Not Customizable By End Users
 
   attributes: 
-    id: 2237530726297265361
+    id: 3340461932065415589
     link: 
       link-column: Link to Custom Target
       target: 
         url: 'f?p=&APP_ID.:17:&APP_SESSION.::&DEBUG.:RP:P17_ID:\#ID#\'
-        page: 17 # Reserva
+        page: 17 # Status Limpeza
         clear-cache: RP
         values: 
           p17_id: '#ID#'
@@ -156,14 +156,14 @@ regions:
 
     saved-reports: 
     - # ====== Saved Report: Primary Report ========================
-      id: 2237583695193265408
+      id: 3340520077155415634
       identification: 
         name: Primary Report
-        alias: 22375837
+        alias: 33405201
 
     columns: 
     - # ====== Column: ID ==========================================
-      id: 2237531494583265362
+      id: 3340462672243415590
       identification: 
         column-name: ID
         type: Hidden
@@ -180,17 +180,14 @@ regions:
       security: 
         escape-special-characters: true
 
-    - # ====== Column: ID_CLIENTE ==================================
-      id: 2237531890074265362
+    - # ====== Column: DESCRICAO ===================================
+      id: 3340463077602415591
       identification: 
-        column-name: ID_CLIENTE
-        type: Plain Text (based on List of Values)
-
-      list-of-values: 
-        list-of-values: CLIENTE.CPF # 2237519965530265352
+        column-name: DESCRICAO
+        type: Plain Text
 
       heading: 
-        heading: Id Cliente
+        heading: Descricao
         alignment: start
 
       single-row-view: 
@@ -199,251 +196,6 @@ regions:
       layout: 
         sequence: 2
         column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-    - # ====== Column: ACOMODACAO_ID ===============================
-      id: 2237532270868265363
-      identification: 
-        column-name: ACOMODACAO_ID
-        type: Plain Text (based on List of Values)
-
-      list-of-values: 
-        list-of-values: ACOMODACAO.NOME # 2237520689223265353
-
-      heading: 
-        heading: Acomodacao
-        alignment: start
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 3
-        column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-    - # ====== Column: METODO_PGTO_ID ==============================
-      id: 2237532638182265363
-      identification: 
-        column-name: METODO_PGTO_ID
-        type: Plain Text (based on List of Values)
-
-      list-of-values: 
-        list-of-values: METODO_PAGAMENTO.DESCRICAO # 2237521325300265354
-
-      heading: 
-        heading: Metodo Pgto
-        alignment: start
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 4
-        column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-    - # ====== Column: STATUS_RESERVA_ID ===========================
-      id: 2237533077013265363
-      identification: 
-        column-name: STATUS_RESERVA_ID
-        type: Plain Text (based on List of Values)
-
-      list-of-values: 
-        list-of-values: STATUS_RESERVA.DESCRICAO # 2237522088490265354
-
-      heading: 
-        heading: Status Reserva
-        alignment: start
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 5
-        column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-    - # ====== Column: DATA_INICIO =================================
-      id: 2237533409111265364
-      identification: 
-        column-name: DATA_INICIO
-        type: Plain Text
-
-      heading: 
-        heading: Data Inicio
-        alignment: start
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 6
-        column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-        date-ranges: All
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-      security: 
-        escape-special-characters: true
-
-    - # ====== Column: DATA_FIM ====================================
-      id: 2237533809545265364
-      identification: 
-        column-name: DATA_FIM
-        type: Plain Text
-
-      heading: 
-        heading: Data Fim
-        alignment: start
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 7
-        column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-        date-ranges: All
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-      security: 
-        escape-special-characters: true
-
-    - # ====== Column: VALOR =======================================
-      id: 2237534250729265364
-      identification: 
-        column-name: VALOR
-        type: Plain Text
-
-      heading: 
-        heading: Valor
-        alignment: end
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 8
-        column-alignment: end
 
       accessibility: 
         value-identifies-row: false
@@ -489,7 +241,7 @@ regions:
         font-size: 12
         font-color: '#000000'
         alignment: center
-        page-header-text: Reserva
+        page-header-text: Status Limpeza
 
       column-headings: 
         font: Helvetica
@@ -513,13 +265,13 @@ regions:
         alignment: center
 
 - # ====== Region: Breadcrumb ==================================
-  id: 2237535903241265365
+  id: 3340464793181415592
   identification: 
     name: Breadcrumb
     type: Breadcrumb
 
   source: 
-    breadcrumb: Breadcrumb # 2236516456817260877
+    breadcrumb: Breadcrumb # 3340022758891411463
 
   layout: 
     sequence: 20
@@ -557,14 +309,14 @@ regions:
 
 buttons: 
 - # ====== Button: CREATE ======================================
-  id: 2237534739940265364
+  id: 3340463548101415591
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 10
-    region: Reserva # 2237530671592265361
+    region: Status Limpeza # 3340461849541415589
     slot: RIGHT_OF_IR_SEARCH_BAR
     start-new-layout: false
     start-new-row: true
@@ -582,14 +334,14 @@ buttons:
     action: Redirect to Page in this Application
     target: 
       url: 'f?p=&APP_ID.:17:&APP_SESSION.::&DEBUG.:17::'
-      page: 17 # Reserva
+      page: 17 # Status Limpeza
       clear-cache: 17
 
     warn-on-unsaved-changes: Do Not Check
 
 dynamic-actions: 
 - # ====== Dynamic Action: Edit Report - Dialog Closed =========
-  id: 2237535064546265365
+  id: 3340463812790415591
   identification: 
     name: Edit Report - Dialog Closed
 
@@ -601,21 +353,21 @@ dynamic-actions:
   when: 
     event: Dialog Closed
     selection-type: Region
-    region: Reserva # 2237530671592265361
+    region: Status Limpeza # 3340461849541415589
 
   actions: 
   - # ====== Action: Refresh =====================================
-    id: 2237535525046265365
+    id: 3340464311639415591
     identification: 
       action: Refresh
 
     affected-elements: 
       selection-type: Region
-      region: Reserva # 2237530671592265361
+      region: Status Limpeza # 3340461849541415589
 
     execution: 
       sequence: 10
-      event: Edit Report - Dialog Closed # 2237535064546265365
+      event: Edit Report - Dialog Closed # 3340463812790415591
       fire-when-event-result-is: True
       fire-on-initialization: false
 

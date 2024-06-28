@@ -1,10 +1,10 @@
 ---
-# ====== Page: Metodo Pagamento ==============================
+# ====== Page: Reserva =======================================
 id: 3
 identification: 
-  name: Metodo Pagamento
-  alias: METODO-PAGAMENTO
-  title: Metodo Pagamento
+  name: Reserva
+  alias: RESERVA
+  title: Reserva
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,17 +41,17 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Metodo Pagamento ============================
-  id: 2237423235385261322
+- # ====== Region: Reserva =====================================
+  id: 3340349230358411805
   identification: 
-    name: Metodo Pagamento
+    name: Reserva
     type: Form
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: METODO_PAGAMENTO
+    table-name: RESERVA
     include-rowid-column: false
 
   layout: 
@@ -91,7 +91,7 @@ regions:
       lost-update-type: Row Values
 
 - # ====== Region: Buttons =====================================
-  id: 2237424978007261324
+  id: 3340356351761411811
   identification: 
     name: Buttons
     type: Static Content
@@ -130,7 +130,7 @@ regions:
 
 page-items: 
 - # ====== Page Item: P3_ID ====================================
-  id: 2237423569795261322
+  id: 3340349504166411806
   identification: 
     name: P3_ID
     type: Hidden
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Metodo Pagamento # 2237423235385261322
+    region: Reserva # 3340349230358411805
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Metodo Pagamento # 2237423235385261322
+    form-region: Reserva # 3340349230358411805
     column: ID
     data-type: NUMBER
     query-only: true
@@ -162,26 +162,283 @@ page-items:
     store-value-encrypted-in-session-state: true
     restricted-characters: All characters can be saved.
 
-- # ====== Page Item: P3_DESCRICAO =============================
-  id: 2237423919700261323
+- # ====== Page Item: P3_ID_CLIENTE ============================
+  id: 3340349970254411806
   identification: 
-    name: P3_DESCRICAO
-    type: Text Field
+    name: P3_ID_CLIENTE
+    type: Select List
 
   label: 
-    label: Descricao
+    label: Id Cliente
     alignment: Right
 
   settings: 
-    subtype: Text
-    trim-spaces: None
-    text-case: NO CHANGE
-    submit-when-enter-pressed: false
-    disabled: false
+    page-action-on-selection: None
+
+  multiple-values: 
+    type: No
 
   layout: 
     sequence: 20
-    region: Metodo Pagamento # 2237423235385261322
+    region: Reserva # 3340349230358411805
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    height: 1
+
+  validation: 
+    value-required: true
+
+  list-of-values: 
+    type: Shared Component
+    list-of-values: CLIENTE.CPF # 3340350082179411806
+    display-extra-values: true
+    display-null-value: true
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Reserva # 3340349230358411805
+    column: ID_CLIENTE
+    data-type: NUMBER
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P3_ACOMODACAO_ID =========================
+  id: 3340350682648411807
+  identification: 
+    name: P3_ACOMODACAO_ID
+    type: Select List
+
+  label: 
+    label: Acomodacao
+    alignment: Right
+
+  settings: 
+    page-action-on-selection: None
+
+  multiple-values: 
+    type: No
+
+  layout: 
+    sequence: 30
+    region: Reserva # 3340349230358411805
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    height: 1
+
+  validation: 
+    value-required: true
+
+  list-of-values: 
+    type: Shared Component
+    list-of-values: ACOMODACAO.NOME # 3340350712655411807
+    display-extra-values: true
+    display-null-value: true
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Reserva # 3340349230358411805
+    column: ACOMODACAO_ID
+    data-type: NUMBER
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P3_METODO_PGTO_ID ========================
+  id: 3340351314354411808
+  identification: 
+    name: P3_METODO_PGTO_ID
+    type: Select List
+
+  label: 
+    label: Metodo Pgto
+    alignment: Right
+
+  settings: 
+    page-action-on-selection: None
+
+  multiple-values: 
+    type: No
+
+  layout: 
+    sequence: 40
+    region: Reserva # 3340349230358411805
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    height: 1
+
+  validation: 
+    value-required: true
+
+  list-of-values: 
+    type: Shared Component
+    list-of-values: METODO_PAGAMENTO.DESCRICAO # 3340351478810411808
+    display-extra-values: true
+    display-null-value: true
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Reserva # 3340349230358411805
+    column: METODO_PGTO_ID
+    data-type: NUMBER
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P3_STATUS_RESERVA_ID =====================
+  id: 3340352003451411808
+  identification: 
+    name: P3_STATUS_RESERVA_ID
+    type: Select List
+
+  label: 
+    label: Status Reserva
+    alignment: Right
+
+  settings: 
+    page-action-on-selection: None
+
+  multiple-values: 
+    type: No
+
+  layout: 
+    sequence: 50
+    region: Reserva # 3340349230358411805
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    height: 1
+
+  validation: 
+    value-required: true
+
+  list-of-values: 
+    type: Shared Component
+    list-of-values: STATUS_RESERVA.DESCRICAO # 3340352142650411808
+    display-extra-values: true
+    display-null-value: true
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Reserva # 3340349230358411805
+    column: STATUS_RESERVA_ID
+    data-type: NUMBER
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P3_DATA_INICIO ===========================
+  id: 3340352714645411808
+  identification: 
+    name: P3_DATA_INICIO
+    type: Date Picker
+
+  label: 
+    label: Data Inicio
+    alignment: Right
+
+  settings: 
+    show-time: false
+    display-as: Popup
+    minimum-date: None
+    maximum-date: None
+    multiple-months: No
+    use-defaults: true
+
+  layout: 
+    sequence: 60
+    region: Reserva # 3340349230358411805
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -205,9 +462,127 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Metodo Pagamento # 2237423235385261322
-    column: DESCRICAO
-    data-type: VARCHAR2
+    form-region: Reserva # 3340349230358411805
+    column: DATA_INICIO
+    data-type: DATE
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P3_DATA_FIM ==============================
+  id: 3340353169884411809
+  identification: 
+    name: P3_DATA_FIM
+    type: Date Picker
+
+  label: 
+    label: Data Fim
+    alignment: Right
+
+  settings: 
+    show-time: false
+    display-as: Popup
+    minimum-date: None
+    maximum-date: None
+    multiple-months: No
+    use-defaults: true
+
+  layout: 
+    sequence: 70
+    region: Reserva # 3340349230358411805
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 32
+
+  validation: 
+    value-required: true
+    maximum-length: 255
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Reserva # 3340349230358411805
+    column: DATA_FIM
+    data-type: DATE
+    query-only: false
+    primary-key: false
+
+  session-state: 
+    storage: Per Request (Memory Only)
+
+  quick-picks: 
+    show-quick-picks: false
+
+  security: 
+    session-state-protection: Unrestricted
+    store-value-encrypted-in-session-state: true
+    restricted-characters: All characters can be saved.
+
+- # ====== Page Item: P3_VALOR =================================
+  id: 3340353595217411809
+  identification: 
+    name: P3_VALOR
+    type: Number Field
+
+  label: 
+    label: Valor
+    alignment: Right
+
+  settings: 
+    number-alignment: Start
+    virtual-keyboard: Decimal
+
+  layout: 
+    sequence: 80
+    region: Reserva # 3340349230358411805
+    slot: BODY
+    alignment: Left
+    start-new-layout: false
+    start-new-row: true
+    column: Automatic
+    new-column: true
+    column-span: Automatic
+    label-column-span: Page Template Default
+
+  appearance: 
+    template: Required - Floating
+    template-options: 
+    - '#DEFAULT#'
+    width: 32
+
+  validation: 
+    value-required: true
+    maximum-length: 255
+
+  advanced: 
+    warn-on-unsaved-changes: Page Default
+
+  source: 
+    form-region: Reserva # 3340349230358411805
+    column: VALOR
+    data-type: NUMBER
     query-only: false
     primary-key: false
 
@@ -224,14 +599,14 @@ page-items:
 
 buttons: 
 - # ====== Button: CANCEL ======================================
-  id: 2237425350881261325
+  id: 3340356758092411812
   identification: 
     button-name: CANCEL
     label: Cancel
 
   layout: 
     sequence: 10
-    region: Buttons # 2237424978007261324
+    region: Buttons # 3340356351761411811
     slot: CLOSE
     start-new-layout: false
     start-new-row: true
@@ -250,14 +625,14 @@ buttons:
     execute-validations: true
 
 - # ====== Button: DELETE ======================================
-  id: 2237426789911261326
+  id: 3340358119792411813
   identification: 
     button-name: DELETE
     label: Delete
 
   layout: 
     sequence: 20
-    region: Buttons # 2237424978007261324
+    region: Buttons # 3340356351761411811
     slot: DELETE
     start-new-layout: false
     start-new-row: true
@@ -289,14 +664,14 @@ buttons:
     item: P3_ID
 
 - # ====== Button: SAVE ========================================
-  id: 2237427113728261326
+  id: 3340358512622411813
   identification: 
     button-name: SAVE
     label: Apply Changes
 
   layout: 
     sequence: 30
-    region: Buttons # 2237424978007261324
+    region: Buttons # 3340356351761411811
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -322,14 +697,14 @@ buttons:
     item: P3_ID
 
 - # ====== Button: CREATE ======================================
-  id: 2237427502730261326
+  id: 3340358922611411813
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 40
-    region: Buttons # 2237424978007261324
+    region: Buttons # 3340356351761411811
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -356,7 +731,7 @@ buttons:
 
 dynamic-actions: 
 - # ====== Dynamic Action: Cancel Dialog =======================
-  id: 2237425491646261325
+  id: 3340356899305411812
   identification: 
     name: Cancel Dialog
 
@@ -368,41 +743,41 @@ dynamic-actions:
   when: 
     event: Click
     selection-type: Button
-    button: CANCEL # 2237425350881261325
+    button: CANCEL # 3340356758092411812
 
   actions: 
   - # ====== Action: Cancel Dialog ===============================
-    id: 2237426215045261325
+    id: 3340357601752411812
     identification: 
       action: Cancel Dialog
 
     execution: 
       sequence: 10
-      event: Cancel Dialog # 2237425491646261325
+      event: Cancel Dialog # 3340356899305411812
       fire-when-event-result-is: True
       fire-on-initialization: false
 
 processes: 
-- # ====== Process: Initialize form Metodo Pagamento ===========
-  id: 2237427907868261327
+- # ====== Process: Initialize form Reserva ====================
+  id: 3340359392361411813
   identification: 
-    name: Initialize form Metodo Pagamento
+    name: Initialize form Reserva
     type: Form - Initialization
     execution-chain: None
-    form-region: Metodo Pagamento # 2237423235385261322
+    form-region: Reserva # 3340349230358411805
 
   execution: 
     sequence: 10
     point: Before Header
     run-process: Once Per Page Visit (default)
 
-- # ====== Process: Process form Metodo Pagamento ==============
-  id: 2237428340371261327
+- # ====== Process: Process form Reserva =======================
+  id: 3340359711880411814
   identification: 
-    name: Process form Metodo Pagamento
+    name: Process form Reserva
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Metodo Pagamento # 2237423235385261322
+    form-region: Reserva # 3340349230358411805
 
   settings: 
     target-type: Region Source
@@ -415,11 +790,14 @@ processes:
     point: Processing
     run-process: Once Per Page Visit (default)
 
+  success-message: 
+    success-message: Cadastro Concluído com Sucesso!!!
+
   error: 
     display-location: Inline in Notification
 
 - # ====== Process: Close Dialog ===============================
-  id: 2237428746852261327
+  id: 3340360180479411814
   identification: 
     name: Close Dialog
     type: Close Dialog

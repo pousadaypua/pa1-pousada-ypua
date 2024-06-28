@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Disponibilidade ========================
+# ====== Page: Acomodacao ====================================
 id: 6
 identification: 
-  name: Status Disponibilidade
-  alias: STATUS-DISPONIBILIDADE1
-  title: Status Disponibilidade
+  name: Acomodacao
+  alias: ACOMODACAO1
+  title: Acomodacao
 
 appearance: 
   page-mode: Normal
@@ -49,17 +49,17 @@ help:
     <p>Click the <strong>Reset</strong> button to reset the interactive report back to the default settings.</p>
 
 regions: 
-- # ====== Region: Status Disponibilidade ======================
-  id: 2237452253902262463
+- # ====== Region: Acomodacaoes ================================
+  id: 3340401634772412909
   identification: 
-    name: Status Disponibilidade
+    name: Acomodacaoes
     type: Interactive Report
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: STATUS_DISPONIBILIDADE
+    table-name: ACOMODACAO
     include-rowid-column: false
 
   layout: 
@@ -86,12 +86,12 @@ regions:
     customizable: Not Customizable By End Users
 
   attributes: 
-    id: 2237452327315262463
+    id: 3340401743943412909
     link: 
       link-column: Link to Custom Target
       target: 
         url: 'f?p=&APP_ID.:7:&APP_SESSION.::&DEBUG.:RP:P7_ID:\#ID#\'
-        page: 7 # Status Disponibilidade
+        page: 7 # Acomodacao
         clear-cache: RP
         values: 
           p7_id: '#ID#'
@@ -156,14 +156,14 @@ regions:
 
     saved-reports: 
     - # ====== Saved Report: Primary Report ========================
-      id: 2237546891686265376
+      id: 3340489280559415610
       identification: 
         name: Primary Report
-        alias: 22375469
+        alias: 33404893
 
     columns: 
     - # ====== Column: ID ==========================================
-      id: 2237453085584262465
+      id: 3340402406050412911
       identification: 
         column-name: ID
         type: Hidden
@@ -172,7 +172,7 @@ regions:
         heading: ID
 
       layout: 
-        sequence: 0
+        sequence: 10
 
       source: 
         primary-key: true
@@ -180,8 +180,172 @@ regions:
       security: 
         escape-special-characters: true
 
+    - # ====== Column: ID_STATUS_LIMPEZA ===========================
+      id: 3340402860496412912
+      identification: 
+        column-name: ID_STATUS_LIMPEZA
+        type: Plain Text (based on List of Values)
+
+      list-of-values: 
+        list-of-values: STATUS_LIMPEZA.DESCRICAO # 3340391197272412901
+
+      heading: 
+        heading: Id Status Limpeza
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 70
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+    - # ====== Column: ID_STATUS_MANUTENCAO ========================
+      id: 3340403277686412912
+      identification: 
+        column-name: ID_STATUS_MANUTENCAO
+        type: Plain Text (based on List of Values)
+
+      list-of-values: 
+        list-of-values: STATUS_MANUTENCAO.DESCRICAO # 3340391873351412902
+
+      heading: 
+        heading: Id Status Manutencao
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 80
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+    - # ====== Column: ID_STATUS_DISPONIBILIDADE ===================
+      id: 3340403613287412912
+      identification: 
+        column-name: ID_STATUS_DISPONIBILIDADE
+        type: Plain Text (based on List of Values)
+
+      list-of-values: 
+        list-of-values: STATUS_DISPONIBILIDADE.DESCRICAO # 3340392555634412903
+
+      heading: 
+        heading: Id Status Disponibilidade
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 90
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+    - # ====== Column: NOME ========================================
+      id: 3340404023720412913
+      identification: 
+        column-name: NOME
+        type: Plain Text
+
+      heading: 
+        heading: Nome
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 20
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
     - # ====== Column: DESCRICAO ===================================
-      id: 2237453453135262465
+      id: 3340404465176412913
       identification: 
         column-name: DESCRICAO
         type: Plain Text
@@ -194,11 +358,99 @@ regions:
         use-column-heading: true
 
       layout: 
-        sequence: 2
+        sequence: 30
         column-alignment: start
 
       accessibility: 
         value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: CAPACIDADE ==================================
+      id: 3340404856814412913
+      identification: 
+        column-name: CAPACIDADE
+        type: Plain Text
+
+      heading: 
+        heading: Capacidade
+        alignment: end
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 40
+        column-alignment: end
+
+      accessibility: 
+        value-identifies-row: false
+
+      appearance: 
+        format-mask: 999G999G999G999G999G999G999G999G999G990
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: VALOR_DIARIA ================================
+      id: 3340405290494412913
+      identification: 
+        column-name: VALOR_DIARIA
+        type: Plain Text
+
+      heading: 
+        heading: Valor Diaria
+        alignment: end
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 50
+        column-alignment: end
+
+      accessibility: 
+        value-identifies-row: false
+
+      appearance: 
+        format-mask: 999G999G999G999G999G999G999G999G999G990
 
       source: 
         primary-key: false
@@ -241,7 +493,7 @@ regions:
         font-size: 12
         font-color: '#000000'
         alignment: center
-        page-header-text: Status Disponibilidade
+        page-header-text: Acomodacao
 
       column-headings: 
         font: Helvetica
@@ -265,13 +517,13 @@ regions:
         alignment: center
 
 - # ====== Region: Breadcrumb ==================================
-  id: 2237455170245262466
+  id: 3340406914048412914
   identification: 
     name: Breadcrumb
     type: Breadcrumb
 
   source: 
-    breadcrumb: Breadcrumb # 2236516456817260877
+    breadcrumb: Breadcrumb # 3340022758891411463
 
   layout: 
     sequence: 20
@@ -309,14 +561,14 @@ regions:
 
 buttons: 
 - # ====== Button: CREATE ======================================
-  id: 2237453961596262465
+  id: 3340405782123412914
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 10
-    region: Status Disponibilidade # 2237452253902262463
+    region: Acomodacaoes # 3340401634772412909
     slot: RIGHT_OF_IR_SEARCH_BAR
     start-new-layout: false
     start-new-row: true
@@ -334,14 +586,14 @@ buttons:
     action: Redirect to Page in this Application
     target: 
       url: 'f?p=&APP_ID.:7:&APP_SESSION.::&DEBUG.:7::'
-      page: 7 # Status Disponibilidade
+      page: 7 # Acomodacao
       clear-cache: 7
 
     warn-on-unsaved-changes: Do Not Check
 
 dynamic-actions: 
 - # ====== Dynamic Action: Edit Report - Dialog Closed =========
-  id: 2237454264301262466
+  id: 3340406089496412914
   identification: 
     name: Edit Report - Dialog Closed
 
@@ -353,21 +605,21 @@ dynamic-actions:
   when: 
     event: Dialog Closed
     selection-type: Region
-    region: Status Disponibilidade # 2237452253902262463
+    region: Acomodacaoes # 3340401634772412909
 
   actions: 
   - # ====== Action: Refresh =====================================
-    id: 2237454732947262466
+    id: 3340406553377412914
     identification: 
       action: Refresh
 
     affected-elements: 
       selection-type: Region
-      region: Status Disponibilidade # 2237452253902262463
+      region: Acomodacaoes # 3340401634772412909
 
     execution: 
       sequence: 10
-      event: Edit Report - Dialog Closed # 2237454264301262466
+      event: Edit Report - Dialog Closed # 3340406089496412914
       fire-when-event-result-is: True
       fire-on-initialization: false
 

@@ -1,10 +1,10 @@
 ---
-# ====== Page: Metodo Pagamento ==============================
+# ====== Page: Reserva =======================================
 id: 2
 identification: 
-  name: Metodo Pagamento
-  alias: METODO-PAGAMENTO1
-  title: Metodo Pagamento
+  name: Reserva
+  alias: RESERVA1
+  title: Reserva
 
 appearance: 
   page-mode: Normal
@@ -49,17 +49,17 @@ help:
     <p>Click the <strong>Reset</strong> button to reset the interactive report back to the default settings.</p>
 
 regions: 
-- # ====== Region: Metodo Pagamentoes ==========================
-  id: 2237429310906261328
+- # ====== Region: Reserva =====================================
+  id: 3340360714475411814
   identification: 
-    name: Metodo Pagamentoes
+    name: Reserva
     type: Interactive Report
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: METODO_PAGAMENTO
+    table-name: RESERVA
     include-rowid-column: false
 
   layout: 
@@ -86,12 +86,12 @@ regions:
     customizable: Not Customizable By End Users
 
   attributes: 
-    id: 2237429453115261328
+    id: 3340360802673411814
     link: 
       link-column: Link to Custom Target
       target: 
         url: 'f?p=&APP_ID.:3:&APP_SESSION.::&DEBUG.:RP:P3_ID:\#ID#\'
-        page: 3 # Metodo Pagamento
+        page: 3 # Reserva
         clear-cache: RP
         values: 
           p3_id: '#ID#'
@@ -156,14 +156,14 @@ regions:
 
     saved-reports: 
     - # ====== Saved Report: Primary Report ========================
-      id: 2237537701458265368
+      id: 3340466537534415594
       identification: 
         name: Primary Report
-        alias: 22375378
+        alias: 33404666
 
     columns: 
     - # ====== Column: ID ==========================================
-      id: 2237430149369261329
+      id: 3340361500062411816
       identification: 
         column-name: ID
         type: Hidden
@@ -180,14 +180,17 @@ regions:
       security: 
         escape-special-characters: true
 
-    - # ====== Column: DESCRICAO ===================================
-      id: 2237430579660261330
+    - # ====== Column: ID_CLIENTE ==================================
+      id: 3340361969553411817
       identification: 
-        column-name: DESCRICAO
-        type: Plain Text
+        column-name: ID_CLIENTE
+        type: Plain Text (based on List of Values)
+
+      list-of-values: 
+        list-of-values: CLIENTE.CPF # 3340350082179411806
 
       heading: 
-        heading: Descricao
+        heading: Id Cliente
         alignment: start
 
       single-row-view: 
@@ -199,6 +202,254 @@ regions:
 
       accessibility: 
         value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+    - # ====== Column: ACOMODACAO_ID ===============================
+      id: 3340362300403411817
+      identification: 
+        column-name: ACOMODACAO_ID
+        type: Plain Text (based on List of Values)
+
+      list-of-values: 
+        list-of-values: ACOMODACAO.NOME # 3340350712655411807
+
+      heading: 
+        heading: Acomodacao
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 3
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+    - # ====== Column: METODO_PGTO_ID ==============================
+      id: 3340362777529411817
+      identification: 
+        column-name: METODO_PGTO_ID
+        type: Plain Text (based on List of Values)
+
+      list-of-values: 
+        list-of-values: METODO_PAGAMENTO.DESCRICAO # 3340351478810411808
+
+      heading: 
+        heading: Metodo Pgto
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 4
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+    - # ====== Column: STATUS_RESERVA_ID ===========================
+      id: 3340363184321411817
+      identification: 
+        column-name: STATUS_RESERVA_ID
+        type: Plain Text (based on List of Values)
+
+      list-of-values: 
+        list-of-values: STATUS_RESERVA.DESCRICAO # 3340352142650411808
+
+      heading: 
+        heading: Status Reserva
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 5
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+    - # ====== Column: DATA_INICIO =================================
+      id: 3340363503742411818
+      identification: 
+        column-name: DATA_INICIO
+        type: Plain Text
+
+      heading: 
+        heading: Data Inicio
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 6
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+        date-ranges: All
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: DATA_FIM ====================================
+      id: 3340363912905411818
+      identification: 
+        column-name: DATA_FIM
+        type: Plain Text
+
+      heading: 
+        heading: Data Fim
+        alignment: start
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 7
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+        date-ranges: All
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: VALOR =======================================
+      id: 3340364399751411818
+      identification: 
+        column-name: VALOR
+        type: Plain Text
+
+      heading: 
+        heading: Valor
+        alignment: end
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 8
+        column-alignment: end
+
+      accessibility: 
+        value-identifies-row: false
+
+      appearance: 
+        format-mask: 999G999G999G999G999G999G999G999G999G990
 
       source: 
         primary-key: false
@@ -241,7 +492,7 @@ regions:
         font-size: 12
         font-color: '#000000'
         alignment: center
-        page-header-text: Metodo Pagamento
+        page-header-text: Reserva
 
       column-headings: 
         font: Helvetica
@@ -265,13 +516,13 @@ regions:
         alignment: center
 
 - # ====== Region: Breadcrumb ==================================
-  id: 2237432253524261331
+  id: 3340366044956411819
   identification: 
     name: Breadcrumb
     type: Breadcrumb
 
   source: 
-    breadcrumb: Breadcrumb # 2236516456817260877
+    breadcrumb: Breadcrumb # 3340022758891411463
 
   layout: 
     sequence: 20
@@ -309,14 +560,14 @@ regions:
 
 buttons: 
 - # ====== Button: CREATE ======================================
-  id: 2237431080965261330
+  id: 3340364853242411818
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 10
-    region: Metodo Pagamentoes # 2237429310906261328
+    region: Reserva # 3340360714475411814
     slot: RIGHT_OF_IR_SEARCH_BAR
     start-new-layout: false
     start-new-row: true
@@ -334,14 +585,14 @@ buttons:
     action: Redirect to Page in this Application
     target: 
       url: 'f?p=&APP_ID.:3:&APP_SESSION.::&DEBUG.:3::'
-      page: 3 # Metodo Pagamento
+      page: 3 # Reserva
       clear-cache: 3
 
     warn-on-unsaved-changes: Do Not Check
 
 dynamic-actions: 
 - # ====== Dynamic Action: Edit Report - Dialog Closed =========
-  id: 2237431361482261330
+  id: 3340365194952411819
   identification: 
     name: Edit Report - Dialog Closed
 
@@ -353,21 +604,21 @@ dynamic-actions:
   when: 
     event: Dialog Closed
     selection-type: Region
-    region: Metodo Pagamentoes # 2237429310906261328
+    region: Reserva # 3340360714475411814
 
   actions: 
   - # ====== Action: Refresh =====================================
-    id: 2237431863804261331
+    id: 3340365649900411819
     identification: 
       action: Refresh
 
     affected-elements: 
       selection-type: Region
-      region: Metodo Pagamentoes # 2237429310906261328
+      region: Reserva # 3340360714475411814
 
     execution: 
       sequence: 10
-      event: Edit Report - Dialog Closed # 2237431361482261330
+      event: Edit Report - Dialog Closed # 3340365194952411819
       fire-when-event-result-is: True
       fire-on-initialization: false
 

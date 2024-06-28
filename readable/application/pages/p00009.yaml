@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Manutencao =============================
+# ====== Page: Metodo Pagamento ==============================
 id: 9
 identification: 
-  name: Status Manutencao
-  alias: STATUS-MANUTENCAO
-  title: Status Manutencao
+  name: Metodo Pagamento
+  alias: METODO-PAGAMENTO
+  title: Metodo Pagamento
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,17 +41,17 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Status Manutencao ===========================
-  id: 2237458375991263049
+- # ====== Region: Metodo Pagamento ============================
+  id: 3340411143370413446
   identification: 
-    name: Status Manutencao
+    name: Metodo Pagamento
     type: Form
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: STATUS_MANUTENCAO
+    table-name: METODO_PAGAMENTO
     include-rowid-column: false
 
   layout: 
@@ -91,7 +91,7 @@ regions:
       lost-update-type: Row Values
 
 - # ====== Region: Buttons =====================================
-  id: 2237460025695263051
+  id: 3340412809513413448
   identification: 
     name: Buttons
     type: Static Content
@@ -130,7 +130,7 @@ regions:
 
 page-items: 
 - # ====== Page Item: P9_ID ====================================
-  id: 2237458693017263050
+  id: 3340411420635413447
   identification: 
     name: P9_ID
     type: Hidden
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Status Manutencao # 2237458375991263049
+    region: Metodo Pagamento # 3340411143370413446
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Manutencao # 2237458375991263049
+    form-region: Metodo Pagamento # 3340411143370413446
     column: ID
     data-type: NUMBER
     query-only: true
@@ -163,7 +163,7 @@ page-items:
     restricted-characters: All characters can be saved.
 
 - # ====== Page Item: P9_DESCRICAO =============================
-  id: 2237459088822263050
+  id: 3340411880001413447
   identification: 
     name: P9_DESCRICAO
     type: Text Field
@@ -181,7 +181,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Status Manutencao # 2237458375991263049
+    region: Metodo Pagamento # 3340411143370413446
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -205,7 +205,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Manutencao # 2237458375991263049
+    form-region: Metodo Pagamento # 3340411143370413446
     column: DESCRICAO
     data-type: VARCHAR2
     query-only: false
@@ -224,14 +224,14 @@ page-items:
 
 buttons: 
 - # ====== Button: CANCEL ======================================
-  id: 2237460429724263051
+  id: 3340413286637413448
   identification: 
     button-name: CANCEL
     label: Cancel
 
   layout: 
     sequence: 10
-    region: Buttons # 2237460025695263051
+    region: Buttons # 3340412809513413448
     slot: CLOSE
     start-new-layout: false
     start-new-row: true
@@ -250,14 +250,14 @@ buttons:
     execute-validations: true
 
 - # ====== Button: DELETE ======================================
-  id: 2237461861363263052
+  id: 3340414631374413449
   identification: 
     button-name: DELETE
     label: Delete
 
   layout: 
     sequence: 20
-    region: Buttons # 2237460025695263051
+    region: Buttons # 3340412809513413448
     slot: DELETE
     start-new-layout: false
     start-new-row: true
@@ -289,14 +289,14 @@ buttons:
     item: P9_ID
 
 - # ====== Button: SAVE ========================================
-  id: 2237462274277263053
+  id: 3340415034765413449
   identification: 
     button-name: SAVE
     label: Apply Changes
 
   layout: 
     sequence: 30
-    region: Buttons # 2237460025695263051
+    region: Buttons # 3340412809513413448
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -322,14 +322,14 @@ buttons:
     item: P9_ID
 
 - # ====== Button: CREATE ======================================
-  id: 2237462626234263053
+  id: 3340415403189413449
   identification: 
     button-name: CREATE
     label: Create
 
   layout: 
     sequence: 40
-    region: Buttons # 2237460025695263051
+    region: Buttons # 3340412809513413448
     slot: NEXT
     start-new-layout: false
     start-new-row: true
@@ -356,7 +356,7 @@ buttons:
 
 dynamic-actions: 
 - # ====== Dynamic Action: Cancel Dialog =======================
-  id: 2237460578100263051
+  id: 3340413385504413448
   identification: 
     name: Cancel Dialog
 
@@ -368,41 +368,41 @@ dynamic-actions:
   when: 
     event: Click
     selection-type: Button
-    button: CANCEL # 2237460429724263051
+    button: CANCEL # 3340413286637413448
 
   actions: 
   - # ====== Action: Cancel Dialog ===============================
-    id: 2237461307787263052
+    id: 3340414175292413449
     identification: 
       action: Cancel Dialog
 
     execution: 
       sequence: 10
-      event: Cancel Dialog # 2237460578100263051
+      event: Cancel Dialog # 3340413385504413448
       fire-when-event-result-is: True
       fire-on-initialization: false
 
 processes: 
-- # ====== Process: Initialize form Status Manutencao ==========
-  id: 2237463063101263053
+- # ====== Process: Initialize form Metodo Pagamento ===========
+  id: 3340415832757413450
   identification: 
-    name: Initialize form Status Manutencao
+    name: Initialize form Metodo Pagamento
     type: Form - Initialization
     execution-chain: None
-    form-region: Status Manutencao # 2237458375991263049
+    form-region: Metodo Pagamento # 3340411143370413446
 
   execution: 
     sequence: 10
     point: Before Header
     run-process: Once Per Page Visit (default)
 
-- # ====== Process: Process form Status Manutencao =============
-  id: 2237463483520263053
+- # ====== Process: Process form Metodo Pagamento ==============
+  id: 3340416210377413450
   identification: 
-    name: Process form Status Manutencao
+    name: Process form Metodo Pagamento
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Status Manutencao # 2237458375991263049
+    form-region: Metodo Pagamento # 3340411143370413446
 
   settings: 
     target-type: Region Source
@@ -419,7 +419,7 @@ processes:
     display-location: Inline in Notification
 
 - # ====== Process: Close Dialog ===============================
-  id: 2237463835916263054
+  id: 3340416668967413450
   identification: 
     name: Close Dialog
     type: Close Dialog
