@@ -1,7 +1,3 @@
-<br><br>
-![Pousada Quinta do Ypuã - logo](/assets/images/app-icon-512)
-<br><br>
-
 ## UniSENAI - Projeto Aplicado I 
 
 # SISTEMA DE GERENCIAMENTO DE HOSPEDAGENS
