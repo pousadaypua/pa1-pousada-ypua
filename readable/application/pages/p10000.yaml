@@ -1,10 +1,10 @@
 ---
-# ====== Page: Administration ================================
+# ====== Page: Preferências ==================================
 id: 10000
 identification: 
-  name: Administration
-  alias: ADMINISTRATION
-  title: Administration
+  name: Preferências
+  alias: PREFERENCIAS
+  title: HTML_TITLE
   page-group: Administration # 3340335550694411655
 
 appearance: 
@@ -126,10 +126,10 @@ regions:
       output-as: HTML
       expand-shortcuts: false
 
-- # ====== Region: Configuration ===============================
+- # ====== Region: Configurações ===============================
   id: 3340548166748415658
   identification: 
-    name: Configuration
+    name: Configurações
     type: List
 
   source: 
@@ -177,10 +177,10 @@ regions:
       - '#DEFAULT#'
       - u-colors
 
-- # ====== Region: User Interface ==============================
+- # ====== Region: Interface Gráfica ===========================
   id: 3340548568598415658
   identification: 
-    name: User Interface
+    name: Interface Gráfica
     type: List
 
   source: 

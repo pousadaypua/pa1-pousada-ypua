@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Manutencao =============================
+# ====== Page: Cadastro de Status de Manutenção ==============
 id: 15
 identification: 
-  name: Status Manutencao
-  alias: STATUS-MANUTENCAO
-  title: Status Manutencao
+  name: Cadastro de Status de Manutenção
+  alias: STATUS-MANUTENCAO-NEW
+  title: Cadastro de Status de Manutenção
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,10 +41,10 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Status Manutencao ===========================
+- # ====== Region: Status de Manutenção ========================
   id: 3340443836743415054
   identification: 
-    name: Status Manutencao
+    name: Status de Manutenção
     type: Form
 
   source: 
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Status Manutencao # 3340443836743415054
+    region: Status de Manutenção # 3340443836743415054
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Manutencao # 3340443836743415054
+    form-region: Status de Manutenção # 3340443836743415054
     column: ID
     data-type: NUMBER
     query-only: true
@@ -169,8 +169,8 @@ page-items:
     type: Text Field
 
   label: 
-    label: Descricao
-    alignment: Right
+    label: Descrição
+    alignment: Left
 
   settings: 
     subtype: Text
@@ -181,7 +181,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Status Manutencao # 3340443836743415054
+    region: Status de Manutenção # 3340443836743415054
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -205,7 +205,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Manutencao # 3340443836743415054
+    form-region: Status de Manutenção # 3340443836743415054
     column: DESCRICAO
     data-type: VARCHAR2
     query-only: false
@@ -227,7 +227,7 @@ buttons:
   id: 3340445938496415056
   identification: 
     button-name: CANCEL
-    label: Cancel
+    label: Cancelar
 
   layout: 
     sequence: 10
@@ -253,7 +253,7 @@ buttons:
   id: 3340447310724415057
   identification: 
     button-name: DELETE
-    label: Delete
+    label: Excluir
 
   layout: 
     sequence: 20
@@ -292,7 +292,7 @@ buttons:
   id: 3340447713194415057
   identification: 
     button-name: SAVE
-    label: Apply Changes
+    label: Salvar
 
   layout: 
     sequence: 30
@@ -325,7 +325,7 @@ buttons:
   id: 3340448115803415058
   identification: 
     button-name: CREATE
-    label: Create
+    label: Salvar
 
   layout: 
     sequence: 40
@@ -383,26 +383,13 @@ dynamic-actions:
       fire-on-initialization: false
 
 processes: 
-- # ====== Process: Initialize form Status Manutencao ==========
-  id: 3340448586579415058
+- # ====== Process: Process form Status Manutenção =============
+  id: 2226787740916718109
   identification: 
-    name: Initialize form Status Manutencao
-    type: Form - Initialization
-    execution-chain: None
-    form-region: Status Manutencao # 3340443836743415054
-
-  execution: 
-    sequence: 10
-    point: Before Header
-    run-process: Once Per Page Visit (default)
-
-- # ====== Process: Process form Status Manutencao =============
-  id: 3340448915803415058
-  identification: 
-    name: Process form Status Manutencao
+    name: Process form Status Manutenção
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Status Manutencao # 3340443836743415054
+    form-region: Status de Manutenção # 3340443836743415054
 
   settings: 
     target-type: Region Source
@@ -411,12 +398,25 @@ processes:
     return-primary-key(s)-after-insert: true
 
   execution: 
-    sequence: 10
+    sequence: 60
     point: Processing
     run-process: Once Per Page Visit (default)
 
   error: 
     display-location: Inline in Notification
+
+- # ====== Process: Initialize form Status Manutencao ==========
+  id: 3340448586579415058
+  identification: 
+    name: Initialize form Status Manutencao
+    type: Form - Initialization
+    execution-chain: None
+    form-region: Status de Manutenção # 3340443836743415054
+
+  execution: 
+    sequence: 10
+    point: Before Header
+    run-process: Once Per Page Visit (default)
 
 - # ====== Process: Close Dialog ===============================
   id: 3340449327249415058

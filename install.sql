@@ -3,11 +3,12 @@ prompt --install
 @@application/delete_application.sql
 @@application/create_application.sql
 @@application/user_interfaces.sql
-@@application/shared_components/navigation/lists/navigation_menu.sql
-@@application/shared_components/navigation/lists/navigation_bar.sql
+@@application/shared_components/navigation/lists/menu_lateral_old.sql
+@@application/shared_components/navigation/lists/menu_superior.sql
 @@application/shared_components/navigation/lists/page_navigation.sql
 @@application/shared_components/navigation/lists/application_configuration.sql
 @@application/shared_components/navigation/lists/user_interface.sql
+@@application/shared_components/navigation/lists/menu_lateral.sql
 @@application/shared_components/navigation/listentry.sql
 @@application/shared_components/files/icons_app_icon_32_png.sql
 @@application/shared_components/files/icons_app_icon_144_rounded_png.sql
@@ -22,6 +23,7 @@ prompt --install
 @@application/shared_components/navigation/tabs/standard.sql
 @@application/shared_components/navigation/tabs/parent.sql
 @@application/shared_components/user_interface/lovs/acomodacao_nome.sql
+@@application/shared_components/user_interface/lovs/acomodacao_valor_diaria.sql
 @@application/shared_components/user_interface/lovs/cliente_cpf.sql
 @@application/shared_components/user_interface/lovs/desktop_theme_styles.sql
 @@application/shared_components/user_interface/lovs/metodo_pagamento_descricao.sql
@@ -31,7 +33,6 @@ prompt --install
 @@application/shared_components/user_interface/lovs/status_reserva_descricao.sql
 @@application/shared_components/user_interface/lovs/user_theme_preference.sql
 @@application/pages/page_groups.sql
-@@application/comments.sql
 @@application/shared_components/navigation/breadcrumbs/breadcrumb.sql
 @@application/shared_components/navigation/breadcrumbentry.sql
 @@application/shared_components/user_interface/templates/page/drawer.sql
@@ -113,6 +114,7 @@ prompt --install
 @@application/shared_components/logic/build_options.sql
 @@application/shared_components/globalization/messages.sql
 @@application/shared_components/globalization/dyntranslations.sql
+@@application/shared_components/security/authentications/apresentacao.sql
 @@application/shared_components/security/authentications/oracle_apex_accounts.sql
 @@application/shared_components/plugins/template_component/theme_42_avatar.sql
 @@application/shared_components/plugins/template_component/theme_42_badge.sql
@@ -144,4 +146,7 @@ prompt --install
 @@application/pages/page_10000.sql
 @@application/pages/page_10010.sql
 @@application/pages/page_10020.sql
+@@application/deployment/definition.sql
+@@application/deployment/checks.sql
+@@application/deployment/buildoptions.sql
 @@application/end_environment.sql

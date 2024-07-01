@@ -185,3 +185,23 @@
       display: Allow End Users to choose Theme Style
       return: Yes
 
+- # ====== List of Values: ACOMODACAO.VALOR_DIARIA =============
+  id: 6907554933613613449
+  identification: 
+    name: ACOMODACAO.VALOR_DIARIA
+
+  subscription: 
+    version-number: 15540537235060
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: ACOMODACAO
+
+  column-mapping: 
+    return: ID
+    display: VALOR_DIARIA
+    default-sort: VALOR_DIARIA
+    sort-direction: Ascending (Nulls Last)
+

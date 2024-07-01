@@ -1,4 +1,22 @@
 ---
+- # ====== Authentication: APRESENTACAO ========================
+  id: 3004664503489538
+  identification: 
+    name: APRESENTACAO
+
+  subscription: 
+    version-number: 15540582045229
+
+  settings: 
+    type: No Authentication
+    username: USUARIO_PADRAO
+
+  login-processing: 
+    switch-in-session: false
+
+  real-application-security: 
+    ras-mode: Disabled
+
 - # ====== Authentication: Oracle APEX Accounts ================
   id: 3340022412554411463
   identification: 

@@ -1,0 +1,41 @@
+---
+- # ====== Substitution: APP_NAME ==============================
+  id: 6939050361125969997
+  identification: 
+    name: APP_NAME
+
+  installation: 
+    prompt-substitution: false
+
+- # ====== Substitution: TAB_TITLE =============================
+  id: 6939050361125969996
+  identification: 
+    name: TAB_TITLE
+
+  installation: 
+    prompt-substitution: false
+
+- # ====== Substitution: EMPRESA ===============================
+  id: 6939050361125969995
+  identification: 
+    name: EMPRESA
+
+  installation: 
+    prompt-substitution: false
+
+- # ====== Substitution: APP_TITLE =============================
+  id: 6939050361125969994
+  identification: 
+    name: APP_TITLE
+
+  installation: 
+    prompt-substitution: false
+
+- # ====== Substitution: NOT_FOUND =============================
+  id: 6939050361125969993
+  identification: 
+    name: NOT_FOUND
+
+  installation: 
+    prompt-substitution: false
+

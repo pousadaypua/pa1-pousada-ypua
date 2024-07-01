@@ -1,10 +1,10 @@
 ---
-# ====== Page: Acomodacao ====================================
+# ====== Page: Cadastro de Acomodação ========================
 id: 7
 identification: 
-  name: Acomodacao
-  alias: ACOMODACAO
-  title: Acomodacao
+  name: Cadastro de Acomodação
+  alias: ACOMODACAO-NEW
+  title: Cadastro de Acomodação
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,10 +41,11 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Acomodacao ==================================
+- # ====== Region: Acomodação ==================================
   id: 3340390380550412900
   identification: 
-    name: Acomodacao
+    name: Acomodação
+    title: Acomodação
     type: Form
 
   source: 
@@ -140,14 +141,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Acomodacao # 3340390380550412900
+    region: Acomodação # 3340390380550412900
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
     column: ID
     data-type: NUMBER
     query-only: true
@@ -169,7 +170,7 @@ page-items:
     type: Select List
 
   label: 
-    label: Id Status Limpeza
+    label: Status de Limpeza
     alignment: Left
 
   settings: 
@@ -179,14 +180,14 @@ page-items:
     type: No
 
   layout: 
-    sequence: 80
-    region: Acomodacao # 3340390380550412900
+    sequence: 70
+    region: Acomodação # 3340390380550412900
     slot: BODY
     alignment: Left
     start-new-layout: false
     start-new-row: false
     column: Automatic
-    new-column: true
+    new-column: false
     column-span: Automatic
     label-column-span: Page Template Default
 
@@ -209,7 +210,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
     column: ID_STATUS_LIMPEZA
     data-type: NUMBER
     query-only: false
@@ -233,7 +234,7 @@ page-items:
     type: Select List
 
   label: 
-    label: Id Status Manutencao
+    label: Status de Manutenção
     alignment: Left
 
   settings: 
@@ -244,7 +245,7 @@ page-items:
 
   layout: 
     sequence: 90
-    region: Acomodacao # 3340390380550412900
+    region: Acomodação # 3340390380550412900
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -273,7 +274,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
     column: ID_STATUS_MANUTENCAO
     data-type: NUMBER
     query-only: false
@@ -297,7 +298,7 @@ page-items:
     type: Select List
 
   label: 
-    label: Id Status Disponibilidade
+    label: Status de Disponibilidade
     alignment: Left
 
   settings: 
@@ -308,7 +309,7 @@ page-items:
 
   layout: 
     sequence: 60
-    region: Acomodacao # 3340390380550412900
+    region: Acomodação # 3340390380550412900
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -337,7 +338,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
     column: ID_STATUS_DISPONIBILIDADE
     data-type: NUMBER
     query-only: false
@@ -373,7 +374,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Acomodacao # 3340390380550412900
+    region: Acomodação # 3340390380550412900
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -397,7 +398,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
     column: NOME
     data-type: VARCHAR2
     query-only: false
@@ -421,7 +422,7 @@ page-items:
     type: Textarea
 
   label: 
-    label: Descricao
+    label: Descrição
     alignment: Left
 
   settings: 
@@ -432,7 +433,7 @@ page-items:
 
   layout: 
     sequence: 30
-    region: Acomodacao # 3340390380550412900
+    region: Acomodação # 3340390380550412900
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -457,7 +458,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
     column: DESCRICAO
     data-type: VARCHAR2
     query-only: false
@@ -491,7 +492,7 @@ page-items:
 
   layout: 
     sequence: 40
-    region: Acomodacao # 3340390380550412900
+    region: Acomodação # 3340390380550412900
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -515,7 +516,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
     column: CAPACIDADE
     data-type: NUMBER
     query-only: false
@@ -539,7 +540,7 @@ page-items:
     type: Number Field
 
   label: 
-    label: Valor Diaria
+    label: Valor da Diária (R$)
     alignment: Left
 
   settings: 
@@ -548,7 +549,7 @@ page-items:
 
   layout: 
     sequence: 50
-    region: Acomodacao # 3340390380550412900
+    region: Acomodação # 3340390380550412900
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -572,7 +573,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
     column: VALOR_DIARIA
     data-type: NUMBER
     query-only: false
@@ -594,7 +595,7 @@ buttons:
   id: 3340397531438412906
   identification: 
     button-name: CANCEL
-    label: Cancel
+    label: Cancelar
 
   layout: 
     sequence: 10
@@ -620,7 +621,7 @@ buttons:
   id: 3340399073373412907
   identification: 
     button-name: DELETE
-    label: Delete
+    label: Excluir
 
   layout: 
     sequence: 20
@@ -659,7 +660,7 @@ buttons:
   id: 3340399495381412908
   identification: 
     button-name: SAVE
-    label: Apply Changes
+    label: Salvar
 
   layout: 
     sequence: 30
@@ -692,7 +693,7 @@ buttons:
   id: 3340399833224412908
   identification: 
     button-name: CREATE
-    label: Create
+    label: Salvar
 
   layout: 
     sequence: 40
@@ -756,7 +757,7 @@ processes:
     name: Initialize form Acomodacao
     type: Form - Initialization
     execution-chain: None
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
 
   execution: 
     sequence: 10
@@ -769,7 +770,7 @@ processes:
     name: Process form Acomodacao
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Acomodacao # 3340390380550412900
+    form-region: Acomodação # 3340390380550412900
 
   settings: 
     target-type: Region Source

@@ -1,23 +1,23 @@
 ---
-- # ====== List: Navigation Menu ===============================
+- # ====== List: Menu Lateral OLD ==============================
   id: 3340023258454411464
   identification: 
-    name: Navigation Menu
+    name: Menu Lateral OLD
 
   subscription: 
-    version-number: 15538721433867
+    version-number: 15540490087517
 
   source: 
     type: Static Values
 
   entries: 
-  - # ====== Entry: Home =========================================
+  - # ====== Entry: Painel =======================================
     id: 3340346761518411666
     label: 
-      label: Home
+      label: Painel
 
     icon: 
-      image/icon-css-classes: fa-home
+      image/icon-css-classes: fa-tiles-2x2
 
     layout: 
       sequence: 10
@@ -27,8 +27,8 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
-        page: 1 # Home
+        url: 'f?p=&APP_ID.:1:&SESSION.::&DEBUG.::::'
+        page: 1 # Painel
 
     click-counting: 
       count-clicks: false
@@ -36,13 +36,13 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Reserva ======================================
+  - # ====== Entry: Reservas =====================================
     id: 3340348233187411668
     label: 
-      label: Reserva
+      label: Reservas
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-book
 
     layout: 
       sequence: 20
@@ -52,8 +52,8 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:::'
-        page: 2 # Reserva
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Reservas
 
     click-counting: 
       count-clicks: false
@@ -61,13 +61,13 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Cliente ======================================
+  - # ====== Entry: Clientes =====================================
     id: 3340367202580411820
     label: 
-      label: Cliente
+      label: Clientes
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-id-card-o
 
     layout: 
       sequence: 30
@@ -77,8 +77,8 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
-        page: 4 # Cliente
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Clientes
 
     click-counting: 
       count-clicks: false
@@ -86,13 +86,13 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Acomodacao ===================================
+  - # ====== Entry: Acomodações ==================================
     id: 3340385576606412362
     label: 
-      label: Acomodacao
+      label: Acomodações
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-bed
 
     layout: 
       sequence: 40
@@ -102,8 +102,8 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:6:&APP_SESSION.::&DEBUG.:::'
-        page: 6 # Acomodacao
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::::'
+        page: 6 # Acomodações
 
     click-counting: 
       count-clicks: false
@@ -111,24 +111,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Metodo Pagamento =============================
+  - # ====== Entry: Métodos de Pagamento =========================
     id: 3340408137710412916
     label: 
-      label: Metodo Pagamento
+      label: Métodos de Pagamento
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-dollar
 
     layout: 
       sequence: 50
+      parent-entry: Reservas # 3340348233187411668
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:8:&APP_SESSION.::&DEBUG.:::'
-        page: 8 # Metodo Pagamento
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+        page: 8 # Métodos de Pagamento
 
     click-counting: 
       count-clicks: false
@@ -136,24 +137,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Status Reserva ===============================
+  - # ====== Entry: Status da Reserva ============================
     id: 3340421375862413454
     label: 
-      label: Status Reserva
+      label: Status da Reserva
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-file-check
 
     layout: 
       sequence: 60
+      parent-entry: Reservas # 3340348233187411668
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:10:&APP_SESSION.::&DEBUG.:::'
-        page: 10 # Status Reserva
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.::::'
+        page: 10 # Status de Reserva
 
     click-counting: 
       count-clicks: false
@@ -161,24 +163,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Status Disponibilidade =======================
+  - # ====== Entry: Status de Disponibilidade ====================
     id: 3340432112950413994
     label: 
-      label: Status Disponibilidade
+      label: Status de Disponibilidade
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-check-square-o
 
     layout: 
       sequence: 70
+      parent-entry: Acomodações # 3340385576606412362
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:12:&APP_SESSION.::&DEBUG.:::'
-        page: 12 # Status Disponibilidade
+        url: 'f?p=&APP_ID.:12:&SESSION.::&DEBUG.::::'
+        page: 12 # Status de Disponibilidade
 
     click-counting: 
       count-clicks: false
@@ -186,24 +189,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Status Manutencao ============================
+  - # ====== Entry: Status de Manutenção =========================
     id: 3340443131873414531
     label: 
-      label: Status Manutencao
+      label: Status de Manutenção
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-wrench
 
     layout: 
       sequence: 80
+      parent-entry: Acomodações # 3340385576606412362
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:14:&APP_SESSION.::&DEBUG.:::'
-        page: 14 # Status Manutencao
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+        page: 14 # Status de Manutenção
 
     click-counting: 
       count-clicks: false
@@ -211,24 +215,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Status Limpeza ===============================
+  - # ====== Entry: Status de Limpeza ============================
     id: 3340454044279415062
     label: 
-      label: Status Limpeza
+      label: Status de Limpeza
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-tint
 
     layout: 
       sequence: 90
+      parent-entry: Acomodações # 3340385576606412362
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:16:&APP_SESSION.::&DEBUG.:::'
-        page: 16 # Status Limpeza
+        url: 'f?p=&APP_ID.:16:&SESSION.::&DEBUG.::::'
+        page: 16 # Status de Limpeza
 
     click-counting: 
       count-clicks: false
@@ -236,13 +241,13 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Administration ===============================
+  - # ====== Entry: Preferências =================================
     id: 3340545212178415656
     label: 
-      label: Administration
+      label: Preferências
 
     icon: 
-      image/icon-css-classes: fa-user-wrench
+      image/icon-css-classes: fa-gears
 
     layout: 
       sequence: 10000
@@ -252,8 +257,8 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:10000:&APP_SESSION.::&DEBUG.:::'
-        page: 10000 # Administration
+        url: 'f?p=&APP_ID.:10000:&SESSION.::&DEBUG.::::'
+        page: 10000 # Preferências
 
     click-counting: 
       count-clicks: false
@@ -264,25 +269,439 @@
     security: 
       authorization-scheme: Administration Rights # 3340335239157411655
 
-- # ====== List: Navigation Bar ================================
+  - # ====== Entry: Reservas =====================================
+    id: 10163374949354003161
+    label: 
+      label: Reservas
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 110
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Reservas
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Clientes =====================================
+    id: 10163375404224003161
+    label: 
+      label: Clientes
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 120
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Clientes
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Acomodações ==================================
+    id: 10163375757973003161
+    label: 
+      label: Acomodações
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 130
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::::'
+        page: 6 # Acomodações
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Métodos de Pagamento =========================
+    id: 10163376189469003162
+    label: 
+      label: Métodos de Pagamento
+
+    icon: 
+      image/icon-css-classes: fa-dollar
+
+    layout: 
+      sequence: 140
+      parent-entry: Reservas # 10163374949354003161
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+        page: 8 # Métodos de Pagamento
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Reserva ============================
+    id: 10163376620051003162
+    label: 
+      label: Status de Reserva
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 150
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.::::'
+        page: 10 # Status de Reserva
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Disponibilidade ====================
+    id: 10163376988058003162
+    label: 
+      label: Status de Disponibilidade
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 160
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:12:&SESSION.::&DEBUG.::::'
+        page: 12 # Status de Disponibilidade
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Manutenção =========================
+    id: 10163377400296003162
+    label: 
+      label: Status de Manutenção
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 170
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+        page: 14 # Status de Manutenção
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Limpeza ============================
+    id: 10163377790043003162
+    label: 
+      label: Status de Limpeza
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 180
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:16:&SESSION.::&DEBUG.::::'
+        page: 16 # Status de Limpeza
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Hide/Del =====================================
+    id: 10163551957917273789
+    label: 
+      label: Hide/Del
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 110
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Reservas
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Clientes =====================================
+    id: 10163552412787273789
+    label: 
+      label: Clientes
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 120
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Clientes
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Acomodações ==================================
+    id: 10163552766536273789
+    label: 
+      label: Acomodações
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 130
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::::'
+        page: 6 # Acomodações
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Métodos de Pagamento =========================
+    id: 10163553198032273790
+    label: 
+      label: Métodos de Pagamento
+
+    icon: 
+      image/icon-css-classes: fa-dollar
+
+    layout: 
+      sequence: 140
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+        page: 8 # Métodos de Pagamento
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Reserva ============================
+    id: 10163553628614273790
+    label: 
+      label: Status de Reserva
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 150
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.::::'
+        page: 10 # Status de Reserva
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Disponibilidade ====================
+    id: 10163553996621273790
+    label: 
+      label: Status de Disponibilidade
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 160
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:12:&SESSION.::&DEBUG.::::'
+        page: 12 # Status de Disponibilidade
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Manutenção =========================
+    id: 10163554408859273790
+    label: 
+      label: Status de Manutenção
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 170
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+        page: 14 # Status de Manutenção
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Limpeza ============================
+    id: 10163554798606273790
+    label: 
+      label: Status de Limpeza
+
+    icon: 
+      image/icon-css-classes: fa-table
+
+    layout: 
+      sequence: 180
+      parent-entry: Hide/Del # 10163551957917273789
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:16:&SESSION.::&DEBUG.::::'
+        page: 16 # Status de Limpeza
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+- # ====== List: Menu Superior =================================
   id: 3340331284247411647
   identification: 
-    name: Navigation Bar
+    name: Menu Superior
 
   subscription: 
-    version-number: 15538721433859
+    version-number: 15540353518744
 
   source: 
     type: Static Values
 
   entries: 
-  - # ====== Entry: Install App ==================================
+  - # ====== Entry: Instalar App =================================
     id: 3340543410078415655
     label: 
-      label: Install App
+      label: Instalar App
 
     icon: 
-      image/icon-css-classes: fa-cloud-download
+      image/icon-css-classes: fa-download
 
     layout: 
       sequence: 10
@@ -348,10 +767,10 @@
     server-side-condition: 
       type: User is Authenticated (not public)
 
-  - # ====== Entry: Sign Out =====================================
+  - # ====== Entry: Sair =========================================
     id: 3340544648763415655
     label: 
-      label: Sign Out
+      label: Sair
 
     icon: 
       image/icon-css-classes: fa-sign-out
@@ -381,19 +800,19 @@
     name: Page Navigation
 
   subscription: 
-    version-number: 15538721433666
+    version-number: 15540567325780
 
   source: 
     type: Static Values
 
   entries: 
-  - # ====== Entry: Reserva ======================================
+  - # ====== Entry: Reservas =====================================
     id: 3340524610907415638
     label: 
-      label: Reserva
+      label: Reservas
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-book
 
     layout: 
       sequence: 20
@@ -403,8 +822,8 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:::'
-        page: 2 # Reserva
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Reservas
 
     click-counting: 
       count-clicks: false
@@ -412,13 +831,13 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Cliente ======================================
+  - # ====== Entry: Clientes =====================================
     id: 3340525065777415638
     label: 
-      label: Cliente
+      label: Clientes
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-id-card-o
 
     layout: 
       sequence: 30
@@ -428,8 +847,8 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
-        page: 4 # Cliente
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Clientes
 
     click-counting: 
       count-clicks: false
@@ -437,13 +856,13 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Acomodacao ===================================
+  - # ====== Entry: Acomodações ==================================
     id: 3340525419526415638
     label: 
-      label: Acomodacao
+      label: Acomodações
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-bed
 
     layout: 
       sequence: 40
@@ -453,8 +872,8 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:6:&APP_SESSION.::&DEBUG.:::'
-        page: 6 # Acomodacao
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::::'
+        page: 6 # Acomodações
 
     click-counting: 
       count-clicks: false
@@ -462,24 +881,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Metodo Pagamento =============================
+  - # ====== Entry: Métodos de Pagamento =========================
     id: 3340525851022415639
     label: 
-      label: Metodo Pagamento
+      label: Métodos de Pagamento
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-dollar
 
     layout: 
       sequence: 50
+      parent-entry: Reservas # 3340524610907415638
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:8:&APP_SESSION.::&DEBUG.:::'
-        page: 8 # Metodo Pagamento
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+        page: 8 # Métodos de Pagamento
 
     click-counting: 
       count-clicks: false
@@ -487,24 +907,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Status Reserva ===============================
+  - # ====== Entry: Status de Reserva ============================
     id: 3340526281604415639
     label: 
-      label: Status Reserva
+      label: Status de Reserva
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-file-check
 
     layout: 
       sequence: 60
+      parent-entry: Reservas # 3340524610907415638
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:10:&APP_SESSION.::&DEBUG.:::'
-        page: 10 # Status Reserva
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.::::'
+        page: 10 # Status de Reserva
 
     click-counting: 
       count-clicks: false
@@ -512,24 +933,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Status Disponibilidade =======================
+  - # ====== Entry: Status de Disponibilidade ====================
     id: 3340526649611415639
     label: 
-      label: Status Disponibilidade
+      label: Status de Disponibilidade
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-check-square-o
 
     layout: 
       sequence: 70
+      parent-entry: Acomodações # 3340525419526415638
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:12:&APP_SESSION.::&DEBUG.:::'
-        page: 12 # Status Disponibilidade
+        url: 'f?p=&APP_ID.:12:&SESSION.::&DEBUG.::::'
+        page: 12 # Status de Disponibilidade
 
     click-counting: 
       count-clicks: false
@@ -537,24 +959,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Status Manutencao ============================
+  - # ====== Entry: Status de Manutenção =========================
     id: 3340527061849415639
     label: 
-      label: Status Manutencao
+      label: Status de Manutenção
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-wrench
 
     layout: 
       sequence: 80
+      parent-entry: Acomodações # 3340525419526415638
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:14:&APP_SESSION.::&DEBUG.:::'
-        page: 14 # Status Manutencao
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+        page: 14 # Status de Manutenção
 
     click-counting: 
       count-clicks: false
@@ -562,24 +985,25 @@
     user-defined-attributes: 
       translatable: false
 
-  - # ====== Entry: Status Limpeza ===============================
+  - # ====== Entry: Status de Limpeza ============================
     id: 3340527451596415639
     label: 
-      label: Status Limpeza
+      label: Status de Limpeza
 
     icon: 
-      image/icon-css-classes: fa-table
+      image/icon-css-classes: fa-tint
 
     layout: 
       sequence: 90
+      parent-entry: Acomodações # 3340525419526415638
 
     is-current: 
       type: Target Page
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:16:&APP_SESSION.::&DEBUG.:::'
-        page: 16 # Status Limpeza
+        url: 'f?p=&APP_ID.:16:&SESSION.::&DEBUG.::::'
+        page: 16 # Status de Limpeza
 
     click-counting: 
       count-clicks: false
@@ -676,4 +1100,246 @@
 
     configuration: 
       build-option: 'Feature: Theme Style Selection' # 3340334555864411654
+
+- # ====== List: Menu Lateral ==================================
+  id: 6830645879933751311
+  identification: 
+    name: Menu Lateral
+
+  subscription: 
+    version-number: 15540492037375
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Métodos de Pagamento =========================
+    id: 6830089504516015034
+    label: 
+      label: Métodos de Pagamento
+
+    icon: 
+      image/icon-css-classes: fa-dollar
+
+    layout: 
+      sequence: 50
+      parent-entry: Reservas # 6830646473590751312
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.::::'
+        page: 8 # Métodos de Pagamento
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Painel =======================================
+    id: 6830646014651751312
+    label: 
+      label: Painel
+
+    icon: 
+      image/icon-css-classes: fa-tiles-2x2
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:1:&SESSION.::&DEBUG.::::'
+        page: 1 # Painel
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Reservas =====================================
+    id: 6830646473590751312
+    label: 
+      label: Reservas
+
+    icon: 
+      image/icon-css-classes: fa-book
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.::::'
+        page: 2 # Reservas
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Clientes =====================================
+    id: 6830646866404751312
+    label: 
+      label: Clientes
+
+    icon: 
+      image/icon-css-classes: fa-id-card-o
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.::::'
+        page: 4 # Clientes
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Acomodações ==================================
+    id: 6830647218598751313
+    label: 
+      label: Acomodações
+
+    icon: 
+      image/icon-css-classes: fa-bed
+
+    layout: 
+      sequence: 40
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::::'
+        page: 6 # Acomodações
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Reserva ============================
+    id: 6831696015482765153
+    label: 
+      label: Status de Reserva
+
+    icon: 
+      image/icon-css-classes: fa-file-check
+
+    layout: 
+      sequence: 60
+      parent-entry: Reservas # 6830646473590751312
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.::::'
+        page: 10 # Status de Reserva
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Disponibilidade ====================
+    id: 6831712553906767518
+    label: 
+      label: Status de Disponibilidade
+
+    icon: 
+      image/icon-css-classes: fa-check-square-o
+
+    layout: 
+      sequence: 70
+      parent-entry: Acomodações # 6830647218598751313
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:12:&SESSION.::&DEBUG.::::'
+        page: 12 # Status de Disponibilidade
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Limpeza ============================
+    id: 6831730481645772466
+    label: 
+      label: Status de Limpeza
+
+    icon: 
+      image/icon-css-classes: fa-tint
+
+    layout: 
+      sequence: 90
+      parent-entry: Acomodações # 6830647218598751313
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:16:&SESSION.::&DEBUG.::::'
+        page: 16 # Status de Limpeza
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Status de Manutenção =========================
+    id: 6832277934050026569
+    label: 
+      label: Status de Manutenção
+
+    icon: 
+      image/icon-css-classes: fa-wrench
+
+    layout: 
+      sequence: 80
+      parent-entry: Acomodações # 6830647218598751313
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.::::'
+        page: 14 # Status de Manutenção
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
 

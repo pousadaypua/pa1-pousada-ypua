@@ -8,15 +8,15 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
 ,p_default_application_id=>236183
-,p_default_id_offset=>0
+,p_default_id_offset=>6939050361125969998
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
 wwv_flow_imp_page.create_page(
  p_id=>15
-,p_name=>'Status Manutencao'
-,p_alias=>'STATUS-MANUTENCAO'
+,p_name=>unistr('Cadastro de Status de Manuten\00E7\00E3o')
+,p_alias=>'STATUS-MANUTENCAO-NEW'
 ,p_page_mode=>'MODAL'
-,p_step_title=>'Status Manutencao'
+,p_step_title=>unistr('Cadastro de Status de Manuten\00E7\00E3o')
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>wwv_flow_imp.id(3340023538035411464)
 ,p_page_template_options=>'#DEFAULT#:js-dialog-class-t-Drawer--pullOutEnd'
@@ -26,7 +26,7 @@ wwv_flow_imp_page.create_page(
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3340443836743415054)
-,p_plug_name=>'Status Manutencao'
+,p_plug_name=>unistr('Status de Manuten\00E7\00E3o')
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>wwv_flow_imp.id(3340059626164411480)
 ,p_plug_display_sequence=>10
@@ -58,9 +58,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#'
 ,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
-,p_button_image_alt=>'Cancel'
+,p_button_image_alt=>'Cancelar'
 ,p_button_position=>'CLOSE'
-,p_button_alignment=>'RIGHT'
+,p_warn_on_unsaved_changes=>null
 );
 wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(3340447310724415057)
@@ -70,9 +70,8 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#:t-Button--danger:t-Button--simple'
 ,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
-,p_button_image_alt=>'Delete'
+,p_button_image_alt=>'Excluir'
 ,p_button_position=>'DELETE'
-,p_button_alignment=>'RIGHT'
 ,p_button_execute_validations=>'N'
 ,p_confirm_message=>'&APP_TEXT$DELETE_MSG!RAW.'
 ,p_confirm_style=>'danger'
@@ -89,9 +88,8 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_template_options=>'#DEFAULT#'
 ,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
 ,p_button_is_hot=>'Y'
-,p_button_image_alt=>'Apply Changes'
+,p_button_image_alt=>'Salvar'
 ,p_button_position=>'NEXT'
-,p_button_alignment=>'RIGHT'
 ,p_button_condition=>'P15_ID'
 ,p_button_condition_type=>'ITEM_IS_NOT_NULL'
 ,p_database_action=>'UPDATE'
@@ -105,9 +103,8 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_template_options=>'#DEFAULT#'
 ,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
 ,p_button_is_hot=>'Y'
-,p_button_image_alt=>'Create'
+,p_button_image_alt=>'Salvar'
 ,p_button_position=>'NEXT'
-,p_button_alignment=>'RIGHT'
 ,p_button_condition=>'P15_ID'
 ,p_button_condition_type=>'ITEM_IS_NULL'
 ,p_database_action=>'INSERT'
@@ -142,20 +139,17 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_imp.id(3340443836743415054)
 ,p_item_source_plug_id=>wwv_flow_imp.id(3340443836743415054)
-,p_use_cache_before_default=>'NO'
-,p_prompt=>'Descricao'
+,p_prompt=>unistr('Descri\00E7\00E3o')
 ,p_source=>'DESCRICAO'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_TEXT_FIELD'
 ,p_cSize=>32
 ,p_cMaxlength=>255
-,p_label_alignment=>'RIGHT'
 ,p_field_template=>wwv_flow_imp.id(3340198660655411536)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_is_persistent=>'N'
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'N'
-,p_attribute_03=>'N'
 ,p_attribute_04=>'TEXT'
 ,p_attribute_05=>'NONE'
 );
@@ -178,20 +172,6 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action=>'NATIVE_DIALOG_CANCEL'
 );
 wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(3340448915803415058)
-,p_process_sequence=>10
-,p_process_point=>'AFTER_SUBMIT'
-,p_region_id=>wwv_flow_imp.id(3340443836743415054)
-,p_process_type=>'NATIVE_FORM_DML'
-,p_process_name=>'Process form Status Manutencao'
-,p_attribute_01=>'REGION_SOURCE'
-,p_attribute_05=>'Y'
-,p_attribute_06=>'Y'
-,p_attribute_08=>'Y'
-,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_internal_uid=>3340448915803415058
-);
-wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(3340449327249415058)
 ,p_process_sequence=>50
 ,p_process_point=>'AFTER_SUBMIT'
@@ -201,6 +181,20 @@ wwv_flow_imp_page.create_page_process(
 ,p_process_when=>'CREATE,SAVE,DELETE'
 ,p_process_when_type=>'REQUEST_IN_CONDITION'
 ,p_internal_uid=>3340449327249415058
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(2226787740916718109)
+,p_process_sequence=>60
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(3340443836743415054)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>unistr('Process form Status Manuten\00E7\00E3o')
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>2226787740916718109
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(3340448586579415058)

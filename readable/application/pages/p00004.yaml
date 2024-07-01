@@ -1,10 +1,10 @@
 ---
-# ====== Page: Cliente =======================================
+# ====== Page: Clientes ======================================
 id: 4
 identification: 
-  name: Cliente
-  alias: CLIENTE1
-  title: Cliente
+  name: Clientes
+  alias: CLIENTES-LIST
+  title: Clientes
 
 appearance: 
   page-mode: Normal
@@ -49,10 +49,10 @@ help:
     <p>Click the <strong>Reset</strong> button to reset the interactive report back to the default settings.</p>
 
 regions: 
-- # ====== Region: Cliente =====================================
+- # ====== Region: Lista de Clientes ===========================
   id: 3340379350365412357
   identification: 
-    name: Cliente
+    name: Lista de Clientes
     type: Interactive Report
 
   source: 
@@ -91,7 +91,7 @@ regions:
       link-column: Link to Custom Target
       target: 
         url: 'f?p=&APP_ID.:5:&APP_SESSION.::&DEBUG.:RP:P5_ID:\#ID#\'
-        page: 5 # Cliente
+        page: 5 # Cadastro de Cliente
         clear-cache: RP
         values: 
           p5_id: '#ID#'
@@ -187,7 +187,7 @@ regions:
         type: Plain Text
 
       heading: 
-        heading: Cpf
+        heading: CPF
         alignment: start
 
       single-row-view: 
@@ -327,7 +327,7 @@ regions:
       link: 
         target: 
           url: 'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:2,RR:IR_ID_CLIENTE:\#CPF#\'
-          page: 2 # Reserva
+          page: 2 # Reservas
           clear-cache: 2,RR
           values: 
             ir_id_cliente: '#CPF#'
@@ -403,7 +403,7 @@ regions:
         type: Plain Text
 
       heading: 
-        heading: Endereco
+        heading: Endereço
         alignment: start
 
       single-row-view: 
@@ -528,11 +528,11 @@ buttons:
   id: 3340383054443412360
   identification: 
     button-name: CREATE
-    label: Create
+    label: Adicionar
 
   layout: 
     sequence: 10
-    region: Cliente # 3340379350365412357
+    region: Lista de Clientes # 3340379350365412357
     slot: RIGHT_OF_IR_SEARCH_BAR
     start-new-layout: false
     start-new-row: true
@@ -541,16 +541,18 @@ buttons:
     column-span: Automatic
 
   appearance: 
-    button-template: Text
+    button-template: Text with Icon
     hot: true
     template-options: 
     - '#DEFAULT#'
+    - t-Button--iconLeft
+    icon: fa-plus-square-o
 
   behavior: 
     action: Redirect to Page in this Application
     target: 
       url: 'f?p=&APP_ID.:5:&APP_SESSION.::&DEBUG.:5::'
-      page: 5 # Cliente
+      page: 5 # Cadastro de Cliente
       clear-cache: 5
 
     warn-on-unsaved-changes: Do Not Check
@@ -569,7 +571,7 @@ dynamic-actions:
   when: 
     event: Dialog Closed
     selection-type: Region
-    region: Cliente # 3340379350365412357
+    region: Lista de Clientes # 3340379350365412357
 
   actions: 
   - # ====== Action: Refresh =====================================
@@ -579,7 +581,7 @@ dynamic-actions:
 
     affected-elements: 
       selection-type: Region
-      region: Cliente # 3340379350365412357
+      region: Lista de Clientes # 3340379350365412357
 
     execution: 
       sequence: 10

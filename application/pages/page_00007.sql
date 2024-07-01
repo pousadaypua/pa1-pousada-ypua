@@ -8,15 +8,15 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
 ,p_default_application_id=>236183
-,p_default_id_offset=>0
+,p_default_id_offset=>6939050361125969998
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
 wwv_flow_imp_page.create_page(
  p_id=>7
-,p_name=>'Acomodacao'
-,p_alias=>'ACOMODACAO'
+,p_name=>unistr('Cadastro de Acomoda\00E7\00E3o')
+,p_alias=>'ACOMODACAO-NEW'
 ,p_page_mode=>'MODAL'
-,p_step_title=>'Acomodacao'
+,p_step_title=>unistr('Cadastro de Acomoda\00E7\00E3o')
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>wwv_flow_imp.id(3340023538035411464)
 ,p_page_template_options=>'#DEFAULT#:js-dialog-class-t-Drawer--pullOutEnd'
@@ -26,7 +26,8 @@ wwv_flow_imp_page.create_page(
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3340390380550412900)
-,p_plug_name=>'Acomodacao'
+,p_plug_name=>unistr('Acomoda\00E7\00E3o')
+,p_title=>unistr('Acomoda\00E7\00E3o')
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>wwv_flow_imp.id(3340059626164411480)
 ,p_plug_display_sequence=>10
@@ -58,9 +59,9 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_action=>'DEFINED_BY_DA'
 ,p_button_template_options=>'#DEFAULT#'
 ,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
-,p_button_image_alt=>'Cancel'
+,p_button_image_alt=>'Cancelar'
 ,p_button_position=>'CLOSE'
-,p_button_alignment=>'RIGHT'
+,p_warn_on_unsaved_changes=>null
 );
 wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(3340399073373412907)
@@ -70,9 +71,8 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_action=>'SUBMIT'
 ,p_button_template_options=>'#DEFAULT#:t-Button--danger:t-Button--simple'
 ,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
-,p_button_image_alt=>'Delete'
+,p_button_image_alt=>'Excluir'
 ,p_button_position=>'DELETE'
-,p_button_alignment=>'RIGHT'
 ,p_button_execute_validations=>'N'
 ,p_confirm_message=>'&APP_TEXT$DELETE_MSG!RAW.'
 ,p_confirm_style=>'danger'
@@ -89,9 +89,8 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_template_options=>'#DEFAULT#'
 ,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
 ,p_button_is_hot=>'Y'
-,p_button_image_alt=>'Apply Changes'
+,p_button_image_alt=>'Salvar'
 ,p_button_position=>'NEXT'
-,p_button_alignment=>'RIGHT'
 ,p_button_condition=>'P7_ID'
 ,p_button_condition_type=>'ITEM_IS_NOT_NULL'
 ,p_database_action=>'UPDATE'
@@ -105,9 +104,8 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_template_options=>'#DEFAULT#'
 ,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
 ,p_button_is_hot=>'Y'
-,p_button_image_alt=>'Create'
+,p_button_image_alt=>'Salvar'
 ,p_button_position=>'NEXT'
-,p_button_alignment=>'RIGHT'
 ,p_button_condition=>'P7_ID'
 ,p_button_condition_type=>'ITEM_IS_NULL'
 ,p_database_action=>'INSERT'
@@ -132,10 +130,10 @@ wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3340391000777412901)
 ,p_name=>'P7_ID_STATUS_LIMPEZA'
 ,p_source_data_type=>'NUMBER'
-,p_item_sequence=>80
+,p_item_sequence=>70
 ,p_item_plug_id=>wwv_flow_imp.id(3340390380550412900)
 ,p_item_source_plug_id=>wwv_flow_imp.id(3340390380550412900)
-,p_prompt=>'Id Status Limpeza'
+,p_prompt=>'Status de Limpeza'
 ,p_source=>'ID_STATUS_LIMPEZA'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
@@ -143,6 +141,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_lov_display_null=>'YES'
 ,p_cHeight=>1
 ,p_begin_on_new_line=>'N'
+,p_begin_on_new_field=>'N'
 ,p_field_template=>wwv_flow_imp.id(3340197378426411536)
 ,p_item_template_options=>'#DEFAULT#'
 ,p_is_persistent=>'N'
@@ -156,7 +155,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>90
 ,p_item_plug_id=>wwv_flow_imp.id(3340390380550412900)
 ,p_item_source_plug_id=>wwv_flow_imp.id(3340390380550412900)
-,p_prompt=>'Id Status Manutencao'
+,p_prompt=>unistr('Status de Manuten\00E7\00E3o')
 ,p_source=>'ID_STATUS_MANUTENCAO'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
@@ -176,7 +175,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>60
 ,p_item_plug_id=>wwv_flow_imp.id(3340390380550412900)
 ,p_item_source_plug_id=>wwv_flow_imp.id(3340390380550412900)
-,p_prompt=>'Id Status Disponibilidade'
+,p_prompt=>'Status de Disponibilidade'
 ,p_source=>'ID_STATUS_DISPONIBILIDADE'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_SELECT_LIST'
@@ -221,7 +220,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>30
 ,p_item_plug_id=>wwv_flow_imp.id(3340390380550412900)
 ,p_item_source_plug_id=>wwv_flow_imp.id(3340390380550412900)
-,p_prompt=>'Descricao'
+,p_prompt=>unistr('Descri\00E7\00E3o')
 ,p_source=>'DESCRICAO'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_TEXTAREA'
@@ -265,7 +264,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_sequence=>50
 ,p_item_plug_id=>wwv_flow_imp.id(3340390380550412900)
 ,p_item_source_plug_id=>wwv_flow_imp.id(3340390380550412900)
-,p_prompt=>'Valor Diaria'
+,p_prompt=>unistr('Valor da Di\00E1ria (R$)')
 ,p_source=>'VALOR_DIARIA'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_NUMBER_FIELD'

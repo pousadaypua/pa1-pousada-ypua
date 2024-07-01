@@ -8,14 +8,14 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
 ,p_default_application_id=>236183
-,p_default_id_offset=>0
+,p_default_id_offset=>6939050361125969998
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
 wwv_flow_imp_page.create_page(
  p_id=>12
-,p_name=>'Status Disponibilidade'
-,p_alias=>'STATUS-DISPONIBILIDADE1'
-,p_step_title=>'Status Disponibilidade'
+,p_name=>'Status de Disponibilidade'
+,p_alias=>'STATUS-DISPONIBILIDADE-LIST'
+,p_step_title=>'Status de Limpeza'
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
@@ -34,8 +34,7 @@ wwv_flow_imp_page.create_page(
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3340439060270414527)
-,p_plug_name=>'Status Disponibilidade'
-,p_region_template_options=>'#DEFAULT#'
+,p_plug_name=>'Lista de Status de Disponibilidade'
 ,p_plug_display_sequence=>10
 ,p_query_type=>'TABLE'
 ,p_query_table=>'STATUS_DISPONIBILIDADE'
@@ -80,10 +79,9 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_db_column_name=>'DESCRICAO'
 ,p_display_order=>2
 ,p_column_identifier=>'B'
-,p_column_label=>'Descricao'
+,p_column_label=>unistr('Descri\00E7\00E3o')
 ,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
-,p_tz_dependent=>'N'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
@@ -115,12 +113,13 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_plug_id=>wwv_flow_imp.id(3340439060270414527)
 ,p_button_name=>'CREATE'
 ,p_button_action=>'REDIRECT_PAGE'
-,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
+,p_button_template_options=>'#DEFAULT#:t-Button--iconLeft'
+,p_button_template_id=>wwv_flow_imp.id(3340199953561411537)
 ,p_button_is_hot=>'Y'
-,p_button_image_alt=>'Create'
+,p_button_image_alt=>'Adicionar'
 ,p_button_position=>'RIGHT_OF_IR_SEARCH_BAR'
 ,p_button_redirect_url=>'f?p=&APP_ID.:13:&APP_SESSION.::&DEBUG.:13::'
+,p_icon_css_classes=>'fa-plus-square-o'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(3340441059949414529)

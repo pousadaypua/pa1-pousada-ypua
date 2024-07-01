@@ -652,5 +652,5 @@ branches:
     type: Page or URL (Redirect)
     target: 
       url: 'f?p=&APP_ID.:10000:&APP_SESSION.::&DEBUG.:::&success_msg=#SUCCESS_MSG#'
-      page: 10000 # Administration
+      page: 10000 # Preferências
 

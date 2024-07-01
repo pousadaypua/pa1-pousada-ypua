@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Disponibilidade ========================
+# ====== Page: Cadastro de Status de Disponibilidade =========
 id: 13
 identification: 
-  name: Status Disponibilidade
-  alias: STATUS-DISPONIBILIDADE
-  title: Status Disponibilidade
+  name: Cadastro de Status de Disponibilidade
+  alias: STATUS-DISPONIBILIDADE-NEW
+  title: Cadastro de Status de Disponibilidade
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,10 +41,10 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Status Disponibilidade ======================
+- # ====== Region: Status de Disponibilidade ===================
   id: 3340432955002414523
   identification: 
-    name: Status Disponibilidade
+    name: Status de Disponibilidade
     type: Form
 
   source: 
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Status Disponibilidade # 3340432955002414523
+    region: Status de Disponibilidade # 3340432955002414523
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Disponibilidade # 3340432955002414523
+    form-region: Status de Disponibilidade # 3340432955002414523
     column: ID
     data-type: NUMBER
     query-only: true
@@ -169,8 +169,8 @@ page-items:
     type: Text Field
 
   label: 
-    label: Descricao
-    alignment: Right
+    label: Descrição
+    alignment: Left
 
   settings: 
     subtype: Text
@@ -181,7 +181,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Status Disponibilidade # 3340432955002414523
+    region: Status de Disponibilidade # 3340432955002414523
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -205,7 +205,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Status Disponibilidade # 3340432955002414523
+    form-region: Status de Disponibilidade # 3340432955002414523
     column: DESCRICAO
     data-type: VARCHAR2
     query-only: false
@@ -227,7 +227,7 @@ buttons:
   id: 3340435049583414525
   identification: 
     button-name: CANCEL
-    label: Cancel
+    label: Cancelar
 
   layout: 
     sequence: 10
@@ -253,7 +253,7 @@ buttons:
   id: 3340436475037414526
   identification: 
     button-name: DELETE
-    label: Delete
+    label: Deletar
 
   layout: 
     sequence: 20
@@ -292,7 +292,7 @@ buttons:
   id: 3340436815536414526
   identification: 
     button-name: SAVE
-    label: Apply Changes
+    label: Salvar
 
   layout: 
     sequence: 30
@@ -325,7 +325,7 @@ buttons:
   id: 3340437288882414526
   identification: 
     button-name: CREATE
-    label: Create
+    label: Salvar
 
   layout: 
     sequence: 40
@@ -389,7 +389,7 @@ processes:
     name: Initialize form Status Disponibilidade
     type: Form - Initialization
     execution-chain: None
-    form-region: Status Disponibilidade # 3340432955002414523
+    form-region: Status de Disponibilidade # 3340432955002414523
 
   execution: 
     sequence: 10
@@ -402,7 +402,7 @@ processes:
     name: Process form Status Disponibilidade
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Status Disponibilidade # 3340432955002414523
+    form-region: Status de Disponibilidade # 3340432955002414523
 
   settings: 
     target-type: Region Source

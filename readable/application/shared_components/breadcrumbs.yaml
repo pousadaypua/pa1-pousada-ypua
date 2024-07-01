@@ -5,10 +5,10 @@
     name: Breadcrumb
 
   entries: 
-  - # ====== Entry: Home =========================================
+  - # ====== Entry: Painel =======================================
     id: 3340022935636411463
     identification: 
-      name: Home
+      name: Painel
       page-number: 1
 
     execution: 
@@ -16,13 +16,13 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
-        page: 1 # Home
+        url: 'f?p=&APP_ID.:1:&SESSION.::&DEBUG.:::'
+        page: 1 # Painel
 
-  - # ====== Entry: Reserva ======================================
+  - # ====== Entry: Reservas =====================================
     id: 3340366514136411820
     identification: 
-      name: Reserva
+      name: Reservas
       page-number: 2
 
     execution: 
@@ -30,13 +30,13 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:::'
-        page: 2 # Reserva
+        url: 'f?p=&APP_ID.:2:&SESSION.::&DEBUG.:::'
+        page: 2 # Reservas
 
-  - # ====== Entry: Cliente ======================================
+  - # ====== Entry: Clientes =====================================
     id: 3340384738237412361
     identification: 
-      name: Cliente
+      name: Clientes
       page-number: 4
 
     execution: 
@@ -44,13 +44,13 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
-        page: 4 # Cliente
+        url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.:::'
+        page: 4 # Clientes
 
-  - # ====== Entry: Acomodacao ===================================
+  - # ====== Entry: Acomodações ==================================
     id: 3340407439571412915
     identification: 
-      name: Acomodacao
+      name: Acomodações
       page-number: 6
 
     execution: 
@@ -58,13 +58,13 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:6:&APP_SESSION.::&DEBUG.:::'
-        page: 6 # Acomodacao
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.:::'
+        page: 6 # Acomodações
 
-  - # ====== Entry: Metodo Pagamento =============================
+  - # ====== Entry: Métodos de Pagamento =========================
     id: 3340420632470413453
     identification: 
-      name: Metodo Pagamento
+      name: Métodos de Pagamento
       page-number: 8
 
     execution: 
@@ -72,13 +72,13 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:8:&APP_SESSION.::&DEBUG.:::'
-        page: 8 # Metodo Pagamento
+        url: 'f?p=&APP_ID.:8:&SESSION.::&DEBUG.:::'
+        page: 8 # Métodos de Pagamento
 
-  - # ====== Entry: Status Reserva ===============================
+  - # ====== Entry: Status de Reserva ============================
     id: 3340431471353413993
     identification: 
-      name: Status Reserva
+      name: Status de Reserva
       page-number: 10
 
     execution: 
@@ -86,13 +86,13 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:10:&APP_SESSION.::&DEBUG.:::'
-        page: 10 # Status Reserva
+        url: 'f?p=&APP_ID.:10:&SESSION.::&DEBUG.:::'
+        page: 10 # Status de Reserva
 
-  - # ====== Entry: Status Disponibilidade =======================
+  - # ====== Entry: Status de Disponibilidade ====================
     id: 3340442465654414530
     identification: 
-      name: Status Disponibilidade
+      name: Status de Disponibilidade
       page-number: 12
 
     execution: 
@@ -100,13 +100,13 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:12:&APP_SESSION.::&DEBUG.:::'
-        page: 12 # Status Disponibilidade
+        url: 'f?p=&APP_ID.:12:&SESSION.::&DEBUG.:::'
+        page: 12 # Status de Disponibilidade
 
-  - # ====== Entry: Status Manutencao ============================
+  - # ====== Entry: Status de Manutenção =========================
     id: 3340453310690415061
     identification: 
-      name: Status Manutencao
+      name: Status de Manutenção
       page-number: 14
 
     execution: 
@@ -114,13 +114,13 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:14:&APP_SESSION.::&DEBUG.:::'
-        page: 14 # Status Manutencao
+        url: 'f?p=&APP_ID.:14:&SESSION.::&DEBUG.:::'
+        page: 14 # Status de Manutenção
 
-  - # ====== Entry: Status Limpeza ===============================
+  - # ====== Entry: Status de Limpeza ============================
     id: 3340465293310415592
     identification: 
-      name: Status Limpeza
+      name: Status de Limpeza
       page-number: 16
 
     execution: 
@@ -128,13 +128,13 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:16:&APP_SESSION.::&DEBUG.:::'
-        page: 16 # Status Limpeza
+        url: 'f?p=&APP_ID.:16:&SESSION.::&DEBUG.:::'
+        page: 16 # Status de Limpeza
 
-  - # ====== Entry: Administration ===============================
+  - # ====== Entry: Preferências =================================
     id: 3340546151277415657
     identification: 
-      name: Administration
+      name: Preferências
       page-number: 10000
 
     execution: 
@@ -142,6 +142,6 @@
 
     link: 
       target: 
-        url: 'f?p=&APP_ID.:10000:&APP_SESSION.::&DEBUG.:::'
-        page: 10000 # Administration
+        url: 'f?p=&APP_ID.:10000:&SESSION.::&DEBUG.:::'
+        page: 10000 # Preferências
 

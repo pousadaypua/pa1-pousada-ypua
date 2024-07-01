@@ -1,10 +1,10 @@
 ---
-# ====== Page: Login Page ====================================
+# ====== Page: Login =========================================
 id: 9999
 identification: 
-  name: Login Page
+  name: Login
   alias: LOGIN
-  title: Pousadadoypua 2.2 - Log In
+  title: '&TAB_TITLE.'
 
 appearance: 
   page-mode: Normal
@@ -38,10 +38,11 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Pousadadoypua 2.2 ===========================
+- # ====== Region: Pousada Quinta do Ypuã ======================
   id: 3340340205809411661
   identification: 
-    name: Pousadadoypua 2.2
+    name: Pousada Quinta do Ypuã
+    title: Pousada Quinta do Ypuã
     type: Static Content
 
   layout: 
@@ -87,8 +88,8 @@ page-items:
     type: Text Field
 
   label: 
-    label: Username
-    alignment: Right
+    label: Nome de usuário
+    alignment: Left
 
   settings: 
     subtype: Text
@@ -99,7 +100,7 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Pousadadoypua 2.2 # 3340340205809411661
+    region: Pousada Quinta do Ypuã # 3340340205809411661
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -115,7 +116,7 @@ page-items:
     - '#DEFAULT#'
     icon: fa-user
     width: 40
-    value-placeholder: Username
+    value-placeholder: Nome de usuário
 
   validation: 
     value-required: false
@@ -148,15 +149,15 @@ page-items:
     type: Password
 
   label: 
-    label: Password
-    alignment: Right
+    label: Senha
+    alignment: Left
 
   settings: 
     submit-when-enter-pressed: true
 
   layout: 
     sequence: 20
-    region: Pousadadoypua 2.2 # 3340340205809411661
+    region: Pousada Quinta do Ypuã # 3340340205809411661
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -172,7 +173,7 @@ page-items:
     - '#DEFAULT#'
     icon: fa-key
     width: 40
-    value-placeholder: Password
+    value-placeholder: Senha
 
   validation: 
     value-required: false
@@ -202,15 +203,15 @@ page-items:
     type: Checkbox
 
   label: 
-    label: Remember username
-    alignment: Right
+    label: Lembrar nome de usuário
+    alignment: Left
 
   settings: 
     use-defaults: true
 
   layout: 
     sequence: 30
-    region: Pousadadoypua 2.2 # 3340340205809411661
+    region: Pousada Quinta do Ypuã # 3340340205809411661
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -255,15 +256,15 @@ page-items:
     type: Checkbox
 
   label: 
-    label: Remember me
-    alignment: Right
+    label: Lembre-se de mim
+    alignment: Left
 
   settings: 
     use-defaults: true
 
   layout: 
     sequence: 30
-    region: Pousadadoypua 2.2 # 3340340205809411661
+    region: Pousada Quinta do Ypuã # 3340340205809411661
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -306,11 +307,11 @@ buttons:
   id: 3340342330395411664
   identification: 
     button-name: LOGIN
-    label: Sign In
+    label: Entrar
 
   layout: 
     sequence: 40
-    region: Pousadadoypua 2.2 # 3340340205809411661
+    region: Pousada Quinta do Ypuã # 3340340205809411661
     slot: NEXT
     start-new-layout: false
     start-new-row: true

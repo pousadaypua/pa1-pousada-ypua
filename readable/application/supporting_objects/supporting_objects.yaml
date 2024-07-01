@@ -1,0 +1,11 @@
+---
+- # ====== Supporting Object:  =================================
+  id: 6838045962085864040
+  prerequisites: 
+    free-space: 100
+    system-privileges: 
+    - CREATE PROCEDURE
+    - CREATE TABLE
+    - CREATE TRIGGER
+    - CREATE VIEW
+

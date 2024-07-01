@@ -1,16 +1,17 @@
 ---
-# ====== Application: Pousada Quinta do Ypuã  - FINAL ========
+# ====== Application: Pousada Quinta do Ypuã  - FINAL !!! ====
+id: 236183
 identification: 
-  name: Pousada Quinta do Ypuã  - FINAL
-  alias: POUSADADOYPUA-3-FINAL
-  version: Release 1.0
+  name: Pousada Quinta do Ypuã  - FINAL !!!
+  alias: POUSADAQUINTADOYPUA
+  version: v38226
 
 row-search: 
   tokenize: true
   text-query-function: None
 
 availability: 
-  status: Available with Developer Toolbar
+  status: Available
   build-status: Run and Build Application
 
 error-handling: 
@@ -36,7 +37,7 @@ authorization:
   source-for-role-or-group-schemes: Access Control User Role Assignments
 
 session-management: 
-  rejoin-sessions: Disabled
+  rejoin-sessions: Enabled for Public Sessions
 
 session-state-protection: 
   enabled: true
@@ -71,7 +72,7 @@ character-value-comparison:
 logo: 
   type: Image and Text
   image-url: '#APP_FILES#app-236183-logo.png'
-  text: PousadaQuintaDoYpua
+  text: Pousada Quinta do Ypuã
 
 progressive-web-app: 
   enable: true
@@ -79,12 +80,13 @@ progressive-web-app:
   display: Standalone
   screen-orientation: Any
   ios-status-bar-style: Default
+  app-description: Sistema de gerenciamento de hospedagens da Pousada Quinta do Ypuã.
   enable-push-notifications: false
 
 navigation: 
   home-url: 
     url: 'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
-    page: 1 # Home
+    page: 1 # Painel
 
   login-url: 
     url: 'f?p=&APP_ID.:LOGIN:&APP_SESSION.::&DEBUG.:::'
@@ -94,14 +96,15 @@ navigation-menu:
   list-template: Side Navigation Menu
   template-options: 
   - '#DEFAULT#'
-  - t-TreeNav--styleA
+  - js-defaultCollapsed
   - js-navCollapsed--hidden
+  - t-TreeNav--styleA
   list-position: Side
-  list: Navigation Menu # 3340023258454411464
+  list: Menu Lateral # 6830645879933751311
 
 navigation-bar: 
   implementation: List
-  list: Navigation Bar # 3340331284247411647
+  list: Menu Superior # 3340331284247411647
   list-template: Navigation Bar
   template-options: 
   - '#DEFAULT#'
@@ -118,12 +121,44 @@ attributes:
 
 substitutions: 
 - # ====== Substitution: APP_NAME ==============================
-  id: 1
+  id: 6939050361125969997
   identification: 
     name: APP_NAME
 
   value: 
+    static-value: '&EMPRESA. - Gerenciamento de Hospedagens'
+
+- # ====== Substitution: TAB_TITLE =============================
+  id: 6939050361125969996
+  identification: 
+    name: TAB_TITLE
+
+  value: 
+    static-value: Quinta do Ypuã
+
+- # ====== Substitution: EMPRESA ===============================
+  id: 6939050361125969995
+  identification: 
+    name: EMPRESA
+
+  value: 
     static-value: Pousada Quinta do Ypuã
+
+- # ====== Substitution: APP_TITLE =============================
+  id: 6939050361125969994
+  identification: 
+    name: APP_TITLE
+
+  value: 
+    static-value: GERENCIAMENTO DE HOSPEDAGENS
+
+- # ====== Substitution: NOT_FOUND =============================
+  id: 6939050361125969993
+  identification: 
+    name: NOT_FOUND
+
+  value: 
+    static-value: Nenhum registro encontrado.
 
 component-settings: 
 - # ====== Component Setting: NATIVE_OPEN_AI_ASSISTANT =========

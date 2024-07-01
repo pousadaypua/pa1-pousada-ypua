@@ -1,10 +1,10 @@
 ---
-# ====== Page: Metodo Pagamento ==============================
+# ====== Page: Cadastro de Método de Pagamento ===============
 id: 9
 identification: 
-  name: Metodo Pagamento
-  alias: METODO-PAGAMENTO
-  title: Metodo Pagamento
+  name: Cadastro de Método de Pagamento
+  alias: METODO-PGTO-NEW
+  title: Cadastro de Método Pagamento
 
 appearance: 
   page-mode: Modal Dialog
@@ -41,10 +41,10 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: Metodo Pagamento ============================
+- # ====== Region: Método de Pagamento =========================
   id: 3340411143370413446
   identification: 
-    name: Metodo Pagamento
+    name: Método de Pagamento
     type: Form
 
   source: 
@@ -140,14 +140,14 @@ page-items:
 
   layout: 
     sequence: 10
-    region: Metodo Pagamento # 3340411143370413446
+    region: Método de Pagamento # 3340411143370413446
     slot: BODY
 
   advanced: 
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Metodo Pagamento # 3340411143370413446
+    form-region: Método de Pagamento # 3340411143370413446
     column: ID
     data-type: NUMBER
     query-only: true
@@ -169,8 +169,8 @@ page-items:
     type: Text Field
 
   label: 
-    label: Descricao
-    alignment: Right
+    label: Descrição
+    alignment: Left
 
   settings: 
     subtype: Text
@@ -181,7 +181,7 @@ page-items:
 
   layout: 
     sequence: 20
-    region: Metodo Pagamento # 3340411143370413446
+    region: Método de Pagamento # 3340411143370413446
     slot: BODY
     alignment: Left
     start-new-layout: false
@@ -205,7 +205,7 @@ page-items:
     warn-on-unsaved-changes: Page Default
 
   source: 
-    form-region: Metodo Pagamento # 3340411143370413446
+    form-region: Método de Pagamento # 3340411143370413446
     column: DESCRICAO
     data-type: VARCHAR2
     query-only: false
@@ -227,7 +227,7 @@ buttons:
   id: 3340413286637413448
   identification: 
     button-name: CANCEL
-    label: Cancel
+    label: Cancelar
 
   layout: 
     sequence: 10
@@ -253,7 +253,7 @@ buttons:
   id: 3340414631374413449
   identification: 
     button-name: DELETE
-    label: Delete
+    label: Excluir
 
   layout: 
     sequence: 20
@@ -292,7 +292,7 @@ buttons:
   id: 3340415034765413449
   identification: 
     button-name: SAVE
-    label: Apply Changes
+    label: Salvar
 
   layout: 
     sequence: 30
@@ -325,7 +325,7 @@ buttons:
   id: 3340415403189413449
   identification: 
     button-name: CREATE
-    label: Create
+    label: Salvar
 
   layout: 
     sequence: 40
@@ -389,7 +389,7 @@ processes:
     name: Initialize form Metodo Pagamento
     type: Form - Initialization
     execution-chain: None
-    form-region: Metodo Pagamento # 3340411143370413446
+    form-region: Método de Pagamento # 3340411143370413446
 
   execution: 
     sequence: 10
@@ -402,7 +402,7 @@ processes:
     name: Process form Metodo Pagamento
     type: Form - Automatic Row Processing (DML)
     execution-chain: None
-    form-region: Metodo Pagamento # 3340411143370413446
+    form-region: Método de Pagamento # 3340411143370413446
 
   settings: 
     target-type: Region Source

@@ -8,14 +8,14 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
 ,p_default_application_id=>236183
-,p_default_id_offset=>0
+,p_default_id_offset=>6939050361125969998
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
 wwv_flow_imp_page.create_page(
  p_id=>9999
-,p_name=>'Login Page'
+,p_name=>'Login'
 ,p_alias=>'LOGIN'
-,p_step_title=>'Pousadadoypua 2.2 - Log In'
+,p_step_title=>'&TAB_TITLE.'
 ,p_warn_on_unsaved_changes=>'N'
 ,p_first_item=>'AUTO_FIRST_ITEM'
 ,p_autocomplete_on_off=>'OFF'
@@ -27,10 +27,12 @@ wwv_flow_imp_page.create_page(
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3340340205809411661)
-,p_plug_name=>'Pousadadoypua 2.2'
+,p_plug_name=>unistr('Pousada Quinta do Ypu\00E3')
+,p_title=>unistr('Pousada Quinta do Ypu\00E3')
 ,p_region_template_options=>'#DEFAULT#'
 ,p_plug_template=>wwv_flow_imp.id(3340121020757411504)
 ,p_plug_display_sequence=>10
+,p_location=>null
 ,p_region_image=>'#APP_FILES#icons/app-icon-512.png'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'expand_shortcuts', 'N',
@@ -46,31 +48,26 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_template_options=>'#DEFAULT#'
 ,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
 ,p_button_is_hot=>'Y'
-,p_button_image_alt=>'Sign In'
+,p_button_image_alt=>'Entrar'
 ,p_button_position=>'NEXT'
-,p_button_alignment=>'LEFT'
-,p_grid_new_row=>'Y'
-,p_grid_new_column=>'Y'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(3340340762636411662)
 ,p_name=>'P9999_USERNAME'
 ,p_item_sequence=>10
 ,p_item_plug_id=>wwv_flow_imp.id(3340340205809411661)
-,p_prompt=>'Username'
-,p_placeholder=>'Username'
+,p_prompt=>unistr('Nome de usu\00E1rio')
+,p_placeholder=>unistr('Nome de usu\00E1rio')
 ,p_display_as=>'NATIVE_TEXT_FIELD'
 ,p_cSize=>40
 ,p_cMaxlength=>100
 ,p_tag_attributes=>'autocomplete="username"'
-,p_label_alignment=>'RIGHT'
 ,p_field_template=>wwv_flow_imp.id(3340197004355411535)
 ,p_item_icon_css_classes=>'fa-user'
 ,p_item_template_options=>'#DEFAULT#'
 ,p_is_persistent=>'N'
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'N'
-,p_attribute_03=>'N'
 ,p_attribute_04=>'TEXT'
 ,p_attribute_05=>'NONE'
 );
@@ -79,13 +76,12 @@ wwv_flow_imp_page.create_page_item(
 ,p_name=>'P9999_PASSWORD'
 ,p_item_sequence=>20
 ,p_item_plug_id=>wwv_flow_imp.id(3340340205809411661)
-,p_prompt=>'Password'
-,p_placeholder=>'Password'
+,p_prompt=>'Senha'
+,p_placeholder=>'Senha'
 ,p_display_as=>'NATIVE_PASSWORD'
 ,p_cSize=>40
 ,p_cMaxlength=>100
 ,p_tag_attributes=>'autocomplete="current-password"'
-,p_label_alignment=>'RIGHT'
 ,p_field_template=>wwv_flow_imp.id(3340197004355411535)
 ,p_item_icon_css_classes=>'fa-key'
 ,p_item_template_options=>'#DEFAULT#'
@@ -97,15 +93,13 @@ wwv_flow_imp_page.create_page_item(
 ,p_name=>'P9999_REMEMBER'
 ,p_item_sequence=>30
 ,p_item_plug_id=>wwv_flow_imp.id(3340340205809411661)
-,p_prompt=>'Remember username'
+,p_prompt=>unistr('Lembrar nome de usu\00E1rio')
 ,p_display_as=>'NATIVE_SINGLE_CHECKBOX'
-,p_label_alignment=>'RIGHT'
 ,p_display_when=>'apex_authentication.persistent_cookies_enabled and not apex_authentication.persistent_auth_enabled'
 ,p_display_when2=>'PLSQL'
 ,p_display_when_type=>'EXPRESSION'
 ,p_field_template=>wwv_flow_imp.id(3340197004355411535)
 ,p_item_template_options=>'#DEFAULT#'
-,p_escape_on_http_output=>'N'
 ,p_attribute_01=>'Y'
 );
 wwv_flow_imp_page.create_page_item(
@@ -113,15 +107,13 @@ wwv_flow_imp_page.create_page_item(
 ,p_name=>'P9999_PERSISTENT_AUTH'
 ,p_item_sequence=>30
 ,p_item_plug_id=>wwv_flow_imp.id(3340340205809411661)
-,p_prompt=>'Remember me'
+,p_prompt=>'Lembre-se de mim'
 ,p_display_as=>'NATIVE_SINGLE_CHECKBOX'
-,p_label_alignment=>'RIGHT'
 ,p_display_when=>'apex_authentication.persistent_auth_enabled'
 ,p_display_when2=>'PLSQL'
 ,p_display_when_type=>'EXPRESSION'
 ,p_field_template=>wwv_flow_imp.id(3340197004355411535)
 ,p_item_template_options=>'#DEFAULT#'
-,p_escape_on_http_output=>'N'
 ,p_attribute_01=>'Y'
 );
 wwv_flow_imp_page.create_page_process(

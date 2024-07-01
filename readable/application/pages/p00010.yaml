@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Reserva ================================
+# ====== Page: Status de Reserva =============================
 id: 10
 identification: 
-  name: Status Reserva
-  alias: STATUS-RESERVA1
-  title: Status Reserva
+  name: Status de Reserva
+  alias: STATUS-RESERVA-LIST
+  title: Status de Reserva
 
 appearance: 
   page-mode: Normal
@@ -49,10 +49,10 @@ help:
     <p>Click the <strong>Reset</strong> button to reset the interactive report back to the default settings.</p>
 
 regions: 
-- # ====== Region: Status Reserva ==============================
+- # ====== Region: Lista de Status de Reserva ==================
   id: 3340428048321413991
   identification: 
-    name: Status Reserva
+    name: Lista de Status de Reserva
     type: Interactive Report
 
   source: 
@@ -91,7 +91,7 @@ regions:
       link-column: Link to Custom Target
       target: 
         url: 'f?p=&APP_ID.:11:&APP_SESSION.::&DEBUG.:RP:P11_ID:\#ID#\'
-        page: 11 # Status Reserva
+        page: 11 # Cadastro de Status de Reserva
         clear-cache: RP
         values: 
           p11_id: '#ID#'
@@ -187,7 +187,7 @@ regions:
         type: Plain Text
 
       heading: 
-        heading: Descricao
+        heading: Descrição
         alignment: start
 
       single-row-view: 
@@ -312,11 +312,11 @@ buttons:
   id: 3340429740076413992
   identification: 
     button-name: CREATE
-    label: Create
+    label: Adicionar
 
   layout: 
     sequence: 10
-    region: Status Reserva # 3340428048321413991
+    region: Lista de Status de Reserva # 3340428048321413991
     slot: RIGHT_OF_IR_SEARCH_BAR
     start-new-layout: false
     start-new-row: true
@@ -325,16 +325,18 @@ buttons:
     column-span: Automatic
 
   appearance: 
-    button-template: Text
+    button-template: Text with Icon
     hot: true
     template-options: 
     - '#DEFAULT#'
+    - t-Button--iconLeft
+    icon: fa-plus-square-o
 
   behavior: 
     action: Redirect to Page in this Application
     target: 
       url: 'f?p=&APP_ID.:11:&APP_SESSION.::&DEBUG.:11::'
-      page: 11 # Status Reserva
+      page: 11 # Cadastro de Status de Reserva
       clear-cache: 11
 
     warn-on-unsaved-changes: Do Not Check
@@ -353,7 +355,7 @@ dynamic-actions:
   when: 
     event: Dialog Closed
     selection-type: Region
-    region: Status Reserva # 3340428048321413991
+    region: Lista de Status de Reserva # 3340428048321413991
 
   actions: 
   - # ====== Action: Refresh =====================================
@@ -363,7 +365,7 @@ dynamic-actions:
 
     affected-elements: 
       selection-type: Region
-      region: Status Reserva # 3340428048321413991
+      region: Lista de Status de Reserva # 3340428048321413991
 
     execution: 
       sequence: 10

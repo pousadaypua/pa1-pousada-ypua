@@ -1,10 +1,10 @@
 ---
-# ====== Page: Home ==========================================
+# ====== Page: Painel ========================================
 id: 1
 identification: 
-  name: Home
-  alias: HOME
-  title: Pousadadoypua 2.2
+  name: Painel
+  alias: PAINEL
+  title: '&TAB_TITLE.'
 
 appearance: 
   page-mode: Normal
@@ -37,10 +37,11 @@ server-cache:
   caching: Disabled
 
 regions: 
-- # ====== Region: PousadaQuintaDoYpua =========================
+- # ====== Region: Painel Principal ============================
   id: 3340347637776411667
   identification: 
-    name: PousadaQuintaDoYpua
+    name: Painel Principal
+    title: Gerenciamento de Hospedagens
     type: Static Content
 
   layout: 
@@ -78,10 +79,11 @@ regions:
       output-as: HTML
       expand-shortcuts: false
 
-- # ====== Region: Page Navigation =============================
+- # ====== Region: Dashboard ===================================
   id: 3340527788893415640
   identification: 
-    name: Page Navigation
+    name: Dashboard
+    title: '&TAB_TITLE.'
     type: List
 
   source: 
@@ -127,5 +129,6 @@ regions:
       - t-Cards--displayIcons
       - t-Cards--4cols
       - t-Cards--hideBody
-      - t-Cards--animColorFill
+      - t-Cards--iconsSquare
+      - t-Cards--animRaiseCard
 

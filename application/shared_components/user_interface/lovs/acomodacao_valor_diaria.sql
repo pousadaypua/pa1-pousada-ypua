@@ -1,0 +1,29 @@
+prompt --application/shared_components/user_interface/lovs/acomodacao_valor_diaria
+begin
+--   Manifest
+--     ACOMODACAO.VALOR_DIARIA
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.05.31'
+,p_release=>'24.1.0'
+,p_default_workspace_id=>123520941329165394883
+,p_default_application_id=>236183
+,p_default_id_offset=>6939050361125969998
+,p_default_owner=>'WKSP_MARCIOSENAI'
+);
+wwv_flow_imp_shared.create_list_of_values(
+ p_id=>wwv_flow_imp.id(6907554933613613449)
+,p_lov_name=>'ACOMODACAO.VALOR_DIARIA'
+,p_source_type=>'TABLE'
+,p_location=>'LOCAL'
+,p_query_table=>'ACOMODACAO'
+,p_return_column_name=>'ID'
+,p_display_column_name=>'VALOR_DIARIA'
+,p_group_sort_direction=>'ASC'
+,p_default_sort_column_name=>'VALOR_DIARIA'
+,p_default_sort_direction=>'ASC'
+,p_version_scn=>15540537235060
+);
+wwv_flow_imp.component_end;
+end;
+/

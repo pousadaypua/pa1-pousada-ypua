@@ -8,14 +8,14 @@ wwv_flow_imp.component_begin (
 ,p_release=>'24.1.0'
 ,p_default_workspace_id=>123520941329165394883
 ,p_default_application_id=>236183
-,p_default_id_offset=>0
+,p_default_id_offset=>6939050361125969998
 ,p_default_owner=>'WKSP_MARCIOSENAI'
 );
 wwv_flow_imp_page.create_page(
  p_id=>14
-,p_name=>'Status Manutencao'
-,p_alias=>'STATUS-MANUTENCAO1'
-,p_step_title=>'Status Manutencao'
+,p_name=>unistr('Status de Manuten\00E7\00E3o')
+,p_alias=>'STATUS-MANUTENCAO-LIST'
+,p_step_title=>unistr('Status de Manuten\00E7\00E3o')
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
@@ -34,8 +34,8 @@ wwv_flow_imp_page.create_page(
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(3340449915272415059)
-,p_plug_name=>'Status Manutencaoes'
-,p_region_template_options=>'#DEFAULT#'
+,p_plug_name=>unistr('Lista de Status de Manuten\00E7\00E3o')
+,p_title=>unistr('Status de Manuten\00E7\00E3o')
 ,p_plug_display_sequence=>10
 ,p_query_type=>'TABLE'
 ,p_query_table=>'STATUS_MANUTENCAO'
@@ -80,10 +80,9 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_db_column_name=>'DESCRICAO'
 ,p_display_order=>2
 ,p_column_identifier=>'B'
-,p_column_label=>'Descricao'
+,p_column_label=>unistr('Descri\00E7\00E3o')
 ,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
-,p_tz_dependent=>'N'
 ,p_use_as_row_header=>'N'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
@@ -105,6 +104,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_template=>wwv_flow_imp.id(3340138676716411511)
 ,p_plug_display_sequence=>20
 ,p_plug_display_point=>'REGION_POSITION_01'
+,p_location=>null
 ,p_menu_id=>wwv_flow_imp.id(3340022758891411463)
 ,p_plug_source_type=>'NATIVE_BREADCRUMB'
 ,p_menu_template_id=>wwv_flow_imp.id(3340201447161411538)
@@ -115,12 +115,13 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_plug_id=>wwv_flow_imp.id(3340449915272415059)
 ,p_button_name=>'CREATE'
 ,p_button_action=>'REDIRECT_PAGE'
-,p_button_template_options=>'#DEFAULT#'
-,p_button_template_id=>wwv_flow_imp.id(3340199878533411537)
+,p_button_template_options=>'#DEFAULT#:t-Button--iconLeft'
+,p_button_template_id=>wwv_flow_imp.id(3340199953561411537)
 ,p_button_is_hot=>'Y'
-,p_button_image_alt=>'Create'
+,p_button_image_alt=>'Adicionar'
 ,p_button_position=>'RIGHT_OF_IR_SEARCH_BAR'
 ,p_button_redirect_url=>'f?p=&APP_ID.:15:&APP_SESSION.::&DEBUG.:15::'
+,p_icon_css_classes=>'fa-plus-square-o'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(3340451941033415061)

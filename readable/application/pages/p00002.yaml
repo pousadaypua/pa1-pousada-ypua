@@ -1,10 +1,10 @@
 ---
-# ====== Page: Reserva =======================================
+# ====== Page: Reservas ======================================
 id: 2
 identification: 
-  name: Reserva
-  alias: RESERVA1
-  title: Reserva
+  name: Reservas
+  alias: RESERVAS-LIST
+  title: Reservas
 
 appearance: 
   page-mode: Normal
@@ -49,18 +49,19 @@ help:
     <p>Click the <strong>Reset</strong> button to reset the interactive report back to the default settings.</p>
 
 regions: 
-- # ====== Region: Reserva =====================================
+- # ====== Region: Lista de Reservas ===========================
   id: 3340360714475411814
   identification: 
-    name: Reserva
+    name: Lista de Reservas
     type: Interactive Report
 
   source: 
     location: Local Database
     type: Table / View
     table-owner: Parsing Schema
-    table-name: RESERVA
+    table-name: VIEW_LISTA_RESERVAS
     include-rowid-column: false
+    order-by-clause: '"Código de Reserva" ASC'
 
   layout: 
     sequence: 10
@@ -86,28 +87,28 @@ regions:
     customizable: Not Customizable By End Users
 
   attributes: 
-    id: 3340360802673411814
+    id: 6843125290876924910
     link: 
       link-column: Link to Custom Target
       target: 
-        url: 'f?p=&APP_ID.:3:&APP_SESSION.::&DEBUG.:RP:P3_ID:\#ID#\'
-        page: 3 # Reserva
+        url: 'f?p=&APP_ID.:3:&SESSION.::&DEBUG.:RP,:P3_ID:#Código de Reserva#'
+        page: 3 # Cadastro de Reserva
         clear-cache: RP
         values: 
-          p3_id: '#ID#'
+          p3_id: '#Código de Reserva#'
 
-      link-icon: <span role="img" aria-label="Edit" class="fa fa-edit" title="Edit"></span>
+      link-icon: <span role="img" aria-label="Editar" class="fa fa-edit" title="Editar"></span>
 
     pagination: 
-      type: Row Ranges X to Y
+      type: Row Ranges X to Y of Z
       display-position: Bottom - Right
 
     performance: 
       lazy-loading: false
+      maximum-rows-to-process: 1000000
 
     messages: 
-      when-no-data-found: No data found.
-      when-more-data-found: 'The maximum row count for this report is #MAX_ROW_COUNT# rows.  Please apply a filter to reduce the number of records in your query.'
+      when-no-data-found: '&NOT_FOUND.'
 
     search-bar: 
       include-search-bar: true
@@ -129,13 +130,13 @@ regions:
       chart: true
       group-by: true
       pivot: true
-      flashback: true
+      flashback: false
       save-report: true
       save-public-report: false
       reset: true
-      help: true
+      help: false
       download: true
-      subscription: true
+      subscription: false
 
     download: 
       formats: 
@@ -156,213 +157,261 @@ regions:
 
     saved-reports: 
     - # ====== Saved Report: Primary Report ========================
-      id: 3340466537534415594
+      id: 6842559384921186177
       identification: 
         name: Primary Report
-        alias: 33404666
+        alias: 68425594
 
     columns: 
-    - # ====== Column: ID ==========================================
-      id: 3340361500062411816
+    - # ====== Column: Código de Reserva ===========================
+      id: 6882077924856712607
       identification: 
-        column-name: ID
-        type: Hidden
+        column-name: Código de Reserva
+        type: Plain Text
 
       heading: 
-        heading: ID
+        heading: Reserva
+        alternative-label: Código de Reserva
+        alignment: center
+
+      single-row-view: 
+        use-column-heading: true
 
       layout: 
-        sequence: 0
+        sequence: 20
+        column-alignment: end
+
+      accessibility: 
+        value-identifies-row: false
 
       source: 
-        primary-key: true
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
 
       security: 
         escape-special-characters: true
 
-    - # ====== Column: ID_CLIENTE ==================================
-      id: 3340361969553411817
+    - # ====== Column: Status ======================================
+      id: 6882078013281712608
       identification: 
-        column-name: ID_CLIENTE
-        type: Plain Text (based on List of Values)
-
-      list-of-values: 
-        list-of-values: CLIENTE.CPF # 3340350082179411806
-
-      heading: 
-        heading: Id Cliente
-        alignment: start
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 2
-        column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-    - # ====== Column: ACOMODACAO_ID ===============================
-      id: 3340362300403411817
-      identification: 
-        column-name: ACOMODACAO_ID
-        type: Plain Text (based on List of Values)
-
-      list-of-values: 
-        list-of-values: ACOMODACAO.NOME # 3340350712655411807
-
-      heading: 
-        heading: Acomodacao
-        alignment: start
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 3
-        column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-    - # ====== Column: METODO_PGTO_ID ==============================
-      id: 3340362777529411817
-      identification: 
-        column-name: METODO_PGTO_ID
-        type: Plain Text (based on List of Values)
-
-      list-of-values: 
-        list-of-values: METODO_PAGAMENTO.DESCRICAO # 3340351478810411808
-
-      heading: 
-        heading: Metodo Pgto
-        alignment: start
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 4
-        column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-    - # ====== Column: STATUS_RESERVA_ID ===========================
-      id: 3340363184321411817
-      identification: 
-        column-name: STATUS_RESERVA_ID
-        type: Plain Text (based on List of Values)
-
-      list-of-values: 
-        list-of-values: STATUS_RESERVA.DESCRICAO # 3340352142650411808
-
-      heading: 
-        heading: Status Reserva
-        alignment: start
-
-      single-row-view: 
-        use-column-heading: true
-
-      layout: 
-        sequence: 5
-        column-alignment: start
-
-      accessibility: 
-        value-identifies-row: false
-
-      source: 
-        primary-key: false
-
-      column-filter: 
-        type: Default Based on Column Type
-
-      enable-users-to: 
-        hide: true
-        sort: true
-        filter: true
-        highlight: true
-        control-break: true
-        aggregate: true
-        compute: true
-        chart: true
-        group-by: true
-        pivot: true
-
-    - # ====== Column: DATA_INICIO =================================
-      id: 3340363503742411818
-      identification: 
-        column-name: DATA_INICIO
+        column-name: Status
         type: Plain Text
 
       heading: 
-        heading: Data Inicio
-        alignment: start
+        heading: Status
+        alternative-label: Status
+        alignment: center
 
       single-row-view: 
         use-column-heading: true
 
       layout: 
-        sequence: 6
+        sequence: 30
         column-alignment: start
 
       accessibility: 
         value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: Cliente =====================================
+      id: 6882078180841712609
+      identification: 
+        column-name: Cliente
+        type: Link
+
+      heading: 
+        heading: Cliente
+        alternative-label: Cliente
+        alignment: center
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 40
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      link: 
+        target: 
+          url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.:::'
+          page: 4 # Clientes
+
+        link-text: '#Cliente#'
+        link-attributes: target="_blank"
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: Cliente (CPF) ===============================
+      id: 6882078295812712610
+      identification: 
+        column-name: Cliente (CPF)
+        type: Link
+
+      heading: 
+        heading: CPF
+        alternative-label: CPF
+        alignment: center
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 60
+        column-alignment: center
+
+      accessibility: 
+        value-identifies-row: false
+
+      link: 
+        target: 
+          url: 'f?p=&APP_ID.:4:&SESSION.::&DEBUG.:::'
+          page: 4 # Clientes
+
+        link-text: '#Cliente (CPF)#'
+        link-attributes: target="_blank"
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: Acomodação ==================================
+      id: 6882078340763712611
+      identification: 
+        column-name: Acomodação
+        type: Plain Text
+
+      heading: 
+        heading: Acomodação
+        alternative-label: Acomodação
+        alignment: center
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 70
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: Data de Entrada =============================
+      id: 6882078443811712612
+      identification: 
+        column-name: Data de Entrada
+        type: Plain Text
+
+      heading: 
+        heading: Entrada
+        alternative-label: Data de Entrada
+        alignment: center
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 80
+        column-alignment: center
+
+      accessibility: 
+        value-identifies-row: false
+
+      appearance: 
+        format-mask: DD/MM/YYYY
 
       source: 
         primary-key: false
@@ -386,25 +435,29 @@ regions:
       security: 
         escape-special-characters: true
 
-    - # ====== Column: DATA_FIM ====================================
-      id: 3340363912905411818
+    - # ====== Column: Data de Saída ===============================
+      id: 6882078574535712613
       identification: 
-        column-name: DATA_FIM
+        column-name: Data de Saída
         type: Plain Text
 
       heading: 
-        heading: Data Fim
-        alignment: start
+        heading: Saída
+        alternative-label: Data de Saída
+        alignment: center
 
       single-row-view: 
         use-column-heading: true
 
       layout: 
-        sequence: 7
-        column-alignment: start
+        sequence: 90
+        column-alignment: center
 
       accessibility: 
         value-identifies-row: false
+
+      appearance: 
+        format-mask: DD/MM/YYYY
 
       source: 
         primary-key: false
@@ -428,28 +481,158 @@ regions:
       security: 
         escape-special-characters: true
 
-    - # ====== Column: VALOR =======================================
-      id: 3340364399751411818
+    - # ====== Column: Número de Diárias ===========================
+      id: 6882078641368712614
       identification: 
-        column-name: VALOR
+        column-name: Número de Diárias
         type: Plain Text
 
       heading: 
-        heading: Valor
-        alignment: end
+        heading: Diárias
+        alternative-label: Número de Diárias
+        alignment: center
 
       single-row-view: 
         use-column-heading: true
 
       layout: 
-        sequence: 8
+        sequence: 100
+        column-alignment: end
+
+      accessibility: 
+        value-identifies-row: false
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: Valor da Diária (R$) ========================
+      id: 6882078744813712615
+      identification: 
+        column-name: Valor da Diária (R$)
+        type: Plain Text
+
+      heading: 
+        heading: Valor/dia (R$)
+        alternative-label: Valor da Diária (R$)
+        alignment: center
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 110
         column-alignment: end
 
       accessibility: 
         value-identifies-row: false
 
       appearance: 
-        format-mask: 999G999G999G999G999G999G999G999G999G990
+        format-mask: 999G999G999G999G990D00
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: Total (R$) ==================================
+      id: 6882078877102712616
+      identification: 
+        column-name: Total (R$)
+        type: Plain Text
+
+      heading: 
+        heading: Total (R$)
+        alternative-label: Total (R$)
+        alignment: center
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 120
+        column-alignment: end
+
+      accessibility: 
+        value-identifies-row: false
+
+      appearance: 
+        format-mask: 999G999G999G999G990D00
+
+      source: 
+        primary-key: false
+
+      column-filter: 
+        type: Default Based on Column Type
+
+      enable-users-to: 
+        hide: true
+        sort: true
+        filter: true
+        highlight: true
+        control-break: true
+        aggregate: true
+        compute: true
+        chart: true
+        group-by: true
+        pivot: true
+
+      security: 
+        escape-special-characters: true
+
+    - # ====== Column: Método de Pagamento =========================
+      id: 6882078952598712617
+      identification: 
+        column-name: Método de Pagamento
+        type: Plain Text
+
+      heading: 
+        heading: Método de Pagamento
+        alternative-label: Método de Pagamento
+        alignment: center
+
+      single-row-view: 
+        use-column-heading: true
+
+      layout: 
+        sequence: 130
+        column-alignment: start
+
+      accessibility: 
+        value-identifies-row: false
 
       source: 
         primary-key: false
@@ -478,11 +661,11 @@ regions:
         view-file-as: Attachment
 
       page: 
-        size: Letter
+        size: A4
         orientation: Landscape
-        units: Inches
-        width: 11
-        height: 8.5
+        units: Millimeters
+        width: 297
+        height: 210
         border-width: 0.5
         border-color: '#666666'
 
@@ -492,7 +675,6 @@ regions:
         font-size: 12
         font-color: '#000000'
         alignment: center
-        page-header-text: Reserva
 
       column-headings: 
         font: Helvetica
@@ -563,11 +745,11 @@ buttons:
   id: 3340364853242411818
   identification: 
     button-name: CREATE
-    label: Create
+    label: Adicionar
 
   layout: 
     sequence: 10
-    region: Reserva # 3340360714475411814
+    region: Lista de Reservas # 3340360714475411814
     slot: RIGHT_OF_IR_SEARCH_BAR
     start-new-layout: false
     start-new-row: true
@@ -576,16 +758,18 @@ buttons:
     column-span: Automatic
 
   appearance: 
-    button-template: Text
+    button-template: Text with Icon
     hot: true
     template-options: 
     - '#DEFAULT#'
+    - t-Button--iconLeft
+    icon: fa-plus-square-o
 
   behavior: 
     action: Redirect to Page in this Application
     target: 
       url: 'f?p=&APP_ID.:3:&APP_SESSION.::&DEBUG.:3::'
-      page: 3 # Reserva
+      page: 3 # Cadastro de Reserva
       clear-cache: 3
 
     warn-on-unsaved-changes: Do Not Check
@@ -604,7 +788,7 @@ dynamic-actions:
   when: 
     event: Dialog Closed
     selection-type: Region
-    region: Reserva # 3340360714475411814
+    region: Lista de Reservas # 3340360714475411814
 
   actions: 
   - # ====== Action: Refresh =====================================
@@ -614,7 +798,7 @@ dynamic-actions:
 
     affected-elements: 
       selection-type: Region
-      region: Reserva # 3340360714475411814
+      region: Lista de Reservas # 3340360714475411814
 
     execution: 
       sequence: 10

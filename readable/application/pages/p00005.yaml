@@ -1,10 +1,10 @@
 ---
-# ====== Page: Cliente =======================================
+# ====== Page: Cadastro de Cliente ===========================
 id: 5
 identification: 
-  name: Cliente
-  alias: CLIENTE
-  title: Cliente
+  name: Cadastro de Cliente
+  alias: CLIENTE-NEW
+  title: Cadastro de Cliente
 
 appearance: 
   page-mode: Modal Dialog
@@ -169,8 +169,8 @@ page-items:
     type: Text Field
 
   label: 
-    label: Cpf
-    alignment: Right
+    label: CPF
+    alignment: Left
 
   settings: 
     subtype: Text
@@ -289,8 +289,8 @@ page-items:
     type: Date Picker
 
   label: 
-    label: Data Nasc
-    alignment: Right
+    label: Data de Nascimento
+    alignment: Left
 
   settings: 
     show-time: false
@@ -410,8 +410,8 @@ page-items:
     type: Text Field
 
   label: 
-    label: Email
-    alignment: Right
+    label: E-mail
+    alignment: Left
 
   settings: 
     subtype: Text
@@ -470,8 +470,8 @@ page-items:
     type: Text Field
 
   label: 
-    label: Endereco
-    alignment: Right
+    label: Endereço
+    alignment: Left
 
   settings: 
     subtype: Text
@@ -528,7 +528,7 @@ buttons:
   id: 3340375386559412354
   identification: 
     button-name: CANCEL
-    label: Cancel
+    label: Cancelar
 
   layout: 
     sequence: 10
@@ -554,7 +554,7 @@ buttons:
   id: 3340376773789412355
   identification: 
     button-name: DELETE
-    label: Delete
+    label: Excluir
 
   layout: 
     sequence: 20
@@ -567,12 +567,11 @@ buttons:
     column-span: Automatic
 
   appearance: 
-    button-template: Text
+    button-template: Text with Icon
     hot: false
     template-options: 
     - '#DEFAULT#'
-    - t-Button--danger
-    - t-Button--simple
+    - t-Button--iconLeft
 
   behavior: 
     action: Submit Page
@@ -593,7 +592,7 @@ buttons:
   id: 3340377141182412355
   identification: 
     button-name: SAVE
-    label: Apply Changes
+    label: Salvar
 
   layout: 
     sequence: 30
@@ -626,7 +625,7 @@ buttons:
   id: 3340377587473412356
   identification: 
     button-name: CREATE
-    label: Create
+    label: Salvar
 
   layout: 
     sequence: 40

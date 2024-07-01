@@ -1,10 +1,10 @@
 ---
-# ====== Page: Status Limpeza ================================
+# ====== Page: Cadastro de Status de Limpeza =================
 id: 17
 identification: 
-  name: Status Limpeza
-  alias: STATUS-LIMPEZA
-  title: Status Limpeza
+  name: Cadastro de Status de Limpeza
+  alias: STATUS-LIMPEZA-NEW
+  title: Cadastro de Status de Limpeza
 
 appearance: 
   page-mode: Modal Dialog
@@ -169,8 +169,8 @@ page-items:
     type: Text Field
 
   label: 
-    label: Descricao
-    alignment: Right
+    label: Descrição
+    alignment: Left
 
   settings: 
     subtype: Text
@@ -227,7 +227,7 @@ buttons:
   id: 3340457800273415587
   identification: 
     button-name: CANCEL
-    label: Cancel
+    label: Cancelar
 
   layout: 
     sequence: 10
@@ -253,7 +253,7 @@ buttons:
   id: 3340459255363415588
   identification: 
     button-name: DELETE
-    label: Delete
+    label: Excluir
 
   layout: 
     sequence: 20
@@ -292,7 +292,7 @@ buttons:
   id: 3340459670326415588
   identification: 
     button-name: SAVE
-    label: Apply Changes
+    label: Salvar
 
   layout: 
     sequence: 30
@@ -325,7 +325,7 @@ buttons:
   id: 3340460036481415588
   identification: 
     button-name: CREATE
-    label: Create
+    label: Salvar
 
   layout: 
     sequence: 40
